@@ -6,7 +6,7 @@
 <meta name="description" content="Jakarta Premier League Season 2 — tournament overview, teams, fixtures, standings and player statistics.">
 <title>JPL Season 2 (2026) | Jakarta Premier League</title>
 <style>
-:root{--navy:#102a43;--navy2:#173f5f;--green:#16845b;--lime:#b7e36a;--ink:#172b3a;--muted:#667788;--paper:#f3f7f5;--line:#e1e9e5;--white:#fff}
+:root{--navy:#102A56;--navy2:#173F78;--green:#F47721;--lime:#FFD43B;--red:#D62828;--ink:#15233B;--muted:#64748b;--paper:#f4f6fb;--line:#e1e6ef;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
 a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
 .top{background:var(--navy);color:#e3edf2;font-size:12px;padding:9px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -61,21 +61,27 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
 }
 
 
-/* JPL Season 2 match results */
-.match-group{margin:22px 0 28px}
-.match-group h3{margin:0 0 12px;color:var(--navy);font-size:18px}
-.match-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.match-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:17px 18px;box-shadow:0 5px 18px rgba(16,42,67,.045)}
-.match-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
-.match-stage{color:var(--green)}
-.match-score{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;align-items:center;margin:14px 0 10px}
-.match-team{font-weight:800;color:var(--ink);font-size:14px}
-.match-team.winner{color:var(--green)}
-.match-runs{font-weight:900;color:var(--navy);font-size:18px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.match-result{border-top:1px solid var(--line);padding-top:10px;color:var(--green);font-size:13px;font-weight:900}
-.match-award{margin-top:5px;color:var(--muted);font-size:12px}
-.match-award b{color:var(--navy)}
-@media(max-width:760px){.match-list{grid-template-columns:1fr}.match-card{padding:15px}.match-runs{font-size:16px}}
+/* JPL Season 2 visual refresh — yellow, orange, red and blue */
+body{background:var(--paper);color:var(--ink)}
+.top{background:linear-gradient(90deg,var(--navy),#071a39);border-bottom:3px solid var(--lime)}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.brand,.brand small{color:var(--navy)}
+.brand-mark{border:2px solid var(--red);color:var(--red);font-weight:900}
+nav a:hover,.tabs a:hover{color:var(--red)}
+.hero{position:relative;isolation:isolate;min-height:420px;display:flex;align-items:center;padding:64px 0;background:linear-gradient(90deg,rgba(7,23,52,.94) 0%,rgba(16,42,86,.78) 48%,rgba(16,42,86,.12) 100%),url('assets/homepage/hero-batting.jpg') center 38%/cover no-repeat}
+.hero:after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:8px;background:linear-gradient(90deg,var(--lime) 0 25%,var(--green) 25% 55%,var(--red) 55% 75%,var(--navy) 75%)}
+.kicker{color:var(--lime)}.crumb a{color:var(--lime)}h1{font-style:italic;text-shadow:0 4px 20px #0008}.hero p{color:#f2f5fb}.pill{border-color:#ffffff70;background:#ffffff1c}
+.tabs-wrap{background:#fff;border-bottom:3px solid var(--lime)}.tabs{color:var(--navy)}.tabs a{padding:2px 0}.tabs a:hover{color:var(--red)}
+main{padding-top:38px}.section-head h2{color:var(--navy);position:relative;padding-left:13px}.section-head h2:before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:5px;border-radius:5px;background:linear-gradient(var(--green),var(--red))}
+.stat{border:0;border-top:4px solid var(--green);box-shadow:0 8px 22px #102a5610}.stat:nth-child(2){border-top-color:var(--red)}.stat:nth-child(3){border-top-color:var(--lime)}.stat strong{color:var(--navy)}
+.panel,.table-scroll{box-shadow:0 8px 24px #102a560d}.team-card{border-color:#dfe5ef;box-shadow:0 8px 22px #102a5610}.team-card summary{background:linear-gradient(110deg,#fff,#fff8e7)}.team-name{color:var(--navy)}.captain{background:#fff0df;color:#bd4d08}.team-card summary::after{background:#fff0df;color:#bd4d08}.team-card[open] summary::after{background:var(--red)}.squad-label{color:var(--red)}.player-list li::before{color:var(--green)}
+th{background:var(--navy);color:#fff}td:first-child{color:var(--navy)}.notice{border-left-color:var(--green);background:#fff8e8;color:#4b5563}
+.sponsor{border-color:#f4c65b;background:#fff;color:var(--navy);border-bottom:3px solid var(--green)}
+footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px solid var(--red)}
+.media-section{margin:0 0 46px}.media-intro{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px}.media-intro h2{margin:0;color:var(--navy);font-size:28px}.media-intro p{margin:5px 0 0;color:var(--muted);font-size:13px}.media-tag{display:inline-block;background:var(--lime);color:var(--navy);font-size:10px;font-weight:900;letter-spacing:.13em;padding:7px 11px;border-radius:3px;white-space:nowrap}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.video-card{background:#071a39;border-radius:16px;overflow:hidden;box-shadow:0 12px 28px #102a5620}.video-card video{display:block;width:100%;aspect-ratio:16/9;background:#020817;object-fit:cover}.video-caption{padding:15px 17px;color:#fff}.video-caption strong{display:block;font-size:15px}.video-caption span{color:#cbd5e1;font-size:12px}
+.photo-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-auto-rows:170px;gap:12px}.photo-grid img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block}.photo-grid .photo-tall{grid-row:span 2}.photo-grid .photo-wide{grid-column:span 2}
+@media(max-width:760px){.hero{min-height:390px;padding:46px 0;background-position:58% center}.video-grid{grid-template-columns:1fr}.media-intro{display:block}.media-tag{margin-top:12px}.photo-grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px}.photo-grid .photo-wide{grid-column:span 2}}
 
 </style>
 </head>
@@ -83,7 +89,7 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
 <div class="top"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · THE HOME OF TENNIS CRICKET</span><span>JAKARTA, INDONESIA</span></div></div>
 <header><div class="wrap nav">
 <a class="brand" href="index.html"><span class="brand-mark">JPL<br>LOGO</span><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
-<nav><a href="index.html">HOME</a><a href="seasons.html">SEASONS</a><a href="#fixtures">FIXTURES</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">STATISTICS</a><a href="#sponsors">SPONSORS</a></nav>
+<nav><a href="index.html">HOME</a><a href="seasons.html">SEASONS</a><a href="#season-moments">HIGHLIGHTS</a><a href="#fixtures">FIXTURES</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">STATISTICS</a><a href="#sponsors">SPONSORS</a></nav>
 </div></header>
 <section class="hero"><div class="wrap">
 <div class="crumb"><a href="index.html">Home</a> / <a href="seasons.html">Seasons</a> / Season 2</div>
@@ -93,8 +99,15 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
 <div class="hero-meta"><span class="pill">30–31 May 2026</span><span class="pill">Gandhi Memorial School Ground · Kemayoran</span><span class="pill">Jakarta, Indonesia</span></div>
 </div></section>
 <div class="tabs-wrap"><div class="wrap tabs">
-<a href="#overview">OVERVIEW</a><a href="#teams">TEAMS</a><a href="#fixtures">FIXTURES & RESULTS</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">PLAYER STATISTICS</a><a href="#sponsors">SPONSORS</a>
+<a href="#overview">OVERVIEW</a><a href="#season-moments">VIDEOS</a><a href="#moments-gallery">GALLERY</a><a href="#teams">TEAMS</a><a href="#fixtures">FIXTURES & RESULTS</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">PLAYER STATISTICS</a><a href="#sponsors">SPONSORS</a>
 </div></div>
+<section class="media-section wrap" id="season-moments" style="padding-top:34px">
+  <div class="media-intro"><div><span class="media-tag">RELIVE THE ACTION</span><h2>Season 2 — The Moments</h2><p>Real match footage and memories from the JPL Season 2 weekend.</p></div></div>
+  <div class="video-grid">
+    <article class="video-card"><video controls preload="metadata" playsinline><source src="assets/videos/DJI_0487.MP4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Match Highlights</strong><span>Action from the tournament</span></div></article>
+    <article class="video-card"><video controls preload="metadata" playsinline><source src="assets/videos/DJI_0294-compressed.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Tournament Moments</strong><span>More action from the ground</span></div></article>
+  </div>
+</section>
 <main class="wrap">
 <section class="section" id="overview">
 <div class="section-head"><div><h2>Tournament overview</h2><p>Key information for the 2026 JPL edition.</p></div></div>
@@ -103,6 +116,15 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
 <div class="stat"><span>Venue</span><strong>Gandhi Memorial School Ground</strong></div>
 <div class="stat"><span>Location</span><strong>Kemayoran, Jakarta</strong></div>
 </div>
+</section>
+<section class="section" id="moments-gallery">
+  <div class="section-head"><div><h2>On-field action & celebrations</h2><p>Real JPL moments — from the first ball to the champions’ celebration.</p></div></div>
+  <div class="photo-grid">
+    <img class="photo-tall" src="assets/homepage/batting-action.jpg" alt="JPL Season 2 batting action" loading="lazy">
+    <img src="assets/homepage/team-photo-1.jpg" alt="JPL teams together" loading="lazy">
+    <img src="assets/homepage/trophy-awards.jpg" alt="JPL Season 2 trophy and awards" loading="lazy">
+    <img class="photo-wide" src="assets/homepage/community-family.jpg" alt="JPL cricket community and families" loading="lazy">
+  </div>
 </section>
 
 <section class="section" id="teams">
@@ -339,8 +361,9 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
   </div>
 </section>
 <section class="section" id="fixtures">
-<div class="section-head"><div><h2>Fixtures & results</h2><p>All 15 matches · JPL Season 2, 2026 · Gandhi Memorial School Ground, Kemayoran, Jakarta.</p></div></div>
-<div class="match-group"><h3>League matches · 31 May 2026</h3><div class="match-list"><article class="match-card"><div class="match-meta"><span>31 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team ">High Spirits</span><span class="match-runs">82/4 (8 ov)</span><span class="match-team winner">KNS Titans</span><span class="match-runs">86/0 (4.2 ov)</span></div><div class="match-result">KNS Titans won by 10 wickets</div><div class="match-award">Man of the Match: <b>Jawad Ali</b></div></article><article class="match-card"><div class="match-meta"><span>31 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team winner">SDAM United</span><span class="match-runs">161/5 (8 ov)</span><span class="match-team ">GMIS Cricket Club</span><span class="match-runs">40/9 (8 ov)</span></div><div class="match-result">SDAM United won by 121 runs</div><div class="match-award">Man of the Match: <b>Vishal Uberoi Jkt</b></div></article><article class="match-card"><div class="match-meta"><span>31 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team winner">BOII Stars</span><span class="match-runs">127/3 (8 ov)</span><span class="match-team ">Satavahana Strikers</span><span class="match-runs">108/2 (8 ov)</span></div><div class="match-result">BOII Stars won by 19 runs</div><div class="match-award">Man of the Match: <b>Sher Awan Khan</b></div></article><article class="match-card"><div class="match-meta"><span>31 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team winner">Udupi Sunshine Cricket Club</span><span class="match-runs">89/10 (8 ov)</span><span class="match-team ">TKC Gully Cricket Guys</span><span class="match-runs">50/6 (8 ov)</span></div><div class="match-result">Udupi Sunshine Cricket Club won by 39 runs</div><div class="match-award">Man of the Match: <b>Rehan Wickramarachchi</b></div></article></div></div><div class="match-group"><h3>League matches · 30 May 2026</h3><div class="match-list"><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team ">High Spirits</span><span class="match-runs">118/7 (8 ov)</span><span class="match-team winner">TKC Gully Cricket Guys</span><span class="match-runs">122/1 (5.4 ov)</span></div><div class="match-result">TKC Gully Cricket Guys won by 9 wickets</div><div class="match-award">Man of the Match: <b>Ashraf</b></div></article><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team ">Satavahana Strikers</span><span class="match-runs">92/6 (8 ov)</span><span class="match-team winner">SDAM United</span><span class="match-runs">94/2 (3.4 ov)</span></div><div class="match-result">SDAM United won by 8 wickets</div><div class="match-award">Man of the Match: <b>Jamshed</b></div></article><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team ">KNS Titans</span><span class="match-runs">99/7 (8 ov)</span><span class="match-team winner">Udupi Sunshine Cricket Club</span><span class="match-runs">104/3 (7 ov)</span></div><div class="match-result">Udupi Sunshine Cricket Club won by 7 wickets</div><div class="match-award">Man of the Match: <b>Syed Kabir</b></div></article><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team winner">BOII Stars</span><span class="match-runs">209/0 (8 ov)</span><span class="match-team ">GMIS Cricket Club</span><span class="match-runs">49/10 (7.5 ov)</span></div><div class="match-result">BOII Stars won by 160 runs</div><div class="match-award">Man of the Match: <b>Mazhar Abbas</b></div></article><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team ">TKC Gully Cricket Guys</span><span class="match-runs">127/3 (8 ov)</span><span class="match-team winner">KNS Titans</span><span class="match-runs">129/1 (7.1 ov)</span></div><div class="match-result">KNS Titans won by 9 wickets</div><div class="match-award">Man of the Match: <b>Jawad Ali</b></div></article><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team winner">SDAM United</span><span class="match-runs">190/1 (8 ov)</span><span class="match-team ">BOII Stars</span><span class="match-runs">100/3 (8 ov)</span></div><div class="match-result">SDAM United won by 90 runs</div><div class="match-award">Man of the Match: <b>Jamshed</b></div></article><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team winner">Satavahana Strikers</span><span class="match-runs">103/2 (8 ov)</span><span class="match-team ">GMIS Cricket Club</span><span class="match-runs">97/4 (8 ov)</span></div><div class="match-result">Satavahana Strikers won by 6 runs</div><div class="match-award">Man of the Match: <b>Satya Narayana Gorla</b></div></article><article class="match-card"><div class="match-meta"><span>30 May 2026</span><span class="match-stage">League match</span></div><div class="match-score"><span class="match-team winner">Udupi Sunshine Cricket Club</span><span class="match-runs">161/0 (8 ov)</span><span class="match-team ">High Spirits</span><span class="match-runs">106/5 (8 ov)</span></div><div class="match-result">Udupi Sunshine Cricket Club won by 55 runs</div><div class="match-award">Man of the Match: <b>Sampath Kumar</b></div></article></div></div><div class="match-group"><h3>Knockout stage · 31 May 2026</h3><div class="match-list"><article class="match-card"><div class="match-meta"><span>31 May 2026</span><span class="match-stage">Semi-final 1</span></div><div class="match-score"><span class="match-team ">Udupi Sunshine Cricket Club</span><span class="match-runs">115/6 (8 ov)</span><span class="match-team winner">BOII Stars</span><span class="match-runs">118/6 (8 ov)</span></div><div class="match-result">BOII Stars won by 4 wickets</div><div class="match-award">Man of the Match: <b>Sher Awan Khan</b></div></article><article class="match-card"><div class="match-meta"><span>31 May 2026</span><span class="match-stage">Semi-final 2</span></div><div class="match-score"><span class="match-team ">KNS Titans</span><span class="match-runs">123/3 (8 ov)</span><span class="match-team winner">SDAM United</span><span class="match-runs">124/2 (7.1 ov)</span></div><div class="match-result">SDAM United won by 8 wickets</div><div class="match-award">Man of the Match: <b>Jamshed</b></div></article><article class="match-card"><div class="match-meta"><span>31 May 2026</span><span class="match-stage">Final</span></div><div class="match-score"><span class="match-team winner">SDAM United</span><span class="match-runs">153/0 (8 ov)</span><span class="match-team ">BOII Stars</span><span class="match-runs">65/9 (8 ov)</span></div><div class="match-result">SDAM United won by 88 runs</div><div class="match-award">Man of the Match: <b>Jamshed</b></div></article></div></div></section>
+<div class="section-head"><div><h2>Fixtures & results</h2><p>Match schedule, results and scorecards.</p></div></div>
+<div class="table-scroll"><table><thead><tr><th>Match</th><th>Date</th><th>Teams</th><th>Result</th><th>Scorecard</th></tr></thead><tbody><tr><td colspan="5" class="empty">Official fixtures and match results to be added.</td></tr></tbody></table></div>
+</section>
 <section class="section" id="points-table">
 <div class="section-head"><div><h2>Points table</h2><p>League standings and qualification positions.</p></div></div>
 <div class="table-scroll"><table><thead><tr><th>Pos.</th><th>Team</th><th>Played</th><th>Won</th><th>Lost</th><th>Points</th><th>NRR</th></tr></thead><tbody><tr><td colspan="7" class="empty">Standings will be published when verified tournament results are entered.</td></tr></tbody></table></div>
@@ -358,7 +381,7 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
 <div class="section-head"><div><h2>Official sponsors</h2><p>Thank you to the partners supporting JPL Season 2.</p></div></div>
 <div class="sponsors"><span class="sponsor">Classic Carpets</span><span class="sponsor">KTL International Indonesia</span><span class="sponsor">PT Gokak Indonesia</span><span class="sponsor">PT Platinumetrix Global Inovasi</span></div>
 </section>
-<div class="notice">All 15 match results and Man of the Match awards shown above have been compiled from the CricHeroes match summaries and the supplied screenshots. Points-table standings and detailed player statistics can be added separately.</div>
+<div class="notice">Team squads and captains are listed above. Official fixtures, match results, points-table standings and player statistics can be added once the verified tournament records are available.</div>
 </main>
 <footer><div class="wrap"><span>© 2026 Jakarta Premier League</span><span>Growing cricket · Supporting talent · Building community</span></div></footer>
 </body></html>
