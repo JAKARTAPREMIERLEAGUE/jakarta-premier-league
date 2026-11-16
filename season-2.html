@@ -56,9 +56,324 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
 <div class="stat"><span>Location</span><strong>Kemayoran, Jakarta</strong></div>
 </div>
 </section>
+
 <section class="section" id="teams">
-<div class="section-head"><div><h2>Participating teams</h2><p>Team names and squad details will appear here.</p></div></div>
-<div class="panel"><div class="notice">Team list and squad information have not yet been added. We will publish the confirmed teams once the official records are provided.</div></div>
+  <style>
+    #teams .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    #teams .team-card {
+      background: #fff;
+      border: 1px solid #dce7e1;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(10,40,35,.06);
+    }
+    #teams .team-card summary {
+      padding: 20px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    #teams .team-card summary::-webkit-details-marker {
+      display: none;
+    }
+    #teams .team-card summary:after {
+      content: "+";
+      font-size: 25px;
+      color: #16866b;
+      font-weight: bold;
+    }
+    #teams .team-card[open] summary:after {
+      content: "−";
+    }
+    #teams .team-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: #102d46;
+    }
+    #teams .captain {
+      display: block;
+      margin-top: 6px;
+      font-size: 13px;
+      color: #648078;
+    }
+    #teams .squad {
+      border-top: 1px solid #e4ebe7;
+      padding: 16px 20px 20px;
+    }
+    #teams .squad-label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #16866b;
+      margin-bottom: 12px;
+    }
+    #teams .player-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 8px;
+      padding-left: 20px;
+      margin: 0;
+    }
+    #teams .player-list li {
+      font-size: 14px;
+      color: #344b5d;
+      padding: 3px 0;
+    }
+  </style>
+
+  <div class="section-head">
+    <div>
+      <h2>Participating Teams</h2>
+      <p>Meet the eight teams and their players from JPL Season 2, 2026.</p>
+    </div>
+  </div>
+
+  <div class="team-grid">
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">SDAM United</span>
+          <span class="captain">Captain: Varun Rawat</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Aaditya Khambekar</li>
+          <li>Arjun</li>
+          <li>Gufran</li>
+          <li>Harish Selavaganesan</li>
+          <li>Jagdeep Singh</li>
+          <li>Jamshed</li>
+          <li>Kirubasankar Coimbatore Ramamoorthy</li>
+          <li>Pallav Bhai Rasuna</li>
+          <li>Pranav Singapuri</li>
+          <li>Puneet Rasuna Jkt</li>
+          <li>Ravi Ramaswamy</li>
+          <li>Sidhant Petwal</li>
+          <li>Varun Rawat</li>
+          <li>Vineet Shah</li>
+          <li>Vishal Uberoi JKT</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">High Spirits</span>
+          <span class="captain">Captain: Harsh Sadarangani</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Armaan Arora</li>
+          <li>Ashish</li>
+          <li>Choudhary Imran Aslam</li>
+          <li>Divit Nanda</li>
+          <li>Gaurang Kapadia</li>
+          <li>Harsh Sadarangani</li>
+          <li>Hemal</li>
+          <li>Karan Nan</li>
+          <li>Nimesh Shah</li>
+          <li>Rohan Shirodkar</li>
+          <li>Rohan Shirodkar</li>
+          <li>Sakthi Narayanan</li>
+          <li>Saleem</li>
+          <li>Shashank Katre</li>
+          <li>Vimal</li>
+          <li>Vimal Subramaniyam</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">TKC Gully Cricket Guys</span>
+          <span class="captain">Captain: Srini</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Ashraf</li>
+          <li>Boopathi</li>
+          <li>Hari Challengers</li>
+          <li>Kuldeep Singh</li>
+          <li>Moh Mubeen</li>
+          <li>Nandha</li>
+          <li>Pawan Bisht</li>
+          <li>Rajiv Gandhi</li>
+          <li>Rajkumar Chockalingam</li>
+          <li>Ramakrishna</li>
+          <li>Sagar Rawat</li>
+          <li>Sambi Reddy</li>
+          <li>Sreenivas Ampolu</li>
+          <li>Srini</li>
+          <li>Venkatrami Reddy</li>
+          <li>Vinamr</li>
+          <li>Vinesh Kamboj</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">KNS Titans</span>
+          <span class="captain">Captain: Ashish Gupta</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Ahsan Raja</li>
+          <li>Aniruddha Hegde</li>
+          <li>Ashish Gupta</li>
+          <li>Ashish Kumar Gupta</li>
+          <li>Ehsan</li>
+          <li>Gilar</li>
+          <li>Haritha Boyagane</li>
+          <li>Jawad Ali</li>
+          <li>JCA Cricket Iruthiaraj</li>
+          <li>Kalpesh Chavan</li>
+          <li>Mukesh Khetan</li>
+          <li>Nuwan</li>
+          <li>Prateek Mohanty</li>
+          <li>Rajesh Singh</li>
+          <li>Rohith Sharma</li>
+          <li>Suren Bhai ID TKCC</li>
+          <li>Swaroop</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">Satavahana Strikers</span>
+          <span class="captain">Captain: Satya Narayana Gorla</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Akash</li>
+          <li>Chandu Chowdary</li>
+          <li>Justin</li>
+          <li>Kalyan Tangirala</li>
+          <li>Kota Gunavantha Rao</li>
+          <li>Nagraj Bitla@Rasuna</li>
+          <li>Naveen</li>
+          <li>Nitesh Bhandari</li>
+          <li>Nitheesh Peram, ITA Indonesia, PT Mulia Empat Satu</li>
+          <li>Pavan</li>
+          <li>Pradeep</li>
+          <li>Praveen</li>
+          <li>Ravi Sarai</li>
+          <li>Sandeep Koyyana*</li>
+          <li>Satya Narayana Gorla</li>
+          <li>Srinivas Mahanti</li>
+          <li>Suman Alavilli, ATR SDAM</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">GMIS Cricket Club</span>
+          <span class="captain">Captain: Yash Maheshwary</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Aditya Mahendra Bendale</li>
+          <li>Aditya Rai</li>
+          <li>Ahad Kafeel</li>
+          <li>Atharva Rajeshirke</li>
+          <li>Darsh Pandey</li>
+          <li>Gladson Lawrence</li>
+          <li>Harsha Tangirala</li>
+          <li>Heet Jain</li>
+          <li>Manish</li>
+          <li>Mohit DS</li>
+          <li>Mokshang Choudhari</li>
+          <li>Raghubir</li>
+          <li>Yash Maheshwary</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">BOII Stars</span>
+          <span class="captain">Captain: K S B Chandramouli</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Ajay Kapoor</li>
+          <li>Anurag Singh</li>
+          <li>Arun Jadhav</li>
+          <li>K S B Chandramouli</li>
+          <li>Maneesh Dubey</li>
+          <li>Mazhar Abbas</li>
+          <li>Rishikesh Moynak</li>
+          <li>Rushikesh Moynak</li>
+          <li>Sai Sujal</li>
+          <li>Sher Awan Khan</li>
+          <li>Sk Chandra</li>
+          <li>Uzair Khan</li>
+          <li>Yashpal</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="team-card">
+      <summary>
+        <span>
+          <span class="team-name">Udupi Sunshine Cricket Club</span>
+          <span class="captain">Captain: Sampath Kumar</span>
+        </span>
+      </summary>
+      <div class="squad">
+        <div class="squad-label">TEAM SQUAD</div>
+        <ol class="player-list">
+          <li>Avinash Rao</li>
+          <li>Bharath Rao</li>
+          <li>Deepakraj Raghavendra</li>
+          <li>Dhanesh Shetty</li>
+          <li>Gautham Kamath</li>
+          <li>Keyur Moradia</li>
+          <li>Nandhan Shetty</li>
+          <li>Prashant Poojary</li>
+          <li>Rathan Santosh</li>
+          <li>Rehan Wickramarachchi</li>
+          <li>Sampath Kumar</li>
+          <li>Sandesh Shetty</li>
+          <li>Sudhakhar</li>
+          <li>Sukesh Valthur</li>
+          <li>Syed Kabir</li>
+          <li>Vidyadhara Poojari</li>
+        </ol>
+      </div>
+    </details>
+
+  </div>
 </section>
 <section class="section" id="fixtures">
 <div class="section-head"><div><h2>Fixtures & results</h2><p>Match schedule, results and scorecards.</p></div></div>
