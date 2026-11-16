@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jakarta Premier League — fixtures, results, teams, players and tournament history.">
+  <title>Jakarta Premier League | Official Website</title>
+  <style>
+    :root{--navy:#102a43;--navy2:#173f5f;--green:#16845b;--lime:#b7e36a;--ink:#172b3a;--muted:#667788;--paper:#f4f7f6;--white:#fff;--line:#e2e9e6}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+    .topbar{background:var(--navy);color:#dbe7ee;font-size:12px;padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.04em;color:var(--navy)}
+    .logo{width:48px;height:48px;border:2px dashed #9db3aa;border-radius:12px;display:grid;place-items:center;font-size:10px;text-align:center;color:#71877d;background:#f5faf7;line-height:1.1}
+    .brand small{display:block;font-size:10px;letter-spacing:.18em;color:var(--green);font-weight:800}
+    nav{display:flex;gap:22px;align-items:center;font-size:13px;font-weight:700;color:#3d5363}
+    nav a:hover{color:var(--green)}.menu{display:none;border:0;background:var(--navy);color:white;padding:9px 12px;border-radius:8px}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(110deg,rgba(9,35,48,.92),rgba(15,75,58,.78)),url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=2000&q=85') center/cover;color:white}
+    .hero:after{content:"";position:absolute;inset:auto -8% -120px 35%;height:260px;background:rgba(183,227,106,.13);transform:rotate(-8deg);border-radius:50%}
+    .hero-inner{position:relative;z-index:1;padding:82px 0 74px;max-width:760px}
+    .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);font-weight:900}
+    h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-.045em;margin:18px 0}
+    .hero p{font-size:17px;color:#e0ece7;max-width:590px;margin:0 0 28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:8px;font-size:13px;font-weight:800}
+    .btn.primary{background:var(--lime);color:#183a2c}.btn.ghost{border:1px solid rgba(255,255,255,.55);color:white}
+    .hero-note{margin-top:32px;font-size:11px;color:#d4e4dc;letter-spacing:.06em}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#dce7e1;border:1px solid #dce7e1;border-radius:12px;overflow:hidden;margin-top:-26px;position:relative;z-index:2;box-shadow:0 14px 35px #173f5f12}
+    .stat{background:white;padding:20px 22px}.stat b{display:block;font-size:25px;color:var(--navy);line-height:1.1}.stat span{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+    section{padding:72px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}
+    .kicker{font-size:10px;color:var(--green);font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+    h2{font-size:clamp(27px,4vw,38px);line-height:1.1;margin:7px 0 0;color:var(--navy);letter-spacing:-.03em}
+    .muted{color:var(--muted);font-size:14px}.text-link{font-size:12px;font-weight:900;color:var(--green)}
+    .feature-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+    .panel{background:white;border:1px solid var(--line);border-radius:13px;padding:24px}
+    .match{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 0;border-bottom:1px solid var(--line)}
+    .match:last-child{border:0;padding-bottom:0}.match:first-of-type{padding-top:6px}
+    .teams{display:flex;align-items:center;gap:13px;font-weight:800;font-size:13px}.crest{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#edf5ef;color:var(--green);font-size:10px;font-weight:900}
+    .match-meta{text-align:right;font-size:11px;color:var(--muted)}.tag{display:inline-block;background:#edf7ef;color:var(--green);font-size:10px;font-weight:900;padding:4px 8px;border-radius:30px;margin-bottom:5px}
+    .season-box{background:var(--navy);color:white;border-radius:13px;padding:25px;position:relative;overflow:hidden}
+    .season-box:after{content:"JPL";position:absolute;right:-5px;bottom:-38px;font-size:110px;font-weight:1000;color:#ffffff0b}
+    .season-box h3{font-size:25px;line-height:1.1;margin:8px 0}.season-box p{font-size:13px;color:#c8d8e2;max-width:270px}
+    .season-box a{display:inline-block;margin-top:12px;color:var(--lime);font-size:12px;font-weight:900}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:white;border:1px solid var(--line);border-radius:13px;overflow:hidden}
+    .card-art{height:135px;background:linear-gradient(135deg,#dcefe4,#f1f6e9);display:grid;place-items:center;color:#668475;font-weight:900;letter-spacing:.12em;font-size:12px}
+    .card-body{padding:18px}.card-body h3{margin:0 0 5px;font-size:17px;color:var(--navy)}.card-body p{font-size:12px;color:var(--muted);margin:0}
+    .table-wrap{overflow:auto;background:white;border:1px solid var(--line);border-radius:13px}
+    table{width:100%;border-collapse:collapse;min-width:540px;text-align:left;font-size:13px}th,td{padding:15px 17px;border-bottom:1px solid var(--line)}th{background:#f7faf8;color:#62766b;font-size:10px;text-transform:uppercase;letter-spacing:.12em}tr:last-child td{border:0}.rank{color:var(--green);font-weight:900}
+    .sponsor-strip{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0}
+    .sponsors{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.sponsor{border:1px dashed #c7d5ce;border-radius:9px;padding:15px 24px;color:#82948a;font-size:11px;font-weight:900;letter-spacing:.1em}
+    .gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:13px}.gallery div{min-height:155px;border-radius:12px;background:linear-gradient(135deg,#dcefe4,#b9d7c8);display:grid;place-items:center;color:#5c7d6d;font-size:11px;font-weight:900;letter-spacing:.1em}.gallery div:first-child{grid-row:span 2;min-height:323px;background:linear-gradient(145deg,#c9e4d2,#7eae91)}
+    footer{background:#0c2233;color:#d7e3e8;padding:42px 0 24px}.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.foot strong{font-size:18px;color:white}.foot p{max-width:390px;color:#aebfc8;font-size:12px}.foot-links{display:flex;gap:18px;flex-wrap:wrap;font-size:12px}.copyright{border-top:1px solid #ffffff22;margin-top:30px;padding-top:18px;color:#91a7b2;font-size:10px}
+    @media(max-width:760px){nav{display:none;position:absolute;left:0;right:0;top:76px;background:white;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav.open nav{display:flex}.menu{display:block}.hero-inner{padding:65px 0 60px}.stats{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery div:first-child{grid-row:auto;min-height:155px}.section-head{align-items:start;flex-direction:column}section{padding:55px 0}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · THE HOME OF TENNIS CRICKET</span><span>JAKARTA, INDONESIA</span></div></div>
+  <header><div class="wrap nav" id="nav">
+    <a class="brand" href="#home"><span class="logo">ADD<br>JPL LOGO</span><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
+    <nav>
+      <a href="#home">HOME</a><a href="#seasons">SEASONS</a><a href="#fixtures">FIXTURES</a><a href="#standings">POINTS TABLE</a><a href="#players">PLAYERS</a><a href="#sponsors">SPONSORS</a><a href="#gallery">GALLERY</a>
+    </nav>
+    <button class="menu" onclick="document.getElementById('nav').classList.toggle('open')">MENU</button>
+  </div></header>
+  <main id="home">
+    <div class="hero"><div class="wrap"><div class="hero-inner">
+      <div class="eyebrow">More than a game · One cricket community</div>
+      <h1>THE CITY.<br>THE GAME.<br>THE LEAGUE.</h1>
+      <p>Welcome to Jakarta Premier League — celebrating tennis cricket, bringing teams together and creating unforgettable moments on and off the field.</p>
+      <div class="actions"><a class="btn primary" href="#fixtures">EXPLORE THE LEAGUE</a><a class="btn ghost" href="#seasons">VIEW ALL SEASONS</a></div>
+      <div class="hero-note">OFFICIAL JPL WEBSITE · JAKARTA, INDONESIA</div>
+    </div></div></div>
+
+    <div class="wrap"><div class="stats">
+      <div class="stat"><b>ALL</b><span>JPL seasons</span></div><div class="stat"><b>TEAMS</b><span>Competition history</span></div><div class="stat"><b>PLAYERS</b><span>Player profiles</span></div><div class="stat"><b>ONE</b><span>Cricket community</span></div>
+    </div></div>
+
+    <section id="fixtures"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">On the field</div><h2>Fixtures & latest results</h2></div><a class="text-link" href="#seasons">BROWSE SEASONS →</a></div>
+      <div class="feature-grid">
+        <div class="panel"><div class="tag">SAMPLE CONTENT · TO BE UPDATED</div>
+          <div class="match"><div class="teams"><span class="crest">T1</span>Team One <span style="color:#9aa9a2">vs</span> <span class="crest">T2</span>Team Two</div><div class="match-meta">Fixture date<br><b>Venue to be confirmed</b></div></div>
+          <div class="match"><div class="teams"><span class="crest">T3</span>Team Three <span style="color:#9aa9a2">vs</span> <span class="crest">T4</span>Team Four</div><div class="match-meta">Result<br><b>Scorecard coming soon</b></div></div>
+          <p class="muted" style="font-size:11px;margin:16px 0 0">These are layout examples, not confirmed JPL fixtures or results.</p>
+        </div>
+        <div class="season-box"><div class="eyebrow">JPL archive</div><h3>Every season.<br>Every story.</h3><p>Explore tournament seasons, match results, team journeys and standout performances from across JPL history.</p><a href="#seasons">EXPLORE THE ARCHIVE →</a></div>
+      </div>
+    </div></section>
+
+    <section id="seasons" style="background:#edf3ef"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">The JPL journey</div><h2>Explore all seasons</h2></div><p class="muted">A home for past, current and future editions.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-art">SEASON 1 · ARCHIVE</div><div class="card-body"><h3>JPL Season 1</h3><p>Add season dates, teams, champions and final standings.</p></div></article>
+        <article class="card"><div class="card-art">SEASON 2 · ARCHIVE</div><div class="card-body"><h3>JPL Season 2</h3><p>Add the 2026 tournament details, match results and statistics.</p></div></article>
+        <article class="card"><div class="card-art">NEXT EDITION</div><div class="card-body"><h3>JPL Season 3</h3><p>Upcoming season information, participating teams and announcements.</p></div></article>
+      </div>
+    </div></section>
+
+    <section id="standings"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">The race for the top</div><h2>Points table</h2></div><span class="tag">DEMO LAYOUT</span></div>
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>Played</th><th>Won</th><th>Lost</th><th>Points</th></tr></thead><tbody>
+        <tr><td class="rank">01</td><td>Team One</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td class="rank">02</td><td>Team Two</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td class="rank">03</td><td>Team Three</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
+      <p class="muted" style="font-size:11px">Placeholder rows only. Official standings will be added once season data is supplied.</p>
+    </div></section>
+
+    <section id="players" style="background:#edf3ef"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">People make the league</div><h2>Teams, players & statistics</h2></div></div>
+      <div class="cards">
+        <article class="card"><div class="card-art">TEAM CRESTS</div><div class="card-body"><h3>Team profiles</h3><p>Squads, team history, captains and season-by-season performance.</p></div></article>
+        <article class="card"><div class="card-art">PLAYER PROFILES</div><div class="card-body"><h3>Player profiles</h3><p>Player photos, batting style, bowling style and career records.</p></div></article>
+        <article class="card"><div class="card-art">PLAYER LEADERBOARD</div><div class="card-body"><h3>Player statistics</h3><p>Top run scorers, leading wicket takers, MVP and other awards.</p></div></article>
+      </div>
+    </div></section>
+
+    <div class="sponsor-strip" id="sponsors"><div class="wrap"><div class="section-head"><div><div class="kicker">With thanks to our partners</div><h2>Our sponsors</h2></div><span class="muted">Sponsor logos will appear here</span></div><div class="sponsors"><div class="sponsor">TITLE SPONSOR</div><div class="sponsor">GOLD PARTNER</div><div class="sponsor">OFFICIAL PARTNER</div><div class="sponsor">SUPPORTING PARTNER</div></div></div></div>
+
+    <section id="gallery"><div class="wrap"><div class="section-head"><div><div class="kicker">Beyond the boundary</div><h2>JPL moments</h2></div><span class="muted">Matchday photos & videos</span></div><div class="gallery"><div>FEATURED MATCH PHOTO</div><div>TEAM MOMENT</div><div>ON-FIELD ACTION</div><div>AWARDS & CELEBRATIONS</div><div>FANS & COMMUNITY</div></div></div></section>
+  </main>
+  <footer><div class="wrap"><div class="foot"><div><strong>JAKARTA PREMIER LEAGUE</strong><p>Growing cricket. Supporting talent. Building the future. A celebration of tennis cricket and community in Jakarta, Indonesia.</p></div><div class="foot-links"><a href="#seasons">Seasons</a><a href="#fixtures">Fixtures</a><a href="#standings">Points table</a><a href="#players">Players</a><a href="#sponsors">Sponsors</a></div></div><div class="copyright">© <span id="year"></span> Jakarta Premier League. All rights reserved. · Official website concept</div></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
