@@ -28,6 +28,25 @@ main{padding:42px 0 72px}.section{margin:0 0 42px;scroll-margin-top:72px}.sectio
 table{border-collapse:collapse;width:100%;min-width:620px;font-size:13px}th,td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line)}th{background:#f6f9f7;color:#526575;font-size:10px;letter-spacing:.1em;text-transform:uppercase}td{color:#526575}td:first-child{font-weight:800;color:var(--navy)}.empty{text-align:center;padding:24px;color:var(--muted);font-size:13px}
 .sponsors{display:flex;gap:12px;flex-wrap:wrap}.sponsor{background:#fff;border:1px solid var(--line);border-radius:9px;padding:13px 17px;font-size:12px;font-weight:800;color:var(--navy)}
 footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* Season 2 team and squad cards */
+.team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.team-card{display:block;background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 5px 18px rgba(16,42,67,.06);transition:transform .18s ease,box-shadow .18s ease}
+.team-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,42,67,.10)}
+.team-card summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:21px 22px;cursor:pointer;background:linear-gradient(110deg,#fff,#f5faf7)}
+.team-card summary::-webkit-details-marker{display:none}
+.team-card summary::after{content:'+';flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#e8f5ef;color:var(--green);font-size:24px;font-weight:800;line-height:1}
+.team-card[open] summary{border-bottom:1px solid var(--line)}
+.team-card[open] summary::after{content:'−';background:var(--green);color:#fff}
+.team-name{display:block;color:var(--navy);font-size:18px;font-weight:900;line-height:1.3}
+.captain{display:inline-block;margin-top:9px;padding:5px 11px;border-radius:20px;background:#eaf5ef;color:var(--green);font-size:12px;font-weight:800}
+.squad{padding:18px 22px 22px}
+.squad-label{margin-bottom:13px;color:var(--green);font-size:11px;font-weight:900;letter-spacing:.16em}
+.player-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;margin:0;padding:0;list-style:none;counter-reset:player}
+.player-list li{counter-increment:player;display:flex;align-items:flex-start;gap:9px;padding:9px 0;border-bottom:1px solid #edf2ef;color:#526575;font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+.player-list li::before{content:counter(player)'.';flex:0 0 19px;color:var(--green);font-weight:900}
+@media(max-width:760px){.team-grid{grid-template-columns:1fr}.player-list{grid-template-columns:1fr}.team-card summary{padding:18px}.squad{padding:16px 18px 20px}}
+
 @media(max-width:760px){.nav{align-items:flex-start;padding:14px 0;flex-direction:column}nav{gap:13px}.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.section-head{display:block}.hero{padding:42px 0}}
 </style>
 </head>
@@ -327,7 +346,7 @@ footer{background:#0c2233;color:#d7e3e8;padding:28px 0;font-size:11px}footer .wr
 <div class="section-head"><div><h2>Official sponsors</h2><p>Thank you to the partners supporting JPL Season 2.</p></div></div>
 <div class="sponsors"><span class="sponsor">Classic Carpets</span><span class="sponsor">KTL International Indonesia</span><span class="sponsor">PT Gokak Indonesia</span><span class="sponsor">PT Platinumetrix Global Inovasi</span></div>
 </section>
-<div class="notice">This is the initial Season 2 page structure. Match schedules, team names, scores, standings and player statistics are intentionally left as placeholders until verified JPL data is supplied.</div>
+<div class="notice">Team squads and captains are listed above. Official fixtures, match results, points-table standings and player statistics can be added once the verified tournament records are available.</div>
 </main>
 <footer><div class="wrap"><span>© 2026 Jakarta Premier League</span><span>Growing cricket · Supporting talent · Building community</span></div></footer>
 </body></html>
