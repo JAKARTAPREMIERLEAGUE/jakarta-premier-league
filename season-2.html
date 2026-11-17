@@ -145,6 +145,32 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 .champion-final{display:inline-block;margin-top:12px;padding:6px 12px;border:1px solid rgba(255,255,255,.35);border-radius:99px;font-size:12px;color:#fff}
 @media(max-width:700px){.champions-section{padding:34px 0}.champions-grid{grid-template-columns:1fr}.champion-card.winner .champion-photo,.champion-photo{height:auto;aspect-ratio:16/10}.champion-info{padding:16px}}
 
+
+/* Season 2 player statistics and individual honours */
+.awards-block{margin:10px 0 34px}
+.awards-title{display:flex;align-items:center;gap:10px;margin:0 0 16px;color:var(--navy);font-size:22px;font-weight:900}
+.awards-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.award-card{overflow:hidden;border-radius:16px;background:#102a56;box-shadow:0 10px 24px rgba(16,42,86,.12);color:#fff}
+.award-card img{display:block;width:100%;height:190px;object-fit:cover;object-position:center 35%}
+.award-copy{padding:14px 15px 16px;background:linear-gradient(145deg,#102a56,#173f78)}
+.award-card:first-child .award-copy{background:linear-gradient(145deg,#102a56,#8a6516)}
+.award-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:900;color:#ffd43b;margin-bottom:6px}
+.award-copy h3{font-size:18px;line-height:1.15;margin:0 0 5px;color:#fff}
+.award-copy p{font-size:12px;margin:0;color:#e9eef8}
+.stat-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 12px}
+.stat-tab{border:1px solid #d8deea;background:#fff;color:var(--navy);padding:10px 17px;border-radius:999px;font-weight:800;font-size:13px}
+.stat-tab.active{background:#102a56;color:#fff;border-color:#102a56}
+.stat-panel{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.stat-panel h3{margin:0;padding:16px 18px;background:#f3f6fb;color:var(--navy);font-size:18px}
+.stat-table{width:100%;border-collapse:collapse;font-size:14px}
+.stat-table th,.stat-table td{padding:11px 13px;text-align:left;border-top:1px solid var(--line)}
+.stat-table th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:#fbfcfe}
+.stat-table td:first-child{font-weight:800;color:var(--navy)}
+.stat-table .rank{width:48px;color:#e47722;font-weight:900}
+.stat-note{color:var(--muted);font-size:12px;margin:10px 2px 0}
+@media(max-width:900px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.award-card img{height:170px}}
+@media(max-width:560px){.awards-grid{grid-template-columns:1fr 1fr;gap:9px}.award-card img{height:125px}.award-copy{padding:10px}.award-copy h3{font-size:15px}.stat-table{font-size:12px}.stat-table th,.stat-table td{padding:9px 7px}.stat-tabs{gap:5px}.stat-tab{padding:8px 11px;font-size:11px}}
+
 </style>
 </head>
 <body>
@@ -484,19 +510,52 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 <p class="standings-note">M = Matches · W = Won · L = Lost · T = Tied · NR = No Result · Pts = Points · NRR = Net Run Rate. Points and NRR are reproduced from the official CricHeroes points-table screenshot.</p>
 </section>
 <section class="section" id="statistics">
-<div class="section-head"><div><h2>Player statistics</h2><p>Season leaders and individual performances.</p></div></div>
-<div class="cards">
-<div class="placeholder"><b>Batting leaderboard</b><p>Runs, highest score, average and strike rate — statistics to be added.</p></div>
-<div class="placeholder"><b>Bowling leaderboard</b><p>Wickets, best bowling, economy and average — statistics to be added.</p></div>
-<div class="placeholder"><b>Fielding leaderboard</b><p>Catches, run-outs and stumpings — statistics to be added.</p></div>
-<div class="placeholder"><b>Player awards</b><p>Player of the Tournament and other awards — winners to be confirmed.</p></div>
+<div class="section-head"><div><h2>Player statistics &amp; Season 2 awards</h2><p>Celebrating the standout performances of Jakarta Premier League Season 2.</p></div></div>
+<div class="awards-block">
+  <h3 class="awards-title">🏆 Individual Award Winners</h3>
+  <div class="awards-grid">
+    <article class="award-card"><img src="assets/season2/award-player-of-series.jpg" alt="Jamshed receiving the Player of the Series award"><div class="award-copy"><div class="award-label">⭐ Player of the Series · MVP</div><h3>Jamshed</h3><p>SDAM United · 44.766 MVP points</p></div></article>
+    <article class="award-card"><img src="assets/season2/award-best-batsman.jpg" alt="Jamshed receiving the Best Batsman award"><div class="award-copy"><div class="award-label">🏏 Best Batsman</div><h3>Jamshed</h3><p>SDAM United · 443 runs</p></div></article>
+    <article class="award-card"><img src="assets/season2/award-best-bowler.jpg" alt="Best Bowler award presentation"><div class="award-copy"><div class="award-label">🎯 Best Bowler</div><h3>Vishal Uberoi Jkt</h3><p>SDAM United · 8 wickets</p></div></article>
+    <article class="award-card"><img src="assets/season2/award-best-fielder.jpg" alt="Best Fielder award presentation"><div class="award-copy"><div class="award-label">🧤 Best Fielder</div><h3>Harish Selavaganesan</h3><p>SDAM United · 11 dismissals</p></div></article>
+  </div>
 </div>
+<div class="stat-tabs" aria-label="Player statistics categories"><span class="stat-tab active">BAT · Top 5</span><span class="stat-tab">BOWL · Top 5</span><span class="stat-tab">FIELD · Top 5</span><span class="stat-tab">MVP · Top 5</span></div>
+<div class="stat-panel"><h3>🏏 Top 5 Batsmen</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Innings</th><th>Runs</th><th>Average</th><th>Strike Rate</th></tr></thead><tbody>
+<tr><td class="rank">01</td><td>Jamshed</td><td>SDAM United</td><td>5</td><td><strong>443</strong></td><td>—</td><td>395.54</td></tr>
+<tr><td class="rank">02</td><td>Sher Awan Khan</td><td>BOII Stars</td><td>4</td><td>192</td><td>64.00</td><td>246.15</td></tr>
+<tr><td class="rank">03</td><td>Mazhar Abbas</td><td>BOII Stars</td><td>5</td><td>175</td><td>58.33</td><td>357.14</td></tr>
+<tr><td class="rank">04</td><td>Jawad Ali</td><td>KNS Titans</td><td>4</td><td>143</td><td>71.50</td><td>246.55</td></tr>
+<tr><td class="rank">05</td><td>Haritha Boyagane</td><td>KNS Titans</td><td>3</td><td>137</td><td>137.00</td><td>297.83</td></tr>
+</tbody></table></div></div>
+<div class="stat-panel" style="margin-top:16px"><h3>🎯 Top 5 Bowlers</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Innings</th><th>Wickets</th><th>Economy</th><th>Average</th><th>Dots</th></tr></thead><tbody>
+<tr><td class="rank">01</td><td>Vishal Uberoi Jkt</td><td>SDAM United</td><td>4</td><td><strong>8</strong></td><td>8.40</td><td>5.25</td><td>17</td></tr>
+<tr><td class="rank">02</td><td>Rehan Wickramarachchi</td><td>Udupi Sunshine Cricket Club</td><td>4</td><td>6</td><td>6.80</td><td>5.67</td><td>17</td></tr>
+<tr><td class="rank">03</td><td>Sagar Rawat</td><td>TKC Gully Cricket Guys</td><td>3</td><td>6</td><td>13.20</td><td>11.00</td><td>16</td></tr>
+<tr><td class="rank">04</td><td>Srini</td><td>TKC Gully Cricket Guys</td><td>3</td><td>5</td><td>10.33</td><td>12.40</td><td>22</td></tr>
+<tr><td class="rank">05</td><td>Vineet Shah</td><td>SDAM United</td><td>3</td><td>5</td><td>14.00</td><td>14.00</td><td>11</td></tr>
+</tbody></table></div></div>
+<div class="stat-panel" style="margin-top:16px"><h3>🧤 Top 5 Fielders</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Matches</th><th>Dismissals</th><th>Catches</th><th>Run-outs</th></tr></thead><tbody>
+<tr><td class="rank">01</td><td>Harish Selavaganesan</td><td>SDAM United</td><td>5</td><td><strong>11</strong></td><td>9</td><td>0</td></tr>
+<tr><td class="rank">02</td><td>Syed Kabir</td><td>Udupi Sunshine Cricket Club</td><td>4</td><td>5</td><td>3</td><td>1</td></tr>
+<tr><td class="rank">03</td><td>Satya Narayana Gorla</td><td>Satavahana Strikers</td><td>3</td><td>4</td><td>3</td><td>1</td></tr>
+<tr><td class="rank">04</td><td>Srini</td><td>TKC Gully Cricket Guys</td><td>3</td><td>4</td><td>2</td><td>2</td></tr>
+<tr><td class="rank">05</td><td>Sampath Kumar</td><td>Udupi Sunshine Cricket Club</td><td>4</td><td>4</td><td>3</td><td>0</td></tr>
+</tbody></table></div></div>
+<div class="stat-panel" style="margin-top:16px"><h3>⭐ Top 5 MVP Rankings · Player of the Series</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>MVP Points</th></tr></thead><tbody>
+<tr><td class="rank">01</td><td>Jamshed</td><td>SDAM United</td><td><strong>44.766</strong></td></tr>
+<tr><td class="rank">02</td><td>Sher Awan Khan</td><td>BOII Stars</td><td>23.491</td></tr>
+<tr><td class="rank">03</td><td>Mazhar Abbas</td><td>BOII Stars</td><td>21.649</td></tr>
+<tr><td class="rank">04</td><td>Jawad Ali</td><td>KNS Titans</td><td>20.149</td></tr>
+<tr><td class="rank">05</td><td>Sampath Kumar</td><td>Udupi Sunshine Cricket Club</td><td>18.852</td></tr>
+</tbody></table></div></div>
+<p class="stat-note">Statistics are transcribed from the CricHeroes Season 2 screenshots shared for this page. Figures are shown as provided.</p>
 </section>
 <section class="section" id="sponsors">
 <div class="section-head"><div><h2>Official sponsors</h2><p>Thank you to the partners supporting JPL Season 2.</p></div></div>
 <div class="sponsors"><span class="sponsor">Classic Carpets</span><span class="sponsor">KTL International Indonesia</span><span class="sponsor">PT Gokak Indonesia</span><span class="sponsor">PT Platinumetrix Global Inovasi</span></div>
 </section>
-<div class="notice">Team squads and captains are listed above. Team squads, match results and official group standings are displayed above. Player statistics can be added when the verified individual scorecards are available.</div>
+<div class="notice">Team squads and captains are listed above. Team squads, match results and official group standings are displayed above. Season 2 individual award winners and Top 5 batting, bowling, fielding and MVP statistics are now featured.</div>
 </main>
 <footer><div class="wrap"><span>© 2026 Jakarta Premier League</span><span>Growing cricket · Supporting talent · Building community</span></div></footer>
 </body></html>
