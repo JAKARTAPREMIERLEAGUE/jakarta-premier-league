@@ -171,6 +171,24 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 @media(max-width:900px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.award-card img{height:170px}}
 @media(max-width:560px){.awards-grid{grid-template-columns:1fr 1fr;gap:9px}.award-card img{height:125px}.award-copy{padding:10px}.award-copy h3{font-size:15px}.stat-table{font-size:12px}.stat-table th,.stat-table td{padding:9px 7px}.stat-tabs{gap:5px}.stat-tab{padding:8px 11px;font-size:11px}}
 
+
+/* Sponsor tiers and logo presentation */
+.hero-powered{margin:16px 0 8px!important;max-width:850px!important;font-size:clamp(16px,2vw,21px)!important;line-height:1.5;color:#fff!important}
+.hero-powered strong{color:#ffd43b;font-weight:900;letter-spacing:.02em}
+.hero-powered span{display:inline-block;margin-top:4px;font-size:clamp(12px,1.35vw,15px);font-weight:700;color:#f4f7ff}
+.sponsor-tier{margin:24px 0 30px}
+.sponsor-tier h3{margin:0 0 14px;color:var(--navy);font-size:17px;font-weight:900;text-align:center;letter-spacing:.06em;text-transform:uppercase}
+.sponsor-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:stretch}
+.co-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px;margin:0 auto}
+.sponsor-logo-card{min-height:145px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 7px 20px rgba(16,42,86,.06);text-align:center}
+.sponsor-logo-card img{display:block;width:100%;height:78px;object-fit:contain}
+.sponsor-logo-card strong{font-size:12px;line-height:1.35;color:var(--navy)}
+.title-logo{max-width:520px;min-height:190px;margin:0 auto;border:2px solid #f2c94c;background:linear-gradient(135deg,#fffdf5,#fff);padding:24px}
+.title-logo img{height:105px}
+.title-logo strong{font-size:17px}
+@media(max-width:760px){.sponsor-logo-grid,.co-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.title-logo{max-width:100%}.sponsor-logo-card{min-height:128px;padding:12px}.sponsor-logo-card img{height:68px}}
+@media(max-width:420px){.sponsor-logo-grid,.co-grid{grid-template-columns:1fr 1fr}.hero-powered span{line-height:1.45}}
+
 </style>
 </head>
 <body>
@@ -183,6 +201,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 <div class="crumb"><a href="index.html">Home</a> / <a href="seasons.html">Seasons</a> / Season 2</div>
 <div class="kicker">Jakarta Premier League · 2026 edition</div>
 <h1>JPL SEASON 2</h1>
+<p class="hero-powered"><strong>Powered by Classic Carpets</strong><br><span>Co-powered by KTL International Indonesia · PT Platinumetrix Global Inovasi · PT Gokak Indonesia</span></p>
 <p>Celebrating tennis cricket, bringing teams together and creating unforgettable moments on and off the field.</p>
 <div class="hero-meta"><span class="pill">30–31 May 2026</span><span class="pill">Gandhi Memorial School Ground · Kemayoran</span><span class="pill">Jakarta, Indonesia</span></div>
 </div></section>
@@ -553,7 +572,32 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 </section>
 <section class="section" id="sponsors">
 <div class="section-head"><div><h2>Official sponsors</h2><p>Thank you to the partners supporting JPL Season 2.</p></div></div>
-<div class="sponsors"><span class="sponsor">Classic Carpets</span><span class="sponsor">KTL International Indonesia</span><span class="sponsor">PT Gokak Indonesia</span><span class="sponsor">PT Platinumetrix Global Inovasi</span></div>
+<div class="sponsor-tier title-tier">
+  <h3>Title Sponsor</h3>
+  <div class="sponsor-logo-card title-logo"><img src="assets/sponsors/classic-carpets.png" alt="Classic Carpets logo"><strong>Classic Carpets</strong></div>
+</div>
+<div class="sponsor-tier co-tier">
+  <h3>Co-Sponsors</h3>
+  <div class="sponsor-logo-grid co-grid">
+    <div class="sponsor-logo-card"><img src="assets/sponsors/ktl-international-indonesia.jpg" alt="KTL International Indonesia logo"><strong>KTL International Indonesia</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/pt-gokak-indonesia.png" alt="PT Gokak Indonesia logo"><strong>PT Gokak Indonesia</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/pgi-data.png" alt="PT Platinumetrix Global Inovasi logo"><strong>PT Platinumetrix Global Inovasi</strong></div>
+  </div>
+</div>
+<div class="sponsor-tier partner-tier">
+  <h3>Sponsors</h3>
+  <div class="sponsor-logo-grid">
+    <div class="sponsor-logo-card"><img src="assets/sponsors/finsure.jpg" alt="Finsure logo"><strong>Finsure</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/jvr.png" alt="JVR logo"><strong>JVR</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/akgrains.png" alt="AKGRAINS logo"><strong>AKGRAINS</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/udupi.png" alt="Udupi logo"><strong>Udupi</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/showtix-id.jpg" alt="Showtix.id logo"><strong>Showtix.id</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/swastik.jpg" alt="Swastik logo"><strong>Swastik</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/wynder-holidays.jpg" alt="Wynder Holidays logo"><strong>Wynder Holidays</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/bank-of-india-indonesia.jpeg" alt="Bank of India Indonesia logo"><strong>Bank of India Indonesia</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/yayasan-kmn.png" alt="Yayasan Karnataka Mitra Nusantara Indonesia logo"><strong>Yayasan Karnataka Mitra Nusantara Indonesia</strong></div>
+  </div>
+</div>
 </section>
 <div class="notice">Team squads and captains are listed above. Team squads, match results and official group standings are displayed above. Season 2 individual award winners and Top 5 batting, bowling, fielding and MVP statistics are now featured.</div>
 </main>
