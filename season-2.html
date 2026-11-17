@@ -68,7 +68,7 @@ header{background:#fff;border-bottom:1px solid var(--line)}
 .brand,.brand small{color:var(--navy)}
 .brand-mark{border:2px solid var(--red);color:var(--red);font-weight:900}
 nav a:hover,.tabs a:hover{color:var(--red)}
-.hero{position:relative;isolation:isolate;min-height:420px;display:flex;align-items:center;padding:64px 0;background:linear-gradient(90deg,rgba(7,23,52,.94) 0%,rgba(16,42,86,.78) 48%,rgba(16,42,86,.12) 100%),url('assets/season2/season2-header-batting.jpg') center 38%/cover no-repeat}
+.hero{position:relative;isolation:isolate;min-height:420px;display:flex;align-items:center;padding:64px 0;background:linear-gradient(90deg,rgba(7,23,52,.94) 0%,rgba(16,42,86,.78) 48%,rgba(16,42,86,.12) 100%),url('assets/season2/jpl-season2-header-ICA09856.jpg') center 38%/cover no-repeat}
 .hero:after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:8px;background:linear-gradient(90deg,var(--lime) 0 25%,var(--green) 25% 55%,var(--red) 55% 75%,var(--navy) 75%)}
 .kicker{color:var(--lime)}.crumb a{color:var(--lime)}h1{font-style:italic;text-shadow:0 4px 20px #0008}.hero p{color:#f2f5fb}.pill{border-color:#ffffff70;background:#ffffff1c}
 .tabs-wrap{background:#fff;border-bottom:3px solid var(--lime)}.tabs{color:var(--navy)}.tabs a{padding:2px 0}.tabs a:hover{color:var(--red)}
@@ -123,6 +123,28 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 .standings-note{margin:12px 2px 0;color:var(--muted);font-size:12px}
 @media(max-width:900px){.standings-grid{grid-template-columns:1fr}.standings-table{min-width:570px}}
 
+
+/* Season 2 champions spotlight */
+.champions-section{padding:48px 0 42px;background:linear-gradient(135deg,#fff 0%,#f5f7fc 100%);border-bottom:1px solid var(--line)}
+.champions-heading{text-align:center;margin:0 auto 24px;max-width:760px}
+.champions-heading .media-tag{display:inline-block}
+.champions-heading h2{font-size:clamp(25px,3vw,36px);line-height:1.15;color:var(--navy);margin:10px 0 8px;font-weight:900}
+.champions-heading p{color:var(--muted);margin:0}
+.champions-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:stretch}
+.champion-card{position:relative;overflow:hidden;border-radius:20px;background:#102a56;box-shadow:0 14px 34px rgba(16,42,86,.14);min-width:0}
+.champion-card.winner{border:3px solid #f2c94c}
+.champion-card.runner{border:2px solid #c5ccd7}
+.champion-photo{width:100%;height:clamp(230px,29vw,360px);object-fit:cover;display:block}
+.champion-card.winner .champion-photo{height:clamp(270px,34vw,410px)}
+.champion-info{padding:19px 22px 22px;color:#fff;text-align:center;background:linear-gradient(135deg,#102a56,#173f78)}
+.champion-card.winner .champion-info{background:linear-gradient(135deg,#102a56,#8a6516)}
+.champion-rank{font-size:12px;letter-spacing:.14em;font-weight:900;color:#ffd43b;text-transform:uppercase;margin-bottom:5px}
+.champion-card.runner .champion-rank{color:#dce3ec}
+.champion-info h3{font-size:clamp(21px,2.5vw,30px);line-height:1.15;margin:0 0 6px;font-weight:900}
+.champion-info p{margin:0;font-size:12px;letter-spacing:.06em;font-weight:700;color:#f3f6fb}
+.champion-final{display:inline-block;margin-top:12px;padding:6px 12px;border:1px solid rgba(255,255,255,.35);border-radius:99px;font-size:12px;color:#fff}
+@media(max-width:700px){.champions-section{padding:34px 0}.champions-grid{grid-template-columns:1fr}.champion-card.winner .champion-photo,.champion-photo{height:auto;aspect-ratio:16/10}.champion-info{padding:16px}}
+
 </style>
 </head>
 <body>
@@ -138,6 +160,36 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 <p>Celebrating tennis cricket, bringing teams together and creating unforgettable moments on and off the field.</p>
 <div class="hero-meta"><span class="pill">30–31 May 2026</span><span class="pill">Gandhi Memorial School Ground · Kemayoran</span><span class="pill">Jakarta, Indonesia</span></div>
 </div></section>
+
+<section class="champions-section" id="season2-champions">
+  <div class="wrap">
+    <div class="champions-heading">
+      <span class="media-tag">SEASON 2 HONOURS</span>
+      <h2>Celebrating Our Champions</h2>
+      <p>Recognising the teams that finished on top at Jakarta Premier League Season 2.</p>
+    </div>
+    <div class="champions-grid">
+      <article class="champion-card winner">
+        <img class="champion-photo" src="assets/season2/jpl-season2-winners-SDAM-United.jpg" alt="SDAM United team photograph, Jakarta Premier League Season 2 champions">
+        <div class="champion-info">
+          <div class="champion-rank">🏆 Season 2 Champions</div>
+          <h3>SDAM UNITED</h3>
+          <p>JAKARTA PREMIER LEAGUE SEASON 2 WINNERS</p>
+          <span class="champion-final">Final · Won by 88 runs</span>
+        </div>
+      </article>
+      <article class="champion-card runner">
+        <img class="champion-photo" src="assets/season2/jpl-season2-runners-up-BOII-Stars.jpg" alt="BOII Stars team photograph, Jakarta Premier League Season 2 runners-up">
+        <div class="champion-info">
+          <div class="champion-rank">🥈 Season 2 Runners-up</div>
+          <h3>BOII STARS</h3>
+          <p>JAKARTA PREMIER LEAGUE SEASON 2 RUNNERS-UP</p>
+          <span class="champion-final">Final · 65/9</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 <div class="tabs-wrap"><div class="wrap tabs">
 <a href="#overview">OVERVIEW</a><a href="#season-moments">VIDEOS</a><a href="#moments-gallery">GALLERY</a><a href="#teams">TEAMS</a><a href="#fixtures">FIXTURES & RESULTS</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">PLAYER STATISTICS</a><a href="#sponsors">SPONSORS</a>
 </div></div>
