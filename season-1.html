@@ -30,16 +30,28 @@ section{padding:70px 0}.section-head{margin-bottom:26px}.eyebrow{font-size:12px;
 footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot strong{color:#fff;letter-spacing:.1em}.foot p{max-width:540px;color:#b8c6d9;font-size:13px}.foot-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}.copyright{border-top:1px solid #ffffff22;margin-top:25px;padding-top:15px;font-size:12px;color:#aab9ce}
 @media(max-width:850px){.teams-grid{grid-template-columns:repeat(2,1fr)}.results-grid{grid-template-columns:repeat(2,1fr)}.quickstats{grid-template-columns:repeat(2,1fr)}.nav{padding:12px 0;align-items:flex-start;flex-direction:column}nav{justify-content:flex-start;gap:12px}.hero{min-height:440px}}
 @media(max-width:560px){.top .wrap{display:block}.top .wrap span:last-child{display:none}.results-grid{grid-template-columns:1fr}.champions{grid-template-columns:1fr}.sponsor-strip{gap:12px;flex-direction:column}.teams-grid{gap:10px}.team-card{padding:12px}.team-card img{width:88px;height:88px}.quickstat{padding:14px}.quickstat b{font-size:26px}section{padding:52px 0}.hero p.lead{font-size:16px}}
+
+.champion-logo{width:112px;height:92px;object-fit:contain;background:#fff;border-radius:12px;padding:8px;margin:14px 0 8px;display:block}
+.sponsors-section{background:#fff}
+.sponsor-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.sponsor-logo-card{min-height:150px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;align-items:center;justify-content:center}
+.sponsor-logo-card img{max-width:100%;width:100%;height:105px;object-fit:contain}
+.supporters{margin-top:34px;padding:24px;background:#f4f6fa;border-radius:15px}
+.supporters h3{margin:0 0 14px;color:var(--navy)}
+.supporter-list{display:flex;gap:12px 28px;flex-wrap:wrap;color:#34445d;font-weight:700}
+@media(max-width:850px){.sponsor-logos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.sponsor-logos{grid-template-columns:repeat(2,minmax(0,1fr))}.sponsor-logo-card{min-height:120px;padding:12px}.sponsor-logo-card img{height:85px}}
+
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · INAUGURAL SEASON</span><span>JAKARTA, INDONESIA</span></div></div>
 <header><div class="wrap nav">
 <a class="brand" href="index.html"><img src="assets/season1/jpl-logo.png" alt="JPL"><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
-<nav><a href="index.html">HOME</a><a href="seasons.html">SEASONS</a><a href="#teams">TEAMS</a><a href="#results">RESULTS</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">PLAYER STATS</a></nav>
+<nav><a href="index.html">HOME</a><a href="#teams">TEAMS</a><a href="#results">RESULTS</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">PLAYER STATS</a></nav>
 </div></header>
 <section class="hero"><div class="wrap">
-<div class="crumb"><a href="index.html">Home</a> / <a href="seasons.html">Seasons</a> / Season 1</div>
+<div class="crumb"><a href="index.html">Home</a> / Season 1</div>
 <div class="kicker">The beginning · 2025</div>
 <h1>Jakarta Premier League – Season 1</h1>
 <p class="hero-powered"><strong>Powered by Classic Carpets</strong><br><span>Co-Powered by PT Platinumetrix Global Inovasi</span></p>
@@ -49,6 +61,10 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 <div class="wrap quickstats">
 <div class="quickstat"><b>15</b><span>Total Matches</span></div><div class="quickstat"><b>8</b><span>Participating Teams</span></div><div class="quickstat"><b>2</b><span>Tournament Days</span></div><div class="quickstat"><b>2025</b><span>Inaugural Season</span></div>
 </div>
+<section id="champions"><div class="wrap"><div class="section-head"><div class="eyebrow">Season 1 honours</div><h2>Celebrating Our Champions</h2><p>The teams that reached the final of the inaugural JPL season.</p></div><div class="champions">
+<article class="champion"><div class="medal">🏆</div><div class="tag">Inaugural Season Champions</div><img class="champion-logo" src="assets/season1/team-powerhouse-xi.jpg" alt="Powerhouse XI team logo"><h3>POWERHOUSE XI</h3><p>Defeated Udupi Sunshine Cricket Club by 20 runs in the final.</p></article>
+<article class="champion runner"><div class="medal">🥈</div><div class="tag">Season 1 Runners-up</div><img class="champion-logo" src="assets/season1/team-udupi-sunshine.png" alt="Udupi Sunshine Cricket Club team logo"><h3>UDUPI SUNSHINE CRICKET CLUB</h3><p>Finished as runners-up after a strong tournament campaign.</p></article>
+</div></div></section>
 <main>
 <section id="overview"><div class="wrap"><div class="section-head"><div class="eyebrow">The beginning</div><h2>Where the JPL story began</h2><p>Jakarta Premier League launched its journey in December 2025, bringing cricket teams together at Gandhi School Ground, Kemayoran. Season 1 set the foundation for a growing community built around competition, teamwork and a shared love of cricket.</p></div>
 <div class="sponsor-strip"><div><div class="sponsor-label">Title sponsor</div><div class="sponsor-main">Powered by Classic Carpets</div></div><div><div class="sponsor-label">Co-powered by</div><div class="sponsor-sub">PT Platinumetrix Global Inovasi</div></div></div></div></section>
@@ -94,10 +110,19 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 <article class="match-card"><div class="match-top"><span>Semi-final · 14 Dec</span><span>Match 14</span></div><div class="match-body"><div class="match-team">Telugu Strikers <span class="score">71/7</span></div><div class="match-team"><strong>Udupi Sunshine Cricket Club</strong><span class="score">72/1</span></div></div><div class="match-result">Udupi Sunshine won by 9 wickets</div></article>
 <article class="match-card"><div class="match-top"><span>Final · 14 Dec</span><span>Match 15</span></div><div class="match-body"><div class="match-team"><strong>Powerhouse XI</strong><span class="score">139/3</span></div><div class="match-team">Udupi Sunshine Cricket Club <span class="score">119/5</span></div></div><div class="match-result">Powerhouse XI won by 20 runs · Champions</div></article>
 </div></div></section>
-<section id="champions"><div class="wrap"><div class="section-head"><div class="eyebrow">Season 1 honours</div><h2>Celebrating Our Champions</h2><p>The teams that reached the final of the inaugural JPL season.</p></div><div class="champions">
-<article class="champion"><div class="medal">🏆</div><div class="tag">Inaugural Season Champions</div><h3>POWERHOUSE XI</h3><p>Defeated Udupi Sunshine Cricket Club by 20 runs in the final.</p></article>
-<article class="champion runner"><div class="medal">🥈</div><div class="tag">Season 1 Runners-up</div><h3>UDUPI SUNSHINE CRICKET CLUB</h3><p>Finished as runners-up after a strong tournament campaign.</p></article>
-</div></div></section>
+
+
+<section id="sponsors" class="sponsors-section"><div class="wrap"><div class="section-head"><div class="eyebrow">Thank you for your support</div><h2>Season 1 Sponsors &amp; Partners</h2><p>Our appreciation to the organisations and businesses that supported the inaugural Jakarta Premier League.</p></div><div class="sponsor-logos">
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/classic-carpets.png" alt="Classic Carpets"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/pgi.png" alt="PT Platinumetrix Global Inovasi"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/pt-gokak.png" alt="PT Gokak Indonesia"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/jayata-consulting.png" alt="Jayata Consulting"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/mystery-lounge.jpg" alt="Mystery Lounge and Bar"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/nityo-infotech.jpg" alt="Nityo Infotech"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/sks.jpg" alt="SKS"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/spicemistry.jpg" alt="Spice Mistry"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/udupi-by-rf.png" alt="Udupi by RF Hospitality"></div>
+</div><div class="supporters"><h3>Special Thanks to Our Supporters</h3><div class="supporter-list"><span>Mr. Karthik Sundar</span><span>Mr. Sudharman Shetty</span><span>Mr. Sukesh Shetty</span><span>Mr. Varun Rawat</span></div></div></div></section>
 <section id="statistics" style="background:#fff"><div class="wrap"><div class="section-head"><div class="eyebrow">Standout performances</div><h2>Player Statistics</h2><p>Top five performers in each category, based on the player-statistics screenshots provided.</p></div>
 <div class="stat-tabs" role="tablist" aria-label="Player statistics categories">
 <button class="stat-tab active" type="button" data-tab="bat">BAT · TOP 5</button><button class="stat-tab" type="button" data-tab="bowl">BOWL · TOP 5</button><button class="stat-tab" type="button" data-tab="field">FIELD · TOP 5</button><button class="stat-tab" type="button" data-tab="mvp">MVP · TOP 5</button>
