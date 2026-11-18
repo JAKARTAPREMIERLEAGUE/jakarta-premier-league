@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JPL Season 3 is coming soon. Follow event plans, register your team and explore sponsorship opportunities with Jakarta Premier League.">
+<title>JPL Season 3 | Coming Soon</title>
+<style>
+:root{--navy:#102A56;--navy2:#071B38;--orange:#F47721;--red:#D62828;--white:#fff;--paper:#F5F7FA;--ink:#13233D;--muted:#66758A;--line:#E2E8F0}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--navy2);color:#dce6f6;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:900;letter-spacing:.04em}.brand img{width:58px;height:58px;object-fit:contain}.brand small{display:block;color:var(--orange);font-size:10px;letter-spacing:.2em}
+nav{display:flex;gap:20px;align-items:center;font-size:12px;font-weight:800;color:#394b65}nav a:hover{color:var(--orange)}.menu{display:none;background:var(--navy);color:white;border:0;border-radius:7px;padding:10px 13px;font-weight:800}
+.hero{position:relative;isolation:isolate;min-height:650px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(5,20,45,.94) 0%,rgba(8,31,65,.76) 52%,rgba(8,31,65,.22) 100%),url('assets/season3/season3-header-photo.jpg') center 48%/cover no-repeat;overflow:hidden}
+.hero:after{content:"";position:absolute;z-index:-1;right:-110px;bottom:-250px;width:540px;height:540px;border:55px solid rgba(244,119,33,.23);border-radius:50%}
+.hero-inner{max-width:760px;padding:92px 0 100px}.eyebrow,.kicker{display:inline-flex;align-items:center;gap:10px;color:#ff9a50;font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.eyebrow:before{content:"";width:30px;height:3px;background:var(--orange)}
+h1{font-size:clamp(48px,8vw,96px);line-height:.94;letter-spacing:-.055em;margin:20px 0 16px;text-transform:uppercase}h1 span{color:#ff8a32;display:block}.hero p{max-width:640px;color:#e3ebf6;font-size:18px;margin:0 0 26px}.coming-pill{display:inline-block;border:1px solid #ffb16e;background:#f4772124;color:#ffd2ae;border-radius:99px;padding:8px 14px;font-size:11px;font-weight:900;letter-spacing:.14em}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:5px;font-size:12px;font-weight:900;letter-spacing:.06em;border:0;cursor:pointer}.btn.primary{background:var(--orange);color:#fff}.btn.ghost{border:1px solid #ffffffa8;color:#fff}.btn.dark{background:var(--navy);color:#fff}
+.meta-strip{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:-34px;position:relative;z-index:3;box-shadow:0 16px 40px #102a5612}.meta{padding:20px 24px;border-right:1px solid var(--line)}.meta:last-child{border:0}.meta b{display:block;color:var(--navy);font-size:17px}.meta span{font-size:10px;color:var(--muted);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+section{padding:78px 0}.section-head{max-width:760px;margin-bottom:30px}.section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.08;color:var(--navy);margin:9px 0 12px}.section-head p{color:var(--muted);font-size:15px;margin:0}
+.showcase{background:#fff}.showcase-image{border-radius:14px;overflow:hidden;box-shadow:0 20px 45px #102a5620}.showcase-image img{display:block;width:100%;height:auto}.image-caption{font-size:11px;color:var(--muted);margin-top:10px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 10px 28px #102a5609}.feature .number{color:var(--orange);font-size:11px;font-weight:900;letter-spacing:.15em}.feature h3{color:var(--navy);font-size:19px;margin:9px 0 7px}.feature p{color:var(--muted);font-size:13px;margin:0}.planned{display:inline-block;margin-top:13px;border-radius:99px;background:#fff3e9;color:#b64c08;padding:5px 9px;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.event-band{background:linear-gradient(115deg,var(--navy),var(--navy2));color:#fff}.event-band h2{font-size:clamp(30px,4vw,44px);margin:8px 0 12px}.event-band .intro{max-width:760px;color:#d8e3f1}.event-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.event-item{border:1px solid #ffffff30;border-radius:10px;padding:20px;background:#ffffff0a}.event-item b{display:block;color:#ff9a50;margin-bottom:5px}.event-item span{font-size:13px;color:#d8e3f1}
+.forms-section{background:#edf1f6}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.form-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 14px 34px #102a560b}.form-card h3{font-size:24px;color:var(--navy);margin:4px 0 8px}.form-card>p{font-size:13px;color:var(--muted);margin:0 0 20px}.form-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:10px;font-weight:900;letter-spacing:.08em;color:var(--navy);text-transform:uppercase}.field input,.field select,.field textarea{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cfd8e5;border-radius:7px;background:#fff;font:inherit;color:var(--ink)}.field textarea{min-height:82px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid #f4772128;border-color:var(--orange)}.form-card button{margin-top:16px;width:100%}.form-note{font-size:10px;color:var(--muted);margin:12px 0 0}.honeypot{position:absolute;left:-5000px}
+.sponsor{background:#fff}.sponsor-grid{display:grid;grid-template-columns:1fr .9fr;gap:36px;align-items:center}.sponsor-copy h2{font-size:clamp(32px,4vw,48px);line-height:1.05;color:var(--navy);margin:10px 0 14px}.sponsor-copy p{color:var(--muted);font-size:14px}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}.benefit{padding:12px 14px;background:var(--paper);border-radius:8px;color:var(--navy);font-size:12px;font-weight:800}.sponsor-callout{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:14px;padding:28px}.sponsor-callout h3{font-size:25px;margin:0 0 10px}.sponsor-callout p{color:#d8e3f1;font-size:13px}.sponsor-callout .btn{margin-top:8px}
+.roadmap{background:#f1f4f8}.roadmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}.step .num{font-size:11px;color:var(--orange);font-weight:900;letter-spacing:.14em}.step h3{color:var(--navy);font-size:17px;margin:8px 0}.step p{font-size:12px;color:var(--muted);margin:0}.status{display:inline-block;margin-top:13px;padding:5px 9px;border-radius:99px;background:#fff2e7;color:#b64c08;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.updates{background:#fff}.update-box{padding:26px;border:1px dashed #b9c7d9;border-radius:12px;background:#f9fbfd}.update-box h3{color:var(--navy);margin:0 0 5px}.update-box p{color:var(--muted);margin:0;font-size:13px}
+footer{background:#06162e;color:#d5dfed;padding:40px 0 20px}.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.foot strong{font-size:18px;color:#fff}.foot p{max-width:440px;color:#aebdd1;font-size:12px}.foot-links{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;font-weight:700}.foot-links a:hover{color:#ff9b50}.copyright{border-top:1px solid #ffffff20;margin-top:25px;padding-top:15px;color:#8fa2bd;font-size:10px}
+@media(max-width:850px){nav{display:none;position:absolute;left:0;right:0;top:78px;background:#fff;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav.open nav{display:flex}.menu{display:block}.hero{min-height:570px;background-position:58% center}.hero-inner{padding:72px 0 85px}.features{grid-template-columns:1fr 1fr}.form-grid,.sponsor-grid{grid-template-columns:1fr}.roadmap-grid{grid-template-columns:1fr 1fr}.event-grid{grid-template-columns:1fr}.meta-strip{grid-template-columns:1fr}.meta{border-right:0;border-bottom:1px solid var(--line)}.meta:last-child{border-bottom:0}}
+@media(max-width:540px){section{padding:58px 0}.features,.roadmap-grid{grid-template-columns:1fr}.form-fields,.benefits{grid-template-columns:1fr}.field.full{grid-column:1}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · SEASON 3</span><span>CONNECTING CRICKET IN INDONESIA</span></div></div>
+<header><div class="wrap nav" id="nav">
+<a class="brand" href="index.html"><img src="assets/jpl-logo.jpg" alt="Jakarta Premier League logo"><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
+<nav aria-label="Season 3 navigation"><a href="index.html">HOME</a><a href="#whats-new">WHAT'S NEW</a><a href="#register">TEAM REGISTRATION</a><a href="#sponsors">SPONSORS</a><a href="#roadmap">EVENT PLANS</a></nav>
+<button class="menu" onclick="document.getElementById('nav').classList.toggle('open')">MENU</button>
+</div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="hero-inner">
+<div class="eyebrow">The next chapter of JPL begins</div><div class="coming-pill">SEASON 3 · COMING SOON</div>
+<h1>JAKARTA PREMIER <span>LEAGUE · SEASON 3</span></h1>
+<p>More cricket. More excitement. One bigger community. We are working on the next JPL experience — bringing players, families, supporters and partners together.</p>
+<div class="hero-actions"><a class="btn primary" href="#register">REGISTER YOUR TEAM</a><a class="btn ghost" href="#sponsors">BECOME A SPONSOR</a></div>
+</div></div></section>
+<div class="wrap"><div class="meta-strip">
+<div class="meta"><b>Dates to be announced</b><span>Official event dates coming soon</span></div>
+<div class="meta"><b>Jakarta, Indonesia</b><span>Venue details to be announced</span></div>
+<div class="meta"><b>Team registration open</b><span>Submit your team's interest</span></div>
+</div></div>
+
+<section class="showcase"><div class="wrap">
+<div class="section-head"><div class="kicker">A glimpse of what's ahead</div><h2>Imagine the Season 3 experience.</h2><p>Our proposed event setup brings together cricket, live entertainment and a festival atmosphere. This visual is a concept model for planning and presentation.</p></div>
+<div class="showcase-image"><img src="assets/season3/season3-ground-model.jpeg" alt="JPL Season 3 proposed 3D cricket ground and event setup"></div>
+<div class="image-caption">Concept visual for JPL Season 3 planning. Final event setup and activations are subject to confirmation.</div>
+</div></section>
+
+<section id="whats-new"><div class="wrap">
+<div class="section-head"><div class="kicker">What's new in Season 3</div><h2>A bigger match-day experience.</h2><p>We are planning new ways to make the tournament more engaging for players, supporters and families.</p></div>
+<div class="features">
+<article class="feature"><div class="number">01 / NIGHT CRICKET</div><h3>Floodlit matches</h3><p>A night-match atmosphere with ground lighting, a lively crowd and a premium event feel.</p><span class="planned">Planned feature</span></article>
+<article class="feature"><div class="number">02 / REVIEW SYSTEM</div><h3>DRS-style match reviews</h3><p>Planned third-umpire reviews for LBW, run-outs and stumpings, subject to the final tournament rules and technology setup.</p><span class="planned">Planned feature</span></article>
+<article class="feature"><div class="number">03 / BROADCAST</div><h3>Live streaming and replays</h3><p>Multi-camera coverage, match replays and slow-motion moments, with a large LED scoreboard experience.</p><span class="planned">Planned feature</span></article>
+<article class="feature"><div class="number">04 / FAN EXPERIENCE</div><h3>Food and community festival</h3><p>A welcoming event atmosphere for players, families and spectators beyond the boundary.</p><span class="planned">Planned feature</span></article>
+<article class="feature"><div class="number">05 / MORE SPORTS</div><h3>Activities beyond cricket</h3><p>We are exploring additional activities such as badminton and family-friendly games alongside the cricket event.</p><span class="planned">Under planning</span></article>
+<article class="feature"><div class="number">06 / RECOGNITION</div><h3>Celebrate every contribution</h3><p>More opportunities to recognise players, teams, volunteers, partners and the people who make JPL possible.</p><span class="planned">Planning concept</span></article>
+</div>
+</div></section>
+
+<section class="event-band"><div class="wrap">
+<div class="kicker">More than a tournament</div><h2>Cricket brings us together.</h2><p class="intro">Season 3 is being planned as a community event — a place to compete, connect, cheer, discover new activities and celebrate the growth of cricket in Indonesia.</p>
+<div class="event-grid"><div class="event-item"><b>For players</b><span>Competitive tennis-ball cricket, team spirit and memorable match-day moments.</span></div><div class="event-item"><b>For families and fans</b><span>A welcoming environment with activities and entertainment beyond the game.</span></div><div class="event-item"><b>For the cricket community</b><span>A platform to connect clubs, supporters, sponsors and aspiring players.</span></div></div>
+</div></section>
+
+<section class="forms-section" id="register"><div class="wrap">
+<div class="section-head"><div class="kicker">Be part of Season 3</div><h2>Team registration of interest.</h2><p>Interested teams can submit their details below. This is an expression of interest, not a final confirmation of participation. Our organising team will contact you with further information.</p></div>
+<div class="form-grid">
+<div class="form-card"><div class="kicker">For cricket teams</div><h3>Register your team</h3><p>Share your team and captain details so we can contact you when registration details are finalised.</p>
+<form action="https://formsubmit.co/jakartapremierleague50@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="JPL Season 3 - Team Registration Interest"><input type="hidden" name="_captcha" value="true"><input type="hidden" name="_template" value="table">
+<div class="honeypot"><label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+<div class="form-fields">
+<div class="field full"><label for="team-name">Team name *</label><input id="team-name" name="Team name" required placeholder="Enter team name"></div>
+<div class="field"><label for="captain">Captain name *</label><input id="captain" name="Captain name" required placeholder="Captain's full name"></div>
+<div class="field"><label for="team-phone">Contact number *</label><input id="team-phone" name="Contact number" type="tel" required placeholder="+62..."></div>
+<div class="field"><label for="team-wa">WhatsApp number *</label><input id="team-wa" name="WhatsApp number" type="tel" required placeholder="+62..."></div>
+<div class="field"><label for="team-email">Email address *</label><input id="team-email" name="Email address" type="email" required placeholder="team@example.com"></div>
+<div class="field"><label for="team-location">Team location *</label><input id="team-location" name="Team location" required placeholder="City / area"></div>
+<div class="field"><label for="squad-size">Approx. squad size</label><select id="squad-size" name="Approximate squad size"><option value="">Select</option><option>Below 12</option><option>12–15</option><option>16–18</option><option>More than 18</option></select></div>
+<div class="field full"><label for="team-message">Additional message</label><textarea id="team-message" name="Additional message" placeholder="Anything you would like the organisers to know?"></textarea></div>
+</div><button class="btn primary" type="submit">SUBMIT TEAM INTEREST</button><p class="form-note">Your details will be sent to the JPL organising email through our form service. Initial activation of the form service may be required.</p>
+</form></div>
+
+<div class="form-card" id="sponsors"><div class="kicker">Partner with JPL</div><h3>Become a Season 3 sponsor</h3><p>Help us create a successful event and support the development of cricket and community sport in Indonesia.</p>
+<form action="https://formsubmit.co/jakartapremierleague50@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="JPL Season 3 - Sponsorship Enquiry"><input type="hidden" name="_captcha" value="true"><input type="hidden" name="_template" value="table">
+<div class="honeypot"><label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+<div class="form-fields">
+<div class="field full"><label for="company">Company / organisation *</label><input id="company" name="Company or organisation" required placeholder="Company name"></div>
+<div class="field"><label for="sponsor-contact">Contact person *</label><input id="sponsor-contact" name="Contact person" required placeholder="Full name"></div>
+<div class="field"><label for="designation">Designation</label><input id="designation" name="Designation" placeholder="Your role"></div>
+<div class="field"><label for="sponsor-phone">Contact number *</label><input id="sponsor-phone" name="Contact number" type="tel" required placeholder="+62..."></div>
+<div class="field"><label for="sponsor-email">Email address *</label><input id="sponsor-email" name="Email address" type="email" required placeholder="name@company.com"></div>
+<div class="field full"><label for="interest">Sponsorship interest</label><select id="interest" name="Sponsorship interest"><option value="">Select area of interest</option><option>Title sponsorship</option><option>Associate sponsorship</option><option>Official partner</option><option>Product / in-kind support</option><option>Other / discuss options</option></select></div>
+<div class="field full"><label for="sponsor-message">Message</label><textarea id="sponsor-message" name="Message" placeholder="Tell us how you would like to partner with JPL"></textarea></div>
+</div><button class="btn dark" type="submit">SEND SPONSOR ENQUIRY</button><p class="form-note">Our organising team will follow up with sponsorship information and available opportunities.</p>
+</form></div>
+</div></div></section>
+
+<section class="sponsor"><div class="wrap sponsor-grid">
+<div class="sponsor-copy"><div class="kicker">Support the next chapter</div><h2>Help us make Season 3 a success.</h2><p>We invite businesses, brands and community partners to support Jakarta Premier League Season 3. Your partnership can help us deliver a stronger tournament experience, create opportunities for players and bring more people into the cricket community.</p>
+<div class="benefits"><div class="benefit">On-ground brand visibility</div><div class="benefit">Jersey and event branding</div><div class="benefit">LED and digital exposure</div><div class="benefit">Live-stream visibility</div><div class="benefit">Social media promotion</div><div class="benefit">Community engagement</div></div>
+<a class="btn primary" href="mailto:jakartapremierleague50@gmail.com?subject=JPL%20Season%203%20Sponsorship%20Enquiry">DISCUSS SPONSORSHIP</a>
+</div>
+<div class="sponsor-callout"><div class="kicker">Let's build the next season together</div><h3>Your support can help grow the game.</h3><p>Become part of a community-focused sporting event and connect with players, families, spectators and cricket supporters in Jakarta.</p><a class="btn ghost" href="#sponsors">SUBMIT SPONSOR INTEREST</a></div>
+</div></section>
+
+<section class="roadmap" id="roadmap"><div class="wrap">
+<div class="section-head"><div class="kicker">The road to Season 3</div><h2>Follow our event preparations.</h2><p>We will keep this section updated as plans are confirmed and announcements are ready to share.</p></div>
+<div class="roadmap-grid">
+<article class="step"><div class="num">01 / PREPARATION</div><h3>Event planning</h3><p>Venue coordination, event setup, partners and operational preparation.</p><span class="status">In planning</span></article>
+<article class="step"><div class="num">02 / PARTICIPATION</div><h3>Team interest</h3><p>Collecting expressions of interest from teams and captains.</p><span class="status">Open for interest</span></article>
+<article class="step"><div class="num">03 / ANNOUNCEMENTS</div><h3>Dates and format</h3><p>Official dates, venue confirmation, tournament format and key details.</p><span class="status">To be announced</span></article>
+<article class="step"><div class="num">04 / EVENT COUNTDOWN</div><h3>Ready for match day</h3><p>Final event schedule, participating teams, partners and match-day updates.</p><span class="status">Coming later</span></article>
+</div>
+</div></section>
+
+<section class="updates"><div class="wrap"><div class="section-head"><div class="kicker">Stay connected</div><h2>Season 3 announcements.</h2><p>Official dates and further event details will be published here once confirmed.</p></div><div class="update-box"><h3>More updates coming soon.</h3><p>Follow Jakarta Premier League and check back for registration updates, sponsor announcements, event plans and the official Season 3 schedule.</p></div></div></section>
+</main>
+<footer><div class="wrap"><div class="foot"><div><strong>JAKARTA PREMIER LEAGUE · SEASON 3</strong><p>More cricket. More excitement. One bigger community. Supporting the growth of cricket in Indonesia.</p></div><div class="foot-links"><a href="index.html">Home</a><a href="#whats-new">What's New</a><a href="#register">Team Registration</a><a href="#sponsors">Sponsors</a><a href="mailto:jakartapremierleague50@gmail.com">Contact JPL</a></div></div><div class="copyright">© <span id="year"></span> Jakarta Premier League. All rights reserved.</div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
