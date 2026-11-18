@@ -11,7 +11,7 @@
 a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
 .top{background:var(--navy);color:#e3edf2;font-size:12px;padding:9px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 header{background:#fff;border-bottom:1px solid var(--line)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-weight:900;letter-spacing:.04em;color:var(--navy);display:flex;align-items:center;gap:12px}.brand-mark{width:52px;height:52px;border:1px dashed #b7c8bf;border-radius:50%;display:grid;place-items:center;color:var(--green);font-size:10px;text-align:center;line-height:1.1}.brand small{display:block;color:var(--green);font-size:10px;letter-spacing:.18em}
+.brand{font-weight:900;letter-spacing:.04em;color:var(--navy);display:flex;align-items:center;gap:12px}.brand-mark{width:58px;height:58px;flex:0 0 58px;object-fit:contain;border:0;border-radius:50%;background:#fff;padding:3px}.brand small{display:block;color:var(--green);font-size:10px;letter-spacing:.18em}
 nav{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;font-weight:800;color:#3d5363}nav a:hover,.tabs a:hover{color:var(--green)}
 .hero{background:linear-gradient(110deg,rgba(9,35,48,.97),rgba(15,75,58,.88));color:white;padding:52px 0 46px}
 .crumb{font-size:12px;color:#d7e7df;margin-bottom:20px}.crumb a{color:var(--lime)}
@@ -68,7 +68,7 @@ header{background:#fff;border-bottom:1px solid var(--line)}
 .brand,.brand small{color:var(--navy)}
 .brand-mark{border:2px solid var(--red);color:var(--red);font-weight:900}
 nav a:hover,.tabs a:hover{color:var(--red)}
-.hero{position:relative;isolation:isolate;min-height:420px;display:flex;align-items:center;padding:64px 0;background:linear-gradient(90deg,rgba(7,23,52,.94) 0%,rgba(16,42,86,.78) 48%,rgba(16,42,86,.12) 100%),url('assets/season2/jpl-season2-header-ICA09856.jpg') center 38%/cover no-repeat}
+.hero{position:relative;isolation:isolate;min-height:420px;display:flex;align-items:center;padding:64px 0;background:linear-gradient(90deg,rgba(7,23,52,.94) 0%,rgba(16,42,86,.78) 48%,rgba(16,42,86,.12) 100%),url('assets/season2/season2-header-ICA09856.jpg') center 38%/cover no-repeat}
 .hero:after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:8px;background:linear-gradient(90deg,var(--lime) 0 25%,var(--green) 25% 55%,var(--red) 55% 75%,var(--navy) 75%)}
 .kicker{color:var(--lime)}.crumb a{color:var(--lime)}h1{font-style:italic;text-shadow:0 4px 20px #0008}.hero p{color:#f2f5fb}.pill{border-color:#ffffff70;background:#ffffff1c}
 .tabs-wrap{background:#fff;border-bottom:3px solid var(--lime)}.tabs{color:var(--navy)}.tabs a{padding:2px 0}.tabs a:hover{color:var(--red)}
@@ -195,12 +195,16 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 .supporter-names{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
 .supporter-names span{display:inline-block;padding:10px 16px;background:#fff;border:1px solid #dce3ed;border-radius:999px;color:#182b4b;font-weight:700}
 
+
+/* JPL Season 2 updates: logo image and statistics jump links */
+.stat-tab{text-decoration:none;display:inline-block}
+.stat-panel[id]{scroll-margin-top:100px}
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · THE HOME OF TENNIS CRICKET</span><span>JAKARTA, INDONESIA</span></div></div>
 <header><div class="wrap nav">
-<a class="brand" href="index.html"><span class="brand-mark">JPL<br>LOGO</span><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
+<a class="brand" href="index.html"><img class="brand-mark" src="assets/season2/jpl-logo.png" alt="Jakarta Premier League logo"><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
 <nav><a href="index.html">HOME</a><a href="seasons.html">SEASONS</a><a href="#season-moments">HIGHLIGHTS</a><a href="#fixtures">FIXTURES</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">STATISTICS</a><a href="#sponsors">SPONSORS</a></nav>
 </div></header>
 <section class="hero"><div class="wrap">
@@ -545,29 +549,29 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
     <article class="award-card"><img src="assets/season2/award-best-fielder.jpg" alt="Best Fielder award presentation"><div class="award-copy"><div class="award-label">🧤 Best Fielder</div><h3>Harish Selavaganesan</h3><p>SDAM United · 11 dismissals</p></div></article>
   </div>
 </div>
-<div class="stat-tabs" aria-label="Player statistics categories"><span class="stat-tab active">BAT · Top 5</span><span class="stat-tab">BOWL · Top 5</span><span class="stat-tab">FIELD · Top 5</span><span class="stat-tab">MVP · Top 5</span></div>
-<div class="stat-panel"><h3>🏏 Top 5 Batsmen</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Innings</th><th>Runs</th><th>Average</th><th>Strike Rate</th></tr></thead><tbody>
+<div class="stat-tabs" aria-label="Player statistics categories"><a class="stat-tab active" href="#batting">BAT · Top 5</a><a class="stat-tab" href="#bowling">BOWL · Top 5</a><a class="stat-tab" href="#fielding">FIELD · Top 5</a><a class="stat-tab" href="#mvp">MVP · Top 5</a></div>
+<div class="stat-panel" id="batting"><h3>🏏 Top 5 Batsmen</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Innings</th><th>Runs</th><th>Average</th><th>Strike Rate</th></tr></thead><tbody>
 <tr><td class="rank">01</td><td>Jamshed</td><td>SDAM United</td><td>5</td><td><strong>443</strong></td><td>—</td><td>395.54</td></tr>
 <tr><td class="rank">02</td><td>Sher Awan Khan</td><td>BOII Stars</td><td>4</td><td>192</td><td>64.00</td><td>246.15</td></tr>
 <tr><td class="rank">03</td><td>Mazhar Abbas</td><td>BOII Stars</td><td>5</td><td>175</td><td>58.33</td><td>357.14</td></tr>
 <tr><td class="rank">04</td><td>Jawad Ali</td><td>KNS Titans</td><td>4</td><td>143</td><td>71.50</td><td>246.55</td></tr>
 <tr><td class="rank">05</td><td>Haritha Boyagane</td><td>KNS Titans</td><td>3</td><td>137</td><td>137.00</td><td>297.83</td></tr>
 </tbody></table></div></div>
-<div class="stat-panel" style="margin-top:16px"><h3>🎯 Top 5 Bowlers</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Innings</th><th>Wickets</th><th>Economy</th><th>Average</th><th>Dots</th></tr></thead><tbody>
+<div class="stat-panel" id="bowling" style="margin-top:16px"><h3>🎯 Top 5 Bowlers</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Innings</th><th>Wickets</th><th>Economy</th><th>Average</th><th>Dots</th></tr></thead><tbody>
 <tr><td class="rank">01</td><td>Vishal Uberoi Jkt</td><td>SDAM United</td><td>4</td><td><strong>8</strong></td><td>8.40</td><td>5.25</td><td>17</td></tr>
 <tr><td class="rank">02</td><td>Rehan Wickramarachchi</td><td>Udupi Sunshine Cricket Club</td><td>4</td><td>6</td><td>6.80</td><td>5.67</td><td>17</td></tr>
 <tr><td class="rank">03</td><td>Sagar Rawat</td><td>TKC Gully Cricket Guys</td><td>3</td><td>6</td><td>13.20</td><td>11.00</td><td>16</td></tr>
 <tr><td class="rank">04</td><td>Srini</td><td>TKC Gully Cricket Guys</td><td>3</td><td>5</td><td>10.33</td><td>12.40</td><td>22</td></tr>
 <tr><td class="rank">05</td><td>Vineet Shah</td><td>SDAM United</td><td>3</td><td>5</td><td>14.00</td><td>14.00</td><td>11</td></tr>
 </tbody></table></div></div>
-<div class="stat-panel" style="margin-top:16px"><h3>🧤 Top 5 Fielders</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Matches</th><th>Dismissals</th><th>Catches</th><th>Run-outs</th></tr></thead><tbody>
+<div class="stat-panel" id="fielding" style="margin-top:16px"><h3>🧤 Top 5 Fielders</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>Matches</th><th>Dismissals</th><th>Catches</th><th>Run-outs</th></tr></thead><tbody>
 <tr><td class="rank">01</td><td>Harish Selavaganesan</td><td>SDAM United</td><td>5</td><td><strong>11</strong></td><td>9</td><td>0</td></tr>
 <tr><td class="rank">02</td><td>Syed Kabir</td><td>Udupi Sunshine Cricket Club</td><td>4</td><td>5</td><td>3</td><td>1</td></tr>
 <tr><td class="rank">03</td><td>Satya Narayana Gorla</td><td>Satavahana Strikers</td><td>3</td><td>4</td><td>3</td><td>1</td></tr>
 <tr><td class="rank">04</td><td>Srini</td><td>TKC Gully Cricket Guys</td><td>3</td><td>4</td><td>2</td><td>2</td></tr>
 <tr><td class="rank">05</td><td>Sampath Kumar</td><td>Udupi Sunshine Cricket Club</td><td>4</td><td>4</td><td>3</td><td>0</td></tr>
 </tbody></table></div></div>
-<div class="stat-panel" style="margin-top:16px"><h3>⭐ Top 5 MVP Rankings · Player of the Series</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>MVP Points</th></tr></thead><tbody>
+<div class="stat-panel" id="mvp" style="margin-top:16px"><h3>⭐ Top 5 MVP Rankings · Player of the Series</h3><div style="overflow-x:auto"><table class="stat-table"><thead><tr><th>#</th><th>Player</th><th>Team</th><th>MVP Points</th></tr></thead><tbody>
 <tr><td class="rank">01</td><td>Jamshed</td><td>SDAM United</td><td><strong>44.766</strong></td></tr>
 <tr><td class="rank">02</td><td>Sher Awan Khan</td><td>BOII Stars</td><td>23.491</td></tr>
 <tr><td class="rank">03</td><td>Mazhar Abbas</td><td>BOII Stars</td><td>21.649</td></tr>
