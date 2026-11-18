@@ -42,6 +42,11 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 @media(max-width:850px){.sponsor-logos{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:560px){.sponsor-logos{grid-template-columns:repeat(2,minmax(0,1fr))}.sponsor-logo-card{min-height:120px;padding:12px}.sponsor-logo-card img{height:85px}}
 
+
+.sponsor-strip{justify-content:space-evenly;gap:28px}
+.sponsor-tier{display:flex;align-items:center;gap:16px;min-width:0}
+.tier-logo{width:112px;height:74px;object-fit:contain;flex:0 0 auto}
+@media(max-width:560px){.sponsor-tier{width:100%;justify-content:flex-start}.tier-logo{width:88px;height:62px}}
 </style>
 </head>
 <body>
@@ -67,7 +72,10 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 </div></div></section>
 <main>
 <section id="overview"><div class="wrap"><div class="section-head"><div class="eyebrow">The beginning</div><h2>Where the JPL story began</h2><p>Jakarta Premier League launched its journey in December 2025, bringing cricket teams together at Gandhi School Ground, Kemayoran. Season 1 set the foundation for a growing community built around competition, teamwork and a shared love of cricket.</p></div>
-<div class="sponsor-strip"><div><div class="sponsor-label">Title sponsor</div><div class="sponsor-main">Powered by Classic Carpets</div></div><div><div class="sponsor-label">Co-powered by</div><div class="sponsor-sub">PT Platinumetrix Global Inovasi</div></div></div></div></section>
+<div class="sponsor-strip">
+<div class="sponsor-tier"><img class="tier-logo" src="assets/season1/sponsors/classic-carpets.png" alt="Classic Carpets logo"><div><div class="sponsor-label">Title Sponsor</div><div class="sponsor-main">Powered by Classic Carpets</div></div></div>
+<div class="sponsor-tier"><img class="tier-logo" src="assets/season1/sponsors/pgi.png" alt="PT Platinumetrix Global Inovasi logo"><div><div class="sponsor-label">Co-Powered By</div><div class="sponsor-sub">PT Platinumetrix Global Inovasi</div></div></div>
+</div></div></section>
 <section id="teams" style="background:#fff"><div class="wrap"><div class="section-head"><div class="eyebrow">Eight teams · One league</div><h2>Meet the Season 1 Teams</h2><p>Eight teams competed in the inaugural Jakarta Premier League.</p></div>
 <div class="teams-grid">
 <article class="team-card"><img src="assets/season1/team-telugu-strikers.jpg" alt="Telugu Strikers logo"><h3>Telugu Strikers</h3></article>
@@ -112,17 +120,7 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 </div></div></section>
 
 
-<section id="sponsors" class="sponsors-section"><div class="wrap"><div class="section-head"><div class="eyebrow">Thank you for your support</div><h2>Season 1 Sponsors &amp; Partners</h2><p>Our appreciation to the organisations and businesses that supported the inaugural Jakarta Premier League.</p></div><div class="sponsor-logos">
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/classic-carpets.png" alt="Classic Carpets"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/pgi.png" alt="PT Platinumetrix Global Inovasi"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/pt-gokak.png" alt="PT Gokak Indonesia"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/jayata-consulting.png" alt="Jayata Consulting"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/mystery-lounge.jpg" alt="Mystery Lounge and Bar"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/nityo-infotech.jpg" alt="Nityo Infotech"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/sks.jpg" alt="SKS"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/spicemistry.jpg" alt="Spice Mistry"></div>
-<div class="sponsor-logo-card"><img src="assets/season1/sponsors/udupi-by-rf.png" alt="Udupi by RF Hospitality"></div>
-</div><div class="supporters"><h3>Special Thanks to Our Supporters</h3><div class="supporter-list"><span>Mr. Karthik Sundar</span><span>Mr. Sudharman Shetty</span><span>Mr. Sukesh Shetty</span><span>Mr. Varun Rawat</span></div></div></div></section>
+
 <section id="statistics" style="background:#fff"><div class="wrap"><div class="section-head"><div class="eyebrow">Standout performances</div><h2>Player Statistics</h2><p>Top five performers in each category, based on the player-statistics screenshots provided.</p></div>
 <div class="stat-tabs" role="tablist" aria-label="Player statistics categories">
 <button class="stat-tab active" type="button" data-tab="bat">BAT · TOP 5</button><button class="stat-tab" type="button" data-tab="bowl">BOWL · TOP 5</button><button class="stat-tab" type="button" data-tab="field">FIELD · TOP 5</button><button class="stat-tab" type="button" data-tab="mvp">MVP · TOP 5</button>
@@ -140,8 +138,19 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 <tr><td>01</td><td>Arjun</td><td>RDX</td><td><strong>27.183</strong></td></tr><tr><td>02</td><td>Syed Kabir</td><td>Udupi Sunshine</td><td><strong>22.222</strong></td></tr><tr><td>03</td><td>Nandha</td><td>Powerhouse XI</td><td><strong>19.550</strong></td></tr><tr><td>04</td><td>Ashraf</td><td>Powerhouse XI</td><td><strong>19.449</strong></td></tr><tr><td>05</td><td>Sampath Kumar</td><td>Udupi Sunshine</td><td><strong>18.417</strong></td></tr>
 </tbody></table></div></div>
 </div></section>
+<section id="sponsors" class="sponsors-section"><div class="wrap"><div class="section-head"><div class="eyebrow">Thank you for your support</div><h2>Season 1 Sponsors &amp; Partners</h2><p>Our appreciation to the organisations and businesses that supported the inaugural Jakarta Premier League.</p></div><div class="sponsor-logos">
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/classic-carpets.png" alt="Classic Carpets"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/pgi.png" alt="PT Platinumetrix Global Inovasi"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/pt-gokak.png" alt="PT Gokak Indonesia"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/jayata-consulting.png" alt="Jayata Consulting"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/mystery-lounge.jpg" alt="Mystery Lounge and Bar"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/nityo-infotech.jpg" alt="Nityo Infotech"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/sks.jpg" alt="SKS"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/spicemistry.jpg" alt="Spice Mistry"></div>
+<div class="sponsor-logo-card"><img src="assets/season1/sponsors/udupi-by-rf.png" alt="Udupi by RF Hospitality"></div>
+</div><div class="supporters"><h3>Special Thanks to Our Supporters</h3><div class="supporter-list"><span>Mr. Karthik Sundar</span><span>Mr. Sudharman Shetty</span><span>Mr. Sukesh Shetty</span><span>Mr. Varun Rawat</span></div></div></div></section>
 </main>
-<footer><div class="wrap"><div class="foot"><div><strong>JAKARTA PREMIER LEAGUE</strong><p>Celebrating tennis-ball cricket, competition and community in Indonesia.</p></div><div class="foot-links"><a href="index.html">Home</a><a href="seasons.html">Seasons</a><a href="season-2.html">Season 2</a></div></div><div class="copyright">© <span id="year"></span> Jakarta Premier League. All rights reserved.</div></div></footer>
+<footer><div class="wrap"><div class="foot"><div><strong>JAKARTA PREMIER LEAGUE</strong><p>Celebrating tennis-ball cricket, competition and community in Indonesia.</p></div><div class="foot-links"><a href="index.html">Home</a><a href="season-2.html">Season 2</a></div></div><div class="copyright">© <span id="year"></span> Jakarta Premier League. All rights reserved.</div></div></footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
 const tabs=[...document.querySelectorAll('.stat-tab')],panels=[...document.querySelectorAll('.stat-panel')];
