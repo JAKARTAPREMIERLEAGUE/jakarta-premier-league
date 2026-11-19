@@ -75,6 +75,29 @@ nav .nav-season{display:inline-flex;align-items:center;gap:7px}
  .hero-title{font-size:clamp(48px,12vw,76px)}
 }
 
+
+/* JPL all-time statistics */
+.alltime-stats{padding:76px 0 72px;background:linear-gradient(135deg,#071b38 0%,#102f59 58%,#173f70 100%);color:#fff;position:relative;overflow:hidden}
+.alltime-stats:before{content:"";position:absolute;width:420px;height:420px;border:1px solid #ffffff12;border-radius:50%;right:-150px;top:-220px;box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff05}
+.alltime-stats .wrap{position:relative;z-index:1}
+.alltime-head{text-align:center;margin:0 auto 28px}
+.alltime-head h2{color:#fff;margin:8px 0 10px}
+.alltime-head .intro{color:#d4dfed;margin:0 auto}
+.alltime-stats .kicker{color:#ff9a52}
+.stats-featured{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stats-card{min-height:102px;border:1px solid #ffffff20;border-radius:11px;background:#ffffff0d;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px 10px;backdrop-filter:blur(4px)}
+.stats-card.featured{min-height:132px;background:linear-gradient(145deg,#ffffff18,#ffffff0a);border-color:#f2c66d70}
+.stats-card b{font-size:clamp(25px,3vw,34px);line-height:1.1;color:#f2c66d;font-weight:900;font-variant-numeric:tabular-nums}
+.stats-card.featured b{font-size:clamp(34px,4vw,46px);color:#ffd27d}
+.stats-card span{margin-top:8px;color:#f2f5fa;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.stats-insights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;padding:16px;border-radius:12px;background:#04132980;border:1px solid #ffffff18}
+.stats-insights div{text-align:center;padding:5px}
+.stats-insights b{display:block;color:#ff9a52;font-size:22px;font-weight:900;font-variant-numeric:tabular-nums}
+.stats-insights span{display:block;color:#d4dfed;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-top:3px}
+.stats-footnote{text-align:center;color:#b8c8dc;font-size:11px;margin:16px 0 0}
+@media(max-width:780px){.alltime-stats{padding:58px 0}.stats-featured{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr);gap:9px}.stats-card{min-height:90px}.stats-insights{grid-template-columns:repeat(2,1fr);gap:14px}.stats-card.featured{min-height:116px}}
+
 </style>
 </head>
 <body>
@@ -96,7 +119,43 @@ nav .nav-season{display:inline-flex;align-items:center;gap:7px}
 </nav><button class="menu" onclick="document.getElementById('nav').classList.toggle('open')">MENU</button></div></header>
 <main id="home">
 <section class="hero"><div class="wrap"><div class="hero-inner"><div class="eyebrow">More than a game · One cricket community</div><h1 class="hero-title">JAKARTA<br><span>PREMIER LEAGUE</span></h1><p>Welcome to Jakarta Premier League — a platform connecting the cricket community in Indonesia through the excitement of tennis-ball cricket tournaments, teamwork and unforgettable moments.</p><div class="actions"><a class="btn primary" href="#seasons">EXPLORE JPL</a><a class="btn ghost" href="#about">OUR STORY</a></div><div class="hero-note">TENNIS-BALL CRICKET · COMMUNITY · COMPETITION</div></div></div></section>
-<div class="wrap"><div class="stats"><div class="stat"><b>2+</b><span>Seasons of cricket</span></div><div class="stat"><b>500+</b><span>Community engaged</span></div><div class="stat"><b>240+</b><span>Players involved</span></div><div class="stat"><b>1</b><span>Growing cricket family</span></div></div></div>
+<div class="wrap"><div class="stats"><div class="stat"><b>2+</b><span>Seasons of cricket</span></div><div class="stat"><b>500+</b><span>Community engaged</span></div><div class="stat"><b>240+</b><span>Players involved</span></div><div class="stat"><b>1</b><span>Growing cricket family</span></div></div>
+<section class="alltime-stats" id="jpl-stats">
+  <div class="wrap">
+    <div class="alltime-head">
+      <div class="kicker">Season 1 + Season 2 · Combined record</div>
+      <h2>JPL by the numbers</h2>
+      <p class="intro">Two seasons of competition, unforgettable performances and one growing cricket community.</p>
+    </div>
+    <div class="stats-featured">
+      <article class="stats-card featured"><b>30</b><span>Matches played</span></article>
+      <article class="stats-card featured"><b>6,710</b><span>Total runs</span></article>
+      <article class="stats-card featured"><b>249</b><span>Wickets taken</span></article>
+      <article class="stats-card featured"><b>704</b><span>Sixes hit</span></article>
+    </div>
+    <div class="stats-grid">
+      <article class="stats-card"><b>60</b><span>Innings</span></article>
+      <article class="stats-card"><b>2,678</b><span>Balls bowled</span></article>
+      <article class="stats-card"><b>659</b><span>Extras</span></article>
+      <article class="stats-card"><b>220</b><span>Fours hit</span></article>
+      <article class="stats-card"><b>24</b><span>Half-centuries</span></article>
+      <article class="stats-card"><b>6</b><span>Centuries</span></article>
+      <article class="stats-card"><b>965</b><span>Dot balls</span></article>
+      <article class="stats-card"><b>114</b><span>Catches</span></article>
+      <article class="stats-card"><b>5</b><span>Stumpings</span></article>
+      <article class="stats-card"><b>29</b><span>50+ partnerships</span></article>
+      <article class="stats-card"><b>6</b><span>100+ partnerships</span></article>
+      <article class="stats-card"><b>0</b><span>Maiden overs</span></article>
+    </div>
+    <div class="stats-insights">
+      <div><b>76.07%</b><span>Runs from boundaries</span></div>
+      <div><b>2.90</b><span>Balls per boundary</span></div>
+      <div><b>2.78</b><span>Balls per dot ball</span></div>
+      <div><b>36.04%</b><span>Dot-ball percentage</span></div>
+    </div>
+    <p class="stats-footnote">Combined tournament statistics from the Season 1 and Season 2 overall score summaries.</p>
+  </div>
+</section>
 <section id="about"><div class="wrap about-grid"><div class="about-photo"><img src="assets/homepage/community-family.jpg" alt="JPL players, families and cricket community"></div><div class="about-copy"><div class="kicker">Who we are</div><h2>More than cricket. We are a community.</h2><p>Jakarta Premier League brings cricket players, teams, families and supporters together through the shared love of the game. Built around the spirit of tennis-ball cricket, JPL creates a place to compete, connect, celebrate talent and make lasting memories.</p><p>From exciting matches to team celebrations and community gatherings, every season adds a new chapter to the cricket story in Indonesia.</p><div class="callout">Our vision: connecting the cricket community in Indonesia, one match and one memory at a time.</div></div></div></section>
 
 <section class="story-section" id="story"><div class="wrap story-grid">
