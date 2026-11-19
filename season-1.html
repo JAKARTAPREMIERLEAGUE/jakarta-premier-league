@@ -64,6 +64,20 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
   .season-dropdown summary{padding:2px 0}
   .season-menu a{padding:8px 10px}
 }
+
+/* Season 1 featured award photography */
+.award-team-photo{display:block;width:100%;height:230px;object-fit:cover;object-position:center;border-radius:12px;margin:14px 0 12px;border:1px solid #ffffff35}
+.award-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 28px}
+.award-feature{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 8px 22px #0b1d370c}
+.award-feature-photo{display:block;width:100%;height:310px;object-fit:contain;object-position:center;background:#f3f5f8}
+.award-feature-copy{padding:18px}
+.award-feature-label{font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.award-feature h3{font-size:22px;color:var(--navy);margin:0 0 5px}
+.award-feature p{font-size:13px;color:var(--muted);margin:0}
+.award-feature .award-stat{display:inline-block;margin-top:12px;padding:7px 10px;border-radius:8px;background:#f3f6fa;color:var(--navy);font-size:11px;font-weight:900}
+@media(max-width:850px){.award-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.award-team-photo{height:210px}.award-feature-photo{height:280px}}
+@media(max-width:560px){.award-feature-grid{grid-template-columns:1fr}.award-team-photo{height:220px}.award-feature-photo{height:auto;max-height:420px;min-height:220px}}
+
 </style>
 </head>
 <body>
@@ -84,8 +98,8 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 <div class="quickstat"><b>15</b><span>Total Matches</span></div><div class="quickstat"><b>8</b><span>Participating Teams</span></div><div class="quickstat"><b>2</b><span>Tournament Days</span></div><div class="quickstat"><b>2025</b><span>Inaugural Season</span></div>
 </div>
 <section id="champions"><div class="wrap"><div class="section-head"><div class="eyebrow">Season 1 honours</div><h2>Celebrating Our Champions</h2><p>The teams that reached the final of the inaugural JPL season.</p></div><div class="champions">
-<article class="champion"><div class="medal">🏆</div><div class="tag">Inaugural Season Champions</div><img class="champion-logo" src="assets/season1/team-powerhouse-xi.jpg" alt="Powerhouse XI team logo"><h3>POWERHOUSE XI</h3><p>Defeated Udupi Sunshine Cricket Club by 20 runs in the final.</p></article>
-<article class="champion runner"><div class="medal">🥈</div><div class="tag">Season 1 Runners-up</div><img class="champion-logo" src="assets/season1/team-udupi-sunshine.png" alt="Udupi Sunshine Cricket Club team logo"><h3>UDUPI SUNSHINE CRICKET CLUB</h3><p>Finished as runners-up after a strong tournament campaign.</p></article>
+<article class="champion"><div class="medal">🏆</div><div class="tag">Inaugural Season Champions</div><img class="award-team-photo" src="assets/season1/awards/champions.jpg" alt="Powerhouse XI celebrating as Season 1 champions"><img class="champion-logo" src="assets/season1/team-powerhouse-xi.jpg" alt="Powerhouse XI team logo"><h3>POWERHOUSE XI</h3><p>Defeated Udupi Sunshine Cricket Club by 20 runs in the final.</p></article>
+<article class="champion runner"><div class="medal">🥈</div><div class="tag">Season 1 Runners-up</div><img class="award-team-photo" src="assets/season1/awards/runner-up.jpg" alt="Udupi Sunshine Cricket Club celebrating as Season 1 runners-up"><img class="champion-logo" src="assets/season1/team-udupi-sunshine.png" alt="Udupi Sunshine Cricket Club team logo"><h3>UDUPI SUNSHINE CRICKET CLUB</h3><p>Finished as runners-up after a strong tournament campaign.</p></article>
 </div></div></section>
 <main>
 <section id="overview"><div class="wrap"><div class="section-head"><div class="eyebrow">The beginning</div><h2>Where the JPL story began</h2><p>Jakarta Premier League launched its journey in December 2025, bringing cricket teams together at Gandhi School Ground, Kemayoran. Season 1 set the foundation for a growing community built around competition, teamwork and a shared love of cricket.</p></div>
@@ -139,6 +153,20 @@ footer{background:var(--navy);color:#dce6f5;padding:38px 0 20px;margin-top:20px}
 
 
 <section id="statistics" style="background:#fff"><div class="wrap"><div class="section-head"><div class="eyebrow">Standout performances</div><h2>Player Statistics</h2><p>Top five performers in each category, based on the player-statistics screenshots provided.</p></div>
+<div class="award-feature-grid" aria-label="Season 1 individual awards">
+  <article class="award-feature">
+    <img class="award-feature-photo" src="assets/season1/awards/best-batsman.jpg" alt="Season 1 Orange Cap award graphic for Arjun">
+    <div class="award-feature-copy"><div class="award-feature-label">Best Batsman · Orange Cap</div><h3>Arjun</h3><p>Rasuna Dynamite Xplosives – RDX</p><span class="award-stat">250 runs · 333.33 strike rate</span></div>
+  </article>
+  <article class="award-feature">
+    <img class="award-feature-photo" src="assets/season1/awards/best-bowler.jpg" alt="Season 1 Purple Cap award graphic for Raj">
+    <div class="award-feature-copy"><div class="award-feature-label">Best Bowler · Purple Cap</div><h3>Raj</h3><p>Powerhouse XI</p><span class="award-stat">8 wickets · Economy 14.83</span></div>
+  </article>
+  <article class="award-feature">
+    <img class="award-feature-photo" src="assets/season1/awards/man-of-the-series.jpg" alt="Season 1 Man of the Series award presentation">
+    <div class="award-feature-copy"><div class="award-feature-label">Man of the Series</div><h3>Season 1 Award</h3><p>Man of the Series presentation</p></div>
+  </article>
+</div>
 <div class="stat-tabs" role="tablist" aria-label="Player statistics categories">
 <button class="stat-tab active" type="button" data-tab="bat">BAT · TOP 5</button><button class="stat-tab" type="button" data-tab="bowl">BOWL · TOP 5</button><button class="stat-tab" type="button" data-tab="field">FIELD · TOP 5</button><button class="stat-tab" type="button" data-tab="mvp">MVP · TOP 5</button>
 </div>
