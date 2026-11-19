@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jakartapremierleague.github.io/jakarta-premier-league/sitemap.xml
