@@ -98,13 +98,36 @@ nav .nav-season{display:inline-flex;align-items:center;gap:7px}
 .stats-footnote{text-align:center;color:#b8c8dc;font-size:11px;margin:16px 0 0}
 @media(max-width:780px){.alltime-stats{padding:58px 0}.stats-featured{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr);gap:9px}.stats-card{min-height:90px}.stats-insights{grid-template-columns:repeat(2,1fr);gap:14px}.stats-card.featured{min-height:116px}}
 
+
+/* JPL professional navigation: consistent spacing and single-line desktop layout */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.nav>.brand{flex:0 0 auto;white-space:nowrap}
+.nav>nav{display:flex;flex:1 1 auto;min-width:0;align-items:center;justify-content:flex-end;flex-wrap:nowrap;gap:clamp(8px,.82vw,14px);white-space:nowrap}
+.nav>nav>a,.nav>nav>.nav-dropdown,.nav>nav>.season-dropdown{flex:0 0 auto;white-space:nowrap}
+.nav>nav>a{font-size:clamp(9.5px,.63vw,11px);line-height:1.2;letter-spacing:.025em;white-space:nowrap}
+.nav>nav .nav-season,.nav>nav summary{font-size:clamp(9.5px,.63vw,11px);letter-spacing:.025em;white-space:nowrap}
+.nav>nav .dropdown-menu a,.nav>nav .season-menu a{font-size:11px;letter-spacing:.04em}
+@media(max-width:1100px){
+  .nav{height:auto;min-height:78px;gap:12px}
+  .nav>nav{flex-wrap:wrap;justify-content:flex-start;gap:10px 16px;white-space:normal}
+  .nav>nav>a,.nav>nav>.nav-dropdown,.nav>nav>.season-dropdown{white-space:nowrap}
+}
+
+/* Cleaner responsive header */
+@media(max-width:1100px){
+  .nav{height:auto;min-height:78px;position:relative;flex-wrap:wrap;padding:10px 0}
+  .nav>nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;padding:18px 4%;border:1px solid var(--line);border-top:0;box-shadow:0 12px 24px #07172c12;flex-direction:column;align-items:flex-start;gap:14px;z-index:35}
+  .nav.open>nav{display:flex}
+  .nav.open>nav>.nav-dropdown{width:100%}
+  .nav.open>nav .dropdown-menu{position:static;box-shadow:none;border:0;padding:4px 0 4px 14px;min-width:0}
+  .menu{display:block;margin-left:auto}
+}
 </style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · TENNIS-BALL CRICKET</span><span>CONNECTING CRICKET IN INDONESIA</span></div></div>
 <header><div class="wrap nav" id="nav"><a class="brand" href="#home"><img src="assets/jpl-logo.jpg" alt="Jakarta Premier League logo"><span>JAKARTA<small>PREMIER LEAGUE</small></span></a><nav aria-label="Main navigation">
 <a href="#home">HOME</a> <a href="#about">ABOUT JPL</a>
-<a href="cricket-in-indonesia.html">CRICKET IN INDONESIA</a>
 <a href="#story">WHY WE STARTED</a>
 <a href="#moments">JPL MOMENTS</a>
 <a href="gallery.html">GALLERY</a>
@@ -115,7 +138,9 @@ nav .nav-season{display:inline-flex;align-items:center;gap:7px}
 <a href="season-2.html">Season 2</a>
 <a href="season-3.html">Season 3 · Upcoming</a>
 </div>
-</div> <a href="sponsors.html">OUR PARTNERS</a>
+</div>
+<a href="cricket-in-indonesia.html">CRICKET IN INDONESIA</a>
+<a href="sponsors.html">OUR PARTNERS</a>
 <a href="#contact">CONTACT US</a>
 </nav><button class="menu" onclick="document.getElementById('nav').classList.toggle('open')">MENU</button></div></header>
 <main id="home">
