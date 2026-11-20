@@ -99,29 +99,32 @@ nav .nav-season{display:inline-flex;align-items:center;gap:7px}
 @media(max-width:780px){.alltime-stats{padding:58px 0}.stats-featured{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr);gap:9px}.stats-card{min-height:90px}.stats-insights{grid-template-columns:repeat(2,1fr);gap:14px}.stats-card.featured{min-height:116px}}
 
 
-/* JPL professional navigation: consistent spacing and single-line desktop layout */
-.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
-.nav>.brand{flex:0 0 auto;white-space:nowrap}
-.nav>nav{display:flex;flex:1 1 auto;min-width:0;align-items:center;justify-content:flex-end;flex-wrap:nowrap;gap:clamp(8px,.82vw,14px);white-space:nowrap}
-.nav>nav>a,.nav>nav>.nav-dropdown,.nav>nav>.season-dropdown{flex:0 0 auto;white-space:nowrap}
-.nav>nav>a{font-size:clamp(9.5px,.63vw,11px);line-height:1.2;letter-spacing:.025em;white-space:nowrap}
-.nav>nav .nav-season,.nav>nav summary{font-size:clamp(9.5px,.63vw,11px);letter-spacing:.025em;white-space:nowrap}
-.nav>nav .dropdown-menu a,.nav>nav .season-menu a{font-size:11px;letter-spacing:.04em}
-@media(max-width:1100px){
-  .nav{height:auto;min-height:78px;gap:12px}
-  .nav>nav{flex-wrap:wrap;justify-content:flex-start;gap:10px 16px;white-space:normal}
-  .nav>nav>a,.nav>nav>.nav-dropdown,.nav>nav>.season-dropdown{white-space:nowrap}
+/* Compact JPL all-time statistics for a tighter homepage layout */
+.alltime-stats{padding:46px 0 42px}
+.alltime-head{margin-bottom:18px}
+.alltime-head h2{margin:5px 0 6px}
+.alltime-head .intro{font-size:15px}
+.stats-featured{gap:10px;margin-bottom:10px}
+.stats-grid{gap:9px}
+.stats-card{min-height:76px;padding:10px 8px}
+.stats-card.featured{min-height:100px}
+.stats-card b{font-size:clamp(22px,2.5vw,30px)}
+.stats-card.featured b{font-size:clamp(29px,3.3vw,39px)}
+.stats-card span{margin-top:5px;font-size:10px;letter-spacing:.07em}
+.stats-insights{margin-top:14px;padding:11px;gap:8px}
+.stats-insights b{font-size:20px}
+.stats-insights span{font-size:9px;margin-top:2px}
+.stats-footnote{margin:11px 0 0;font-size:10px}
+@media(max-width:780px){
+  .alltime-stats{padding:38px 0 34px}
+  .alltime-head{margin-bottom:16px}
+  .stats-card{min-height:70px;padding:9px 7px}
+  .stats-card.featured{min-height:88px}
+  .stats-card b{font-size:25px}
+  .stats-card.featured b{font-size:32px}
+  .stats-insights{margin-top:12px;padding:9px}
 }
 
-/* Cleaner responsive header */
-@media(max-width:1100px){
-  .nav{height:auto;min-height:78px;position:relative;flex-wrap:wrap;padding:10px 0}
-  .nav>nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;padding:18px 4%;border:1px solid var(--line);border-top:0;box-shadow:0 12px 24px #07172c12;flex-direction:column;align-items:flex-start;gap:14px;z-index:35}
-  .nav.open>nav{display:flex}
-  .nav.open>nav>.nav-dropdown{width:100%}
-  .nav.open>nav .dropdown-menu{position:static;box-shadow:none;border:0;padding:4px 0 4px 14px;min-width:0}
-  .menu{display:block;margin-left:auto}
-}
 </style>
 </head>
 <body>
@@ -182,8 +185,8 @@ nav .nav-season{display:inline-flex;align-items:center;gap:7px}
     <p class="stats-footnote">Combined tournament statistics from the Season 1 and Season 2 overall score summaries.</p>
   </div>
 </section>
-<section id="about"><div class="wrap about-grid"><div class="about-photo"><img src="assets/homepage/community-family.jpg" alt="JPL players, families and cricket community"></div><div class="about-copy"><div class="kicker">Who we are</div><h2>More than cricket. We are a community.</h2><p>Jakarta Premier League (JPL) is both a cricket tournament organiser and a community platform in Jakarta, Indonesia. We bring cricket players, teams, families and supporters together through organised tennis-ball cricket competitions, creating opportunities to play, compete, connect and celebrate the game.</p><p>From exciting matches to team celebrations and community gatherings, every season adds a new chapter to the cricket story in Indonesia.</p>
-<p><a href="cricket-in-indonesia.html" style="font-weight:800;color:var(--orange)">Explore cricket in Indonesia →</a></p><div class="callout">Our vision: connecting the cricket community in Indonesia, one match and one memory at a time.</div></div></div></section>
+<section id="about"><div class="wrap about-grid"><div class="about-photo"><img src="assets/homepage/community-family.jpg" alt="JPL players, families and cricket community"></div><div class="about-copy"><div class="kicker">Who we are</div><h2>More than cricket. We are a community.</h2><p>Jakarta Premier League (JPL) is a cricket tournament organiser and community platform based in Jakarta. Our main purpose is to help promote cricket across Indonesia. Through tournaments and community events, we want to introduce more people to the game, create opportunities for players and strengthen local cricket communities.</p><p>We also want to help cricketers who face financial barriers, including players who need essential equipment or support to take part. Our aim is to make a practical difference wherever our resources allow.</p>
+<p><a href="cricket-in-indonesia.html" style="font-weight:800;color:var(--orange)">Explore cricket in Indonesia →</a></p><div class="callout">A future ambition: if JPL secures sufficient sponsorship and resources, we hope to contribute to PCI's cricket-development initiatives. Any support would depend on available funding and a suitable partnership.</div></div></div></section>
 
 <section class="story-section" id="story"><div class="wrap story-grid">
   <div class="story-photo"><img src="assets/homepage/team-celebration.jpg" alt="JPL cricket community celebrating together"></div>
@@ -197,15 +200,15 @@ nav .nav-season{display:inline-flex;align-items:center;gap:7px}
   </div>
 </div></section>
 <section class="vision-section" id="vision"><div class="wrap">
-  <div class="section-head"><div class="kicker">Where we want to go</div><h2>A bigger vision for cricket in Indonesia.</h2>
-  <p class="intro">Our ambition goes beyond organising tournaments. We want to contribute to the growth of cricket in Indonesia in every way we can.</p></div>
+  <div class="section-head"><div class="kicker">Our purpose</div><h2>Promote cricket. Create opportunities. Support players.</h2>
+  <p class="intro">Our main motivation is to help cricket grow across Indonesia. We want to make the game more visible and accessible, create meaningful opportunities for players, and support those who need a helping hand.</p></div>
   <div class="vision-grid">
     <article class="vision-card"><div class="num">01 / PROMOTE</div><h3>Make cricket more accessible</h3><p>Introduce more people to the game, encourage participation and help cricket reach new communities across Indonesia.</p></article>
     <article class="vision-card"><div class="num">02 / CREATE OPPORTUNITY</div><h3>Give players a platform</h3><p>Help passionate players showcase their talent, develop their skills and experience competitive cricket.</p></article>
     <article class="vision-card"><div class="num">03 / SUPPORT</div><h3>Help players who need it</h3><p>Where possible, support aspiring cricketers who cannot afford essential sports gear and equipment so financial barriers do not stop them from playing.</p></article>
     <article class="vision-card"><div class="num">04 / INSPIRE</div><h3>Encourage the next generation</h3><p>Inspire children and young people to discover cricket, enjoy the game and become part of its future.</p></article>
     <article class="vision-card"><div class="num">05 / CONNECT</div><h3>Build a stronger community</h3><p>Bring clubs, players, families, supporters and cricket enthusiasts together through shared experiences.</p></article>
-    <article class="vision-card"><div class="num">06 / CONTRIBUTE</div><h3>Grow Indonesian cricket</h3><p>Contribute wherever we can to make cricket more recognised, supported and developed throughout Indonesia.</p></article>
+    <article class="vision-card"><div class="num">06 / FUTURE CONTRIBUTION</div><h3>Support cricket development with PCI</h3><p>As JPL grows, and if we secure sufficient sponsorship and resources, we hope to contribute to PCI-led cricket development initiatives through sponsorship or other practical support. This is a long-term ambition, not a current commitment.</p></article>
   </div>
 </div></section>
 <section class="sponsor-band" id="sponsors"><div class="wrap sponsor-grid">
