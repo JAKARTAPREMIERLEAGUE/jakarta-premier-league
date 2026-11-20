@@ -76,6 +76,37 @@ footer{background:#06162e;color:#d5dfed;padding:35px 0 20px}.foot{display:flex;j
 .national-milestones{background:#eef2f7}.milestone-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.milestone-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}.milestone-card b{font-size:25px;color:var(--orange)}.milestone-card h3{font-size:17px;color:var(--navy);margin:7px 0}.milestone-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.6}
 @media(max-width:900px){.pci-grid,.milestone-grid{grid-template-columns:1fr 1fr}.bali-layout,.chairman-panel{grid-template-columns:1fr}.bali-facts{max-width:none}}
 @media(max-width:620px){.pci-grid,.milestone-grid{grid-template-columns:1fr}.chairman-panel{padding:22px}.bali-facts{padding:20px}}
+
+
+/* Final JPL header refinement: same desktop and mobile navigation as homepage */
+header .wrap.nav{width:min(1540px,96%);min-height:82px;height:auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
+header .wrap.nav>.brand{flex:0 0 auto;white-space:nowrap}
+header .wrap.nav>nav{display:flex;flex:1 1 auto;min-width:0;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:clamp(10px,1.05vw,17px);white-space:nowrap}
+header .wrap.nav>nav>a,header .wrap.nav>nav>.nav-dropdown{flex:0 0 auto;white-space:nowrap}
+header .wrap.nav>nav>a{display:inline-flex;align-items:center;font-size:10.5px;line-height:1.2;letter-spacing:.025em;white-space:nowrap}
+header .wrap.nav>nav .nav-season{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;line-height:1.2;letter-spacing:.025em;white-space:nowrap}
+header .wrap.nav>nav .dropdown-menu{min-width:190px}
+header .menu{display:none}
+@media(max-width:1200px){
+  header .wrap.nav{width:96%;min-height:76px;position:relative;display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 0}
+  header .wrap.nav>nav{display:none;position:absolute;top:100%;left:-2%;right:-2%;width:auto;min-width:0;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;box-shadow:0 14px 28px #07172c18;padding:10px 22px;z-index:60;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;white-space:normal}
+  header .wrap.nav.open>nav{display:flex}
+  header .wrap.nav.open>nav>a,header .wrap.nav.open>nav>.nav-dropdown{display:block;width:100%;padding:11px 0;border-bottom:1px solid var(--line);white-space:nowrap}
+  header .wrap.nav.open>nav>a{font-size:12px}
+  header .wrap.nav.open>nav>.nav-dropdown{height:auto}
+  header .wrap.nav.open>nav .dropdown-menu{position:static;display:none;min-width:0;margin-top:7px;padding:5px 0 4px 14px;border:0;border-radius:0;box-shadow:none;background:#f7f9fc}
+  header .wrap.nav.open>nav .nav-dropdown:hover .dropdown-menu,header .wrap.nav.open>nav .nav-dropdown:focus-within .dropdown-menu{display:block}
+  header .wrap.nav.open>nav .dropdown-menu a{padding:9px 12px}
+  header .menu{display:block;margin-left:auto}
+}
+
+/* PCI chairman portrait */
+.chairman-profile{display:grid;grid-template-columns:minmax(135px,.78fr) minmax(205px,1.22fr);gap:13px;align-items:stretch;min-width:0}
+.chairman-portrait{display:block;width:100%;height:270px;object-fit:cover;object-position:center 22%;border-radius:12px;border:1px solid var(--line);background:#e8eef6}
+.chairman-profile .chairman-highlight{height:100%;min-height:270px;padding:22px}
+.chairman-profile .chairman-highlight strong{font-size:clamp(21px,2.1vw,29px)}
+@media(max-width:620px){.chairman-profile{grid-template-columns:minmax(110px,.75fr) minmax(0,1.25fr);gap:10px}.chairman-portrait{height:250px}.chairman-profile .chairman-highlight{min-height:250px;padding:17px}.chairman-profile .chairman-highlight strong{font-size:21px}}
+
 </style>
 </head>
 <body>
@@ -129,7 +160,10 @@ footer{background:#06162e;color:#d5dfed;padding:35px 0 20px}.foot{display:flex;j
       <p>At Jakarta Premier League, we are proud to see Indonesian cricket leadership represented at this important international level. We congratulate Mr Yadav on this milestone and wish him every success as he contributes to the continued growth of the game.</p>
       <a class="chairman-link" href="https://www.icc-cricket.com/media-releases/abhiram-singh-yadav-appointed-to-icc-chief-executives-committee" target="_blank" rel="noopener noreferrer">Read the ICC announcement →</a>
     </div>
-    <div class="chairman-highlight"><span>PCI CHAIRMAN</span><strong>Abhiram Singh Yadav</strong><em>ICC Chief Executives' Committee · Associate Member representative</em><small>Term through the next elections in June 2027</small></div>
+    <div class="chairman-profile">
+      <img class="chairman-portrait" src="assets/pci/abhiram-singh-yadav.jpg" alt="Portrait of PCI Chairman Abhiram Singh Yadav">
+      <div class="chairman-highlight"><span>PCI CHAIRMAN</span><strong>Abhiram Singh Yadav</strong><em>ICC Chief Executives' Committee · Associate Member representative</em><small>Term through the next elections in June 2027</small></div>
+    </div>
   </div>
 </section>
 <section class="national-milestones">
