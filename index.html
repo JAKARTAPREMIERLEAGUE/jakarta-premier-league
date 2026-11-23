@@ -294,6 +294,12 @@ header .menu{display:none}
 @media(max-width:520px){.idc-ticker-label{display:none}.idc-ticker{gap:8px}.idc-ticker-window{mask-image:linear-gradient(90deg,#000 0,#000 96%,transparent 100%)}.idc-ticker-more{margin-left:auto}}
 @media(prefers-reduced-motion:reduce){.idc-ticker-track{animation:none;transform:none}.idc-ticker-window{overflow-x:auto;mask-image:none}.idc-ticker-set[aria-hidden="true"]{display:none}}
 
+
+/* JPL Season 3 announcement shares the Indonesia cricket ticker — no extra banner height */
+.idc-ticker-track{animation-duration:64s}
+.idc-ticker-jpl b{color:#ffad70}
+.idc-ticker-jpl span{color:#fff;font-weight:900}
+.idc-ticker-jpl:hover span{color:#ffad70}
 </style>
 <style id="jpl-refresh-styles">
 
@@ -353,108 +359,7 @@ html{scroll-padding-top:135px}
 
 
 
-/* Compact JPL Season 3 announcement — avoids global section spacing */
-.jpl-season3-banner{
-  width:min(1180px,92%);
-  margin:12px auto 14px;
-  padding:0;
-  color:#102a56;
-  background:linear-gradient(105deg,#f3f7fc 0%,#ffffff 72%,#fff9f3 100%);
-  border:1px solid #dbe5f1;
-  border-left:4px solid #f47721;
-  border-radius:9px;
-  box-shadow:0 5px 16px rgba(16,42,86,.07);
-}
-.jpl-season3-banner-inner{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding:11px 16px;
-}
-.jpl-season3-banner-copy{
-  min-width:0;
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-.jpl-season3-banner-kicker{
-  flex:0 0 auto;
-  display:inline-flex;
-  align-items:center;
-  padding:6px 9px;
-  border-radius:5px;
-  background:#fff0e5;
-  color:#d85d12;
-  font-size:9px;
-  line-height:1.2;
-  font-weight:900;
-  letter-spacing:.11em;
-  text-transform:uppercase;
-}
-.jpl-season3-banner-text{min-width:0}
-.jpl-season3-banner h2{
-  margin:0;
-  color:#102a56;
-  font-size:clamp(16px,1.55vw,20px);
-  line-height:1.2;
-  letter-spacing:-.02em;
-}
-.jpl-season3-banner p{
-  margin:3px 0 0;
-  color:#62738a;
-  font-size:11.5px;
-  line-height:1.35;
-}
-.jpl-season3-banner-action{
-  flex:0 0 auto;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:10px 13px;
-  border:1px solid #102a56;
-  border-radius:6px;
-  background:#102a56;
-  color:#fff;
-  font-size:10px;
-  line-height:1.2;
-  font-weight:900;
-  letter-spacing:.045em;
-  text-decoration:none;
-  white-space:nowrap;
-  transition:background .18s ease,border-color .18s ease,transform .18s ease;
-}
-.jpl-season3-banner-action:hover{
-  background:#f47721;
-  border-color:#f47721;
-  color:#fff;
-  transform:translateY(-1px);
-}
-.jpl-season3-banner-action:focus-visible{
-  outline:3px solid #f47721;
-  outline-offset:3px;
-}
-@media(max-width:650px){
-  .jpl-season3-banner{width:94%;margin:10px auto 12px}
-  .jpl-season3-banner-inner{
-    min-height:0;
-    align-items:flex-start;
-    flex-direction:column;
-    gap:10px;
-    padding:13px;
-  }
-  .jpl-season3-banner-copy{
-    align-items:flex-start;
-    flex-direction:column;
-    gap:7px;
-  }
-  .jpl-season3-banner-kicker{padding:5px 8px}
-  .jpl-season3-banner h2{font-size:17px}
-  .jpl-season3-banner p{font-size:11px}
-  .jpl-season3-banner-action{padding:9px 11px;font-size:9px}
-}
+
 </style>
 <link rel="preload" as="image" href="assets/homepage/hero-batting.jpg" fetchpriority="high">
 </head>
@@ -476,10 +381,12 @@ html{scroll-padding-top:135px}
 </header>
 <div class="idc-ticker" role="region" aria-label="Indonesia national cricket news">
   <span class="idc-ticker-label">INDONESIA CRICKET</span>
-  <div class="idc-ticker-window" tabindex="0" aria-label="Scrolling cricket headlines. Hover or focus to pause.">
+  <div class="idc-ticker-window" tabindex="0" aria-label="Scrolling Indonesia cricket headlines and JPL Season 3 announcement. Hover or focus to pause.">
     <div class="idc-ticker-track">
       <div class="idc-ticker-set">
         <a class="idc-ticker-item" href="https://www.cricketworld.com/cricket/malaysia-women-vs-indonesia-women/match/scorecard/100519" target="_blank" rel="noopener noreferrer"><b>RESULT · 23 NOV</b><span>Indonesia Women beat Malaysia by 6 wickets · 80/4 (16.2)</span></a>
+        <i aria-hidden="true">•</i>
+        <a class="idc-ticker-item idc-ticker-jpl" href="season-3.html"><b>JPL ANNOUNCEMENT</b><span>JPL Season 3 is coming soon — stay tuned for updates</span></a>
         <i aria-hidden="true">•</i>
         <a class="idc-ticker-item" href="https://www.icc-cricket.com/teams/1810/indonesia-women" target="_blank" rel="noopener noreferrer"><b>RESULT · 21 NOV</b><span>Indonesia Women beat China by 3 runs · 114/3</span></a>
         <i aria-hidden="true">•</i>
@@ -489,6 +396,8 @@ html{scroll-padding-top:135px}
       </div>
       <div class="idc-ticker-set" aria-hidden="true">
         <a class="idc-ticker-item" href="https://www.cricketworld.com/cricket/malaysia-women-vs-indonesia-women/match/scorecard/100519" tabindex="-1"><b>RESULT · 23 NOV</b><span>Indonesia Women beat Malaysia by 6 wickets · 80/4 (16.2)</span></a>
+        <i>•</i>
+        <a class="idc-ticker-item idc-ticker-jpl" tabindex="-1" href="season-3.html"><b>JPL ANNOUNCEMENT</b><span>JPL Season 3 is coming soon — stay tuned for updates</span></a>
         <i>•</i>
         <a class="idc-ticker-item" href="https://www.icc-cricket.com/teams/1810/indonesia-women" tabindex="-1"><b>RESULT · 21 NOV</b><span>Indonesia Women beat China by 3 runs · 114/3</span></a>
         <i>•</i>
@@ -501,18 +410,7 @@ html{scroll-padding-top:135px}
   <a class="idc-ticker-more" href="indonesia-cricket-centre.html">MORE UPDATES <span aria-hidden="true">↗</span></a>
 </div>
 <main id="home">
-<aside class="jpl-season3-banner" aria-labelledby="jpl-season3-banner-title">
-  <div class="jpl-season3-banner-inner">
-    <div class="jpl-season3-banner-copy">
-      <span class="jpl-season3-banner-kicker">UPCOMING SEASON · SEASON 3</span>
-      <div class="jpl-season3-banner-text">
-        <h2 id="jpl-season3-banner-title">JPL Season 3 is coming soon!</h2>
-        <p>Stay tuned for official announcements and updates.</p>
-      </div>
-    </div>
-    <a class="jpl-season3-banner-action" href="season-3.html">EXPLORE SEASON 3 <span aria-hidden="true">↗</span></a>
-  </div>
-</aside>
+
 
 <section class="hero"><div class="wrap"><div class="hero-inner"><div class="eyebrow">More than a game · One cricket community</div><h1 class="hero-title">JAKARTA<br><span>PREMIER LEAGUE</span></h1><p>Welcome to Jakarta Premier League (JPL), a cricket tournament organiser and community platform based in Jakarta, Indonesia. Through competitive tennis-ball cricket tournaments and community events, we bring players, teams and cricket enthusiasts together and help promote the growth of cricket across Indonesia.</p><div class="actions"><a class="btn primary" href="#seasons">EXPLORE JPL</a><a class="btn ghost" href="#about">OUR STORY</a></div><div class="hero-note">TENNIS-BALL CRICKET · COMMUNITY · COMPETITION</div></div></div></section>
 <div class="wrap"><div class="stats"><div class="stat"><b>2+</b><span>Seasons of cricket</span></div><div class="stat"><b>500+</b><span>Community engaged</span></div><div class="stat"><b>240+</b><span>Players involved</span></div><div class="stat"><b>1</b><span>Growing cricket family</span></div></div>
