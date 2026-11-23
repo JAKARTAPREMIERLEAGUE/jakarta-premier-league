@@ -25,55 +25,155 @@ footer{background:var(--navy);color:#dbe5f4;padding:28px 5%;text-align:center;fo
 .lightbox.open{display:flex}.lightbox img{max-width:min(1100px,95vw);max-height:88vh;object-fit:contain;border-radius:8px}
 .close{position:absolute;right:25px;top:18px;color:white;background:none;border:0;font-size:36px;cursor:pointer}
 @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}nav{gap:13px}.topbar .wrap{display:block}.topbar .wrap span:last-child{display:none}}
-</style><meta content="Browse Jakarta Premier League photos capturing the cricket matches, teams, players, celebrations and memorable moments from our tournaments." name="description"/><link href="https://jakartapremierleague.github.io/jakarta-premier-league/gallery.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Jakarta Premier League" property="og:site_name"/><meta content="JPL Photo Gallery | Jakarta Premier League" property="og:title"/><meta content="Browse Jakarta Premier League photos capturing the cricket matches, teams, players, celebrations and memorable moments from our tournaments." property="og:description"/><meta content="https://jakartapremierleague.github.io/jakarta-premier-league/gallery.html" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="JPL Photo Gallery | Jakarta Premier League" name="twitter:title"/><meta content="Browse Jakarta Premier League photos capturing the cricket matches, teams, players, celebrations and memorable moments from our tournaments." name="twitter:description"/></head><body>
+</style><meta content="Browse Jakarta Premier League photos capturing the cricket matches, teams, players, celebrations and memorable moments from our tournaments." name="description"/><link href="https://jakartapremierleague.github.io/jakarta-premier-league/gallery.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Jakarta Premier League" property="og:site_name"/><meta content="JPL Photo Gallery | Jakarta Premier League" property="og:title"/><meta content="Browse Jakarta Premier League photos capturing the cricket matches, teams, players, celebrations and memorable moments from our tournaments." property="og:description"/><meta content="https://jakartapremierleague.github.io/jakarta-premier-league/gallery.html" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="JPL Photo Gallery | Jakarta Premier League" name="twitter:title"/><meta content="Browse Jakarta Premier League photos capturing the cricket matches, teams, players, celebrations and memorable moments from our tournaments." name="twitter:description"/><style id="jpl-refresh-styles">
+
+/* JPL shared primary navigation */
+html{scroll-padding-top:135px}
+.jpl-site-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e2e8f0;box-shadow:0 4px 18px rgba(16,42,86,.07)}
+.jpl-nav-inner{width:min(1540px,96%);min-height:80px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+.jpl-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto;color:#102a56;font-weight:900;letter-spacing:.045em;white-space:nowrap;text-decoration:none}
+.jpl-brand img{width:54px;height:54px;object-fit:contain;display:block}
+.jpl-brand span{font-size:14px;line-height:1.15}
+.jpl-brand small{display:block;color:#f47721;font-size:10px;letter-spacing:.2em;margin-top:4px}
+.jpl-main-nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(9px,.8vw,15px);min-width:0;white-space:nowrap}
+.jpl-main-nav>a,.jpl-nav-dropdown>a{display:inline-flex;align-items:center;color:#394b65;font-size:10.5px;line-height:1.25;font-weight:800;letter-spacing:.025em;text-decoration:none;white-space:nowrap;cursor:pointer;transition:color .18s ease}
+.jpl-main-nav>a:hover,.jpl-nav-dropdown>a:hover,.jpl-main-nav a[aria-current="page"]{color:#f47721}
+.jpl-nav-dropdown{position:relative;display:flex;align-items:center;gap:3px;flex:0 0 auto}
+.jpl-season-toggle{border:0;background:transparent;color:#394b65;padding:5px 3px;font-size:12px;font-weight:900;cursor:pointer;border-radius:4px}
+.jpl-season-toggle:hover,.jpl-season-toggle[aria-expanded="true"]{color:#f47721;background:#fff5ed}
+.jpl-dropdown-menu{display:none;position:absolute;top:calc(100% + 12px);left:-14px;min-width:195px;padding:8px;background:#fff;border:1px solid #e2e8f0;border-radius:9px;box-shadow:0 14px 32px rgba(7,27,56,.16);z-index:1001}
+.jpl-nav-dropdown.open>.jpl-dropdown-menu{display:grid;gap:2px}
+@media(min-width:1101px){.jpl-nav-dropdown:hover>.jpl-dropdown-menu,.jpl-nav-dropdown:focus-within>.jpl-dropdown-menu{display:grid;gap:2px}}
+.jpl-dropdown-menu a{padding:10px 12px;border-radius:6px;color:#394b65;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap}
+.jpl-dropdown-menu a:hover,.jpl-dropdown-menu a[aria-current="page"]{background:#f5f7fa;color:#f47721}
+.jpl-nav-toggle{display:none;width:42px;height:40px;padding:9px;border:0;border-radius:7px;background:#102a56;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.jpl-nav-toggle span{display:block;width:19px;height:2px;background:#fff;border-radius:2px}
+.jpl-main-nav a:focus-visible,.jpl-season-toggle:focus-visible,.jpl-nav-toggle:focus-visible{outline:3px solid #f47721;outline-offset:3px}
+.jpl-page-shortcuts{background:#f7f9fc;border-bottom:1px solid #e2e8f0}
+.jpl-page-shortcuts-inner{width:min(1180px,92%);min-height:44px;margin:0 auto;display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:7px 0}
+.jpl-page-shortcuts-inner>span{color:#8a98aa;font-size:9px;font-weight:900;letter-spacing:.13em;margin-right:5px}
+.jpl-page-shortcuts-inner>a{display:inline-flex;align-items:center;padding:5px 9px;border-radius:5px;color:#43536b;background:#fff;border:1px solid #e2e8f0;font-size:9px;font-weight:800;letter-spacing:.035em;text-decoration:none;white-space:nowrap}
+.jpl-page-shortcuts-inner>a:hover{color:#f47721;border-color:#f7bf94}
+@media(max-width:1100px){
+  .jpl-nav-inner{min-height:74px}
+  .jpl-brand img{width:50px;height:50px}
+  .jpl-nav-toggle{display:flex;margin-left:auto}
+  .jpl-main-nav{display:none;position:absolute;top:100%;left:0;right:0;padding:10px 18px 14px;background:#fff;border:1px solid #e2e8f0;border-top:0;border-radius:0 0 12px 12px;box-shadow:0 14px 28px rgba(7,27,56,.14);align-items:stretch;flex-direction:column;gap:0;white-space:normal;z-index:1000}
+  .jpl-nav-inner.open>.jpl-main-nav{display:flex}
+  .jpl-main-nav>a{display:flex;width:100%;min-height:42px;padding:10px 2px;font-size:12px;border-bottom:1px solid #edf1f6}
+  .jpl-nav-dropdown{width:100%;display:grid;grid-template-columns:1fr auto;gap:4px 8px;border-bottom:1px solid #edf1f6}
+  .jpl-nav-dropdown>a{display:flex;align-items:center;min-height:42px;padding:10px 2px;font-size:12px}
+  .jpl-season-toggle{width:42px;min-height:38px}
+  .jpl-dropdown-menu{position:static;grid-column:1/-1;min-width:0;margin:0 0 9px;padding:4px 0 4px 12px;border:0;border-radius:0;box-shadow:none;background:#f7f9fc}
+  .jpl-nav-dropdown.open>.jpl-dropdown-menu{display:grid}
+  .jpl-dropdown-menu a{padding:10px 12px}
+  .jpl-page-shortcuts-inner{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding:8px 0}
+  .jpl-page-shortcuts-inner>span{flex:0 0 auto}
+}
+@media(max-width:420px){
+  .jpl-nav-inner{width:94%;min-height:68px}
+  .jpl-brand img{width:44px;height:44px}
+  .jpl-brand span{font-size:12px}
+  .jpl-brand small{font-size:9px}
+}
+
+</style>
+</head><body>
 <div class="topbar"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · TENNIS-BALL CRICKET</span><span>CONNECTING CRICKET IN INDONESIA</span></div></div>
-<header><div class="nav"><a class="brand" href="index.html"><img alt="JPL logo" src="assets/jpl-logo.jpg"/><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
-<nav aria-label="Main navigation"><a href="index.html">HOME</a> <a href="index.html#about">ABOUT JPL</a><a href="index.html#story">WHY WE STARTED</a><a href="index.html#moments">JPL MOMENTS</a><a href="gallery.html">GALLERY</a>
-<div class="nav-dropdown"><a href="index.html#seasons">SEASONS ▾</a><div class="dropdown-menu"><a href="season-1.html">Season 1</a><a href="season-2.html">Season 2</a><a href="season-3.html">Season 3 · Upcoming</a></div></div><a href="index.html#contact">CONTACT US</a></nav></div></header>
+<header class="jpl-site-header">
+  <div class="jpl-nav-inner" id="jpl-nav">
+    <a class="jpl-brand" href="index.html#home" aria-label="Jakarta Premier League home">
+      <img src="assets/jpl-logo.jpg" alt="Jakarta Premier League logo" decoding="async">
+      <span>JAKARTA<small>PREMIER LEAGUE</small></span>
+    </a>
+    <nav class="jpl-main-nav" id="jpl-main-nav" aria-label="Main navigation">
+      <a href="index.html#home">HOME</a><a href="index.html#about">ABOUT JPL</a><a href="index.html#story">WHY WE STARTED</a><a href="index.html#moments">JPL MOMENTS</a><a href="gallery.html" aria-current="page">GALLERY</a><div class="jpl-nav-dropdown"><a href="index.html#seasons">SEASONS</a><button class="jpl-season-toggle" type="button" aria-label="Open Seasons menu" aria-controls="jpl-seasons-menu" aria-expanded="false">▾</button><div class="jpl-dropdown-menu" id="jpl-seasons-menu" aria-label="Season pages"><a href="season-1.html">Season 1</a><a href="season-2.html">Season 2</a><a href="season-3.html">Season 3 · Coming Soon</a></div></div><a href="cricket-in-indonesia.html">CRICKET IN INDONESIA</a><a href="sponsors.html">OUR PARTNERS</a><a href="index.html#contact">CONTACT US</a>
+    </nav>
+    <button class="jpl-nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="jpl-main-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 <main><div class="kicker">The JPL story in pictures</div><h1>JPL Gallery</h1><p class="intro">Every match, every team and every celebration creates a memory. Explore moments from the Jakarta Premier League community. More photos will be added as the league grows.</p>
 <div class="gallery-grid"><button aria-label="View JPL team moments" class="photo" data-full="assets/gallery/jpl-gallery-01.jpg" type="button">
-<img alt="JPL team moments" loading="lazy" src="assets/gallery/jpl-gallery-01.jpg"/><span>JPL team moments</span></button>
+<img alt="JPL team moments" src="assets/gallery/jpl-gallery-01.jpg"/ loading="eager" decoding="async" fetchpriority="high"><span>JPL team moments</span></button>
 <button aria-label="View Together as one team" class="photo" data-full="assets/gallery/jpl-gallery-02.jpg" type="button">
-<img alt="Together as one team" loading="lazy" src="assets/gallery/jpl-gallery-02.jpg"/><span>Together as one team</span></button>
+<img alt="Together as one team" src="assets/gallery/jpl-gallery-02.jpg"/ loading="eager" decoding="async" fetchpriority="high"><span>Together as one team</span></button>
 <button aria-label="View Team huddle" class="photo" data-full="assets/gallery/jpl-gallery-03.jpg" type="button">
-<img alt="Team huddle" loading="lazy" src="assets/gallery/jpl-gallery-03.jpg"/><span>Team huddle</span></button>
+<img alt="Team huddle" src="assets/gallery/jpl-gallery-03.jpg"/ loading="lazy" decoding="async"><span>Team huddle</span></button>
 <button aria-label="View JPL from above" class="photo" data-full="assets/gallery/jpl-gallery-04.jpg" type="button">
-<img alt="JPL from above" loading="lazy" src="assets/gallery/jpl-gallery-04.jpg"/><span>JPL from above</span></button>
+<img alt="JPL from above" src="assets/gallery/jpl-gallery-04.jpg"/ loading="lazy" decoding="async"><span>JPL from above</span></button>
 <button aria-label="View A view of the ground" class="photo" data-full="assets/gallery/jpl-gallery-05.jpg" type="button">
-<img alt="A view of the ground" loading="lazy" src="assets/gallery/jpl-gallery-05.jpg"/><span>A view of the ground</span></button>
+<img alt="A view of the ground" src="assets/gallery/jpl-gallery-05.jpg"/ loading="lazy" decoding="async"><span>A view of the ground</span></button>
 <button aria-label="View Cricket community" class="photo" data-full="assets/gallery/jpl-gallery-06.jpg" type="button">
-<img alt="Cricket community" loading="lazy" src="assets/gallery/jpl-gallery-06.jpg"/><span>Cricket community</span></button>
+<img alt="Cricket community" src="assets/gallery/jpl-gallery-06.jpg"/ loading="lazy" decoding="async"><span>Cricket community</span></button>
 <button aria-label="View On the field" class="photo" data-full="assets/gallery/jpl-gallery-07.jpg" type="button">
-<img alt="On the field" loading="lazy" src="assets/gallery/jpl-gallery-07.jpg"/><span>On the field</span></button>
+<img alt="On the field" src="assets/gallery/jpl-gallery-07.jpg"/ loading="lazy" decoding="async"><span>On the field</span></button>
 <button aria-label="View Team spirit" class="photo" data-full="assets/gallery/jpl-gallery-08.jpg" type="button">
-<img alt="Team spirit" loading="lazy" src="assets/gallery/jpl-gallery-08.jpg"/><span>Team spirit</span></button>
+<img alt="Team spirit" src="assets/gallery/jpl-gallery-08.jpg"/ loading="lazy" decoding="async"><span>Team spirit</span></button>
 <button aria-label="View Tournament moments" class="photo" data-full="assets/gallery/jpl-gallery-09.jpg" type="button">
-<img alt="Tournament moments" loading="lazy" src="assets/gallery/jpl-gallery-09.jpg"/><span>Tournament moments</span></button>
+<img alt="Tournament moments" src="assets/gallery/jpl-gallery-09.jpg"/ loading="lazy" decoding="async"><span>Tournament moments</span></button>
 <button aria-label="View Celebrating together" class="photo" data-full="assets/gallery/jpl-gallery-10.jpg" type="button">
-<img alt="Celebrating together" loading="lazy" src="assets/gallery/jpl-gallery-10.jpg"/><span>Celebrating together</span></button>
+<img alt="Celebrating together" src="assets/gallery/jpl-gallery-10.jpg"/ loading="lazy" decoding="async"><span>Celebrating together</span></button>
 <button aria-label="View Players in action" class="photo" data-full="assets/gallery/jpl-gallery-11.jpg" type="button">
-<img alt="Players in action" loading="lazy" src="assets/gallery/jpl-gallery-11.jpg"/><span>Players in action</span></button>
+<img alt="Players in action" src="assets/gallery/jpl-gallery-11.jpg"/ loading="lazy" decoding="async"><span>Players in action</span></button>
 <button aria-label="View JPL memories" class="photo" data-full="assets/gallery/jpl-gallery-12.jpg" type="button">
-<img alt="JPL memories" loading="lazy" src="assets/gallery/jpl-gallery-12.jpg"/><span>JPL memories</span></button>
+<img alt="JPL memories" src="assets/gallery/jpl-gallery-12.jpg"/ loading="lazy" decoding="async"><span>JPL memories</span></button>
 <button aria-label="View Team conversations" class="photo" data-full="assets/gallery/jpl-gallery-13.jpg" type="button">
-<img alt="Team conversations" loading="lazy" src="assets/gallery/jpl-gallery-13.jpg"/><span>Team conversations</span></button>
+<img alt="Team conversations" src="assets/gallery/jpl-gallery-13.jpg"/ loading="lazy" decoding="async"><span>Team conversations</span></button>
 <button aria-label="View Together before the game" class="photo" data-full="assets/gallery/jpl-gallery-14.jpg" type="button">
-<img alt="Together before the game" loading="lazy" src="assets/gallery/jpl-gallery-14.jpg"/><span>Together before the game</span></button>
+<img alt="Together before the game" src="assets/gallery/jpl-gallery-14.jpg"/ loading="lazy" decoding="async"><span>Together before the game</span></button>
 <button aria-label="View A team huddle" class="photo" data-full="assets/gallery/jpl-gallery-15.jpg" type="button">
-<img alt="A team huddle" loading="lazy" src="assets/gallery/jpl-gallery-15.jpg"/><span>A team huddle</span></button>
+<img alt="A team huddle" src="assets/gallery/jpl-gallery-15.jpg"/ loading="lazy" decoding="async"><span>A team huddle</span></button>
 <button aria-label="View Cricket community" class="photo" data-full="assets/gallery/jpl-gallery-16.jpg" type="button">
-<img alt="Cricket community" loading="lazy" src="assets/gallery/jpl-gallery-16.jpg"/><span>Cricket community</span></button>
+<img alt="Cricket community" src="assets/gallery/jpl-gallery-16.jpg"/ loading="lazy" decoding="async"><span>Cricket community</span></button>
 <button aria-label="View Tournament celebrations" class="photo" data-full="assets/gallery/jpl-gallery-17.jpg" type="button">
-<img alt="Tournament celebrations" loading="lazy" src="assets/gallery/jpl-gallery-17.jpg"/><span>Tournament celebrations</span></button>
+<img alt="Tournament celebrations" src="assets/gallery/jpl-gallery-17.jpg"/ loading="lazy" decoding="async"><span>Tournament celebrations</span></button>
 <button aria-label="View Player moments" class="photo" data-full="assets/gallery/jpl-gallery-18.jpg" type="button">
-<img alt="Player moments" loading="lazy" src="assets/gallery/jpl-gallery-18.jpg"/><span>Player moments</span></button>
+<img alt="Player moments" src="assets/gallery/jpl-gallery-18.jpg"/ loading="lazy" decoding="async"><span>Player moments</span></button>
 <button aria-label="View JPL gathering" class="photo" data-full="assets/gallery/jpl-gallery-19.jpg" type="button">
-<img alt="JPL gathering" loading="lazy" src="assets/gallery/jpl-gallery-19.jpg"/><span>JPL gathering</span></button>
+<img alt="JPL gathering" src="assets/gallery/jpl-gallery-19.jpg"/ loading="lazy" decoding="async"><span>JPL gathering</span></button>
 <button aria-label="View Team memories" class="photo" data-full="assets/gallery/jpl-gallery-20.jpg" type="button">
-<img alt="Team memories" loading="lazy" src="assets/gallery/jpl-gallery-20.jpg"/><span>Team memories</span></button>
+<img alt="Team memories" src="assets/gallery/jpl-gallery-20.jpg"/ loading="lazy" decoding="async"><span>Team memories</span></button>
 <button aria-label="View On-field moments" class="photo" data-full="assets/gallery/jpl-gallery-21.jpg" type="button">
-<img alt="On-field moments" loading="lazy" src="assets/gallery/jpl-gallery-21.jpg"/><span>On-field moments</span></button></div></main>
+<img alt="On-field moments" src="assets/gallery/jpl-gallery-21.jpg"/ loading="lazy" decoding="async"><span>On-field moments</span></button></div></main>
 <footer>© <span id="year"></span> Jakarta Premier League. All rights reserved.</footer>
-<div aria-label="Photo viewer" aria-modal="true" class="lightbox" id="lightbox" role="dialog"><button aria-label="Close" class="close">×</button><img alt="Selected JPL gallery photo" id="lightbox-img"/></div>
+<div aria-label="Photo viewer" aria-modal="true" class="lightbox" id="lightbox" role="dialog"><button aria-label="Close" class="close">×</button><img alt="Selected JPL gallery photo" id="lightbox-img"/ loading="lazy" decoding="async"></div>
 <script>document.getElementById('year').textContent=new Date().getFullYear();const box=document.getElementById('lightbox'),large=document.getElementById('lightbox-img');document.querySelectorAll('.photo').forEach(b=>b.addEventListener('click',()=>{large.src=b.dataset.full;box.classList.add('open')}));document.querySelector('.close').addEventListener('click',()=>box.classList.remove('open'));box.addEventListener('click',e=>{if(e.target===box)box.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')box.classList.remove('open')});</script>
+<script>
+(function(){
+  const header=document.getElementById('jpl-nav');
+  if(!header)return;
+  const toggle=header.querySelector('.jpl-nav-toggle');
+  const nav=header.querySelector('.jpl-main-nav');
+  const dropdown=header.querySelector('.jpl-nav-dropdown');
+  const seasonToggle=header.querySelector('.jpl-season-toggle');
+  if(!toggle||!nav||!dropdown||!seasonToggle)return;
+  function closeMenu(){
+    header.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open navigation menu');
+  }
+  function closeSeasons(){
+    dropdown.classList.remove('open');
+    seasonToggle.setAttribute('aria-expanded','false');
+    seasonToggle.setAttribute('aria-label','Open Seasons menu');
+  }
+  toggle.addEventListener('click',function(){
+    const open=header.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+    if(!open)closeSeasons();
+  });
+  seasonToggle.addEventListener('click',function(event){
+    event.stopPropagation();
+    const open=dropdown.classList.toggle('open');
+    seasonToggle.setAttribute('aria-expanded',String(open));
+    seasonToggle.setAttribute('aria-label',open?'Close Seasons menu':'Open Seasons menu');
+  });
+  nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){closeMenu();closeSeasons();});});
+  document.addEventListener('keydown',function(event){if(event.key==='Escape'){closeMenu();closeSeasons();}});
+  document.addEventListener('click',function(event){if(!header.contains(event.target)){closeMenu();closeSeasons();}});
+})();
+</script>
 </body></html>
