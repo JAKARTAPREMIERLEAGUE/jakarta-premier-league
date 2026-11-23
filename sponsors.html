@@ -17,6 +17,26 @@ main{padding:62px 0 78px}.section-heading{text-align:center;margin-bottom:30px}.
 footer{background:#041126;color:#D1DCEC;padding:25px 0;font-size:11px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{color:#FFD27A}
 @media(max-width:850px){.nav{padding:12px 0;align-items:flex-start;flex-direction:column}.nav nav{gap:13px}.featured{grid-template-columns:1fr}.featured-copy{padding:35px 30px 18px}.featured-art{min-height:220px}.featured-art img{height:180px}.partners{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.topbar .wrap{justify-content:center;text-align:center}.nav nav{gap:10px 15px}.hero{padding:58px 0}.partners{grid-template-columns:1fr}.partner{padding:22px}.featured-copy{padding:30px 24px 12px}main{padding-top:44px}}
+
+/* Additional supporters marquee — exclusive to the Our Partners page */
+.supported-by-section{margin:52px 0 0;padding:0}
+.supported-by-heading{text-align:center;margin:0 auto 17px;max-width:680px}
+.supported-by-heading .kicker{color:#f47721;font-size:10px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+.supported-by-heading h2{margin:7px 0 5px;color:#102b50;font-size:clamp(24px,3.2vw,32px);line-height:1.12}
+.supported-by-heading p{margin:0;color:#64748b;font-size:13px}
+.supported-marquee{position:relative;overflow:hidden;border:1px solid #dce5f0;border-radius:12px;background:linear-gradient(100deg,#f7f9fc 0%,#fff 48%,#f7f9fc 100%);box-shadow:0 8px 24px rgba(16,42,86,.06);padding:18px 0;}
+.supported-marquee:before,.supported-marquee:after{content:"";position:absolute;top:0;bottom:0;width:48px;z-index:2;pointer-events:none}
+.supported-marquee:before{left:0;background:linear-gradient(90deg,#f7f9fc,transparent)}
+.supported-marquee:after{right:0;background:linear-gradient(270deg,#f7f9fc,transparent)}
+.supported-track{width:max-content;display:flex;align-items:center;gap:0;white-space:nowrap;animation:supported-by-scroll 42s linear infinite;will-change:transform}
+.supported-name{display:inline-flex;align-items:center;gap:20px;padding:0 24px;color:#18365c;font-size:14px;line-height:1.3;font-weight:800;letter-spacing:.015em}
+.supported-name:after{content:"";width:5px;height:5px;display:inline-block;border-radius:50%;background:#f47721;flex:0 0 auto}
+.supported-name small{margin-left:-12px;color:#708096;font-size:10px;font-weight:600;letter-spacing:0}
+.supported-marquee:hover .supported-track,.supported-marquee:focus-within .supported-track{animation-play-state:paused}
+@keyframes supported-by-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:600px){.supported-by-section{margin-top:38px}.supported-by-heading p{font-size:12px}.supported-marquee{padding:15px 0}.supported-name{font-size:12px;padding:0 17px;gap:14px}.supported-name small{font-size:9px;margin-left:-8px}.supported-marquee:before,.supported-marquee:after{width:28px}}
+@media(prefers-reduced-motion:reduce){.supported-track{animation:none;transform:none}.supported-marquee{overflow-x:auto}.supported-track[aria-hidden="true"]{display:none}}
+
 </style>
 <style id="jpl-refresh-styles">
 
@@ -100,6 +120,20 @@ html{scroll-padding-top:135px}
 <article class="partner"><div class="partner-logo"><img src="assets/sponsors/pt-gokak-indonesia.png" alt="PT Gokak Indonesia logo" loading="lazy" decoding="async"></div><h3>PT Gokak Indonesia</h3><p>An Indonesian textile manufacturer operating in the fibre, yarn and thread mills sector, including cotton, synthetic and blended yarn products.</p><a class="text-link" href="https://www.gokakindonesia.com/" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
 <article class="partner"><div class="partner-logo"><img src="assets/sponsors/ktl-international-indonesia.jpg" alt="KTL International Indonesia logo" loading="lazy" decoding="async"></div><h3>KTL International Indonesia</h3><p>KTL Indonesia combines local market knowledge with KTL’s international network for sea and air shipments to and from Indonesia. Its regional presence includes Belawan, Jakarta and Surabaya, supporting local coordination and customers’ transport requirements.</p><a class="text-link" href="https://www.kinay.com/Group-Companies/25/indonesia" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
 </div>
+<section class="supported-by-section" aria-labelledby="supported-by-title">
+  <div class="supported-by-heading">
+    <div class="kicker">With appreciation</div>
+    <h2 id="supported-by-title">Supported By</h2>
+    <p>Our thanks to the businesses and community supporters who have helped JPL along the way.</p>
+  </div>
+  <div class="supported-marquee" role="region" aria-label="Additional JPL supporters">
+    <div class="supported-track">
+      <span class="supported-name">JVR Jayata Consulting</span><span class="supported-name">PT Finsure Consulting</span><span class="supported-name">Udupi by RF</span><span class="supported-name">Udupi Shree Krishna &amp; Delicious</span><span class="supported-name">Om Spice Mystery</span><span class="supported-name">Nityo Infotech</span><span class="supported-name">Bank of India Indonesia</span><span class="supported-name">Swastik Mart</span><span class="supported-name">AK Grains Cricket Facility <small>(Crickingdom Academy by Rohit Sharma)</small></span><span class="supported-name">Wynder Holidays</span>
+      <span class="supported-name" aria-hidden="true">JVR Jayata Consulting</span><span class="supported-name" aria-hidden="true">PT Finsure Consulting</span><span class="supported-name" aria-hidden="true">Udupi by RF</span><span class="supported-name" aria-hidden="true">Udupi Shree Krishna &amp; Delicious</span><span class="supported-name" aria-hidden="true">Om Spice Mystery</span><span class="supported-name" aria-hidden="true">Nityo Infotech</span><span class="supported-name" aria-hidden="true">Bank of India Indonesia</span><span class="supported-name" aria-hidden="true">Swastik Mart</span><span class="supported-name" aria-hidden="true">AK Grains Cricket Facility <small>(Crickingdom Academy by Rohit Sharma)</small></span><span class="supported-name" aria-hidden="true">Wynder Holidays</span>
+    </div>
+  </div>
+</section>
+
 <div class="closing"><h2>Thank You for Supporting JPL</h2><p>Your partnership helps us create opportunities, strengthen our cricket community and grow the game in Indonesia.</p></div>
 </main>
 <footer><div class="wrap"><span>© Jakarta Premier League. All rights reserved.</span><a href="index.html">Back to JPL Home</a></div></footer>
