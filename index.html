@@ -149,6 +149,67 @@ header .menu{display:none}
   header .menu{display:block;margin-left:auto}
 }
 
+
+
+/* Indonesia Cricket Centre — national teams, official live-score links and PCI updates */
+.idc-ticker{height:42px;display:flex;align-items:center;gap:18px;padding:0 max(2%,calc((100% - 1500px)/2));background:#071b38;color:#fff;overflow:hidden;position:relative;z-index:5}
+.idc-ticker-label{flex:0 0 auto;color:#ffad70;font-size:10px;font-weight:900;letter-spacing:.16em;white-space:nowrap}
+.idc-ticker-window{flex:1 1 auto;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%)}
+.idc-ticker-track{display:flex;align-items:center;gap:19px;width:max-content;white-space:nowrap;animation:idc-marquee 35s linear infinite}
+.idc-ticker-track span{font-size:10px;font-weight:800;letter-spacing:.10em;color:#e3ebf7}
+.idc-ticker-track i{font-style:normal;color:#f47721;font-size:14px}
+.idc-ticker:hover .idc-ticker-track{animation-play-state:paused}
+.idc-ticker>a{flex:0 0 auto;color:#ffad70;font-size:10px;font-weight:900;letter-spacing:.08em;white-space:nowrap}
+.idc-ticker>a:hover{color:#fff}
+@keyframes idc-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.indonesia-centre{padding:76px 0;background:#eef2f7;scroll-margin-top:100px}
+.idc-heading{max-width:760px;margin-bottom:28px}
+.idc-heading .kicker{color:#f47721}
+.idc-heading h2{margin:8px 0 10px}
+.idc-heading p{margin:0;color:#66758a;font-size:15px;max-width:700px}
+.idc-team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.idc-team-card{position:relative;overflow:hidden;background:#fff;border:1px solid #dce4ee;border-radius:13px;padding:25px;box-shadow:0 12px 28px rgba(16,42,86,.06)}
+.idc-team-card:after{content:"";position:absolute;right:-42px;top:-52px;width:150px;height:150px;border:20px solid rgba(244,119,33,.10);border-radius:50%;pointer-events:none}
+.idc-team-kicker{display:flex;align-items:center;gap:9px;color:#f47721;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.idc-flag{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;border-radius:50%;background:#f5f7fa;font-size:17px;letter-spacing:0}
+.idc-team-card h3{margin:13px 0 7px;color:#102a56;font-size:23px;line-height:1.15}
+.idc-team-card p{margin:0 0 18px;color:#66758a;font-size:13px;max-width:490px}
+.idc-team-actions{display:flex;gap:9px;flex-wrap:wrap;position:relative;z-index:1}
+.idc-action-primary,.idc-action-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:41px;padding:10px 14px;border-radius:6px;font-size:10px;font-weight:900;letter-spacing:.055em;text-decoration:none}
+.idc-action-primary{background:#102a56;color:#fff}
+.idc-action-primary:hover{background:#173f78;color:#fff}
+.idc-action-secondary{border:1px solid #d5deea;color:#102a56;background:#fff}
+.idc-action-secondary:hover{border-color:#f47721;color:#f47721}
+.idc-support-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
+.idc-support-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:18px;min-height:220px;padding:25px;border-radius:13px;background:#102a56;color:#fff;box-shadow:0 12px 28px rgba(16,42,86,.10)}
+.idc-support-card.social{background:#fff;color:#13233d;border:1px solid #dce4ee;box-shadow:0 12px 28px rgba(16,42,86,.05)}
+.idc-support-kicker{color:#ffad70;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.idc-support-card.social .idc-support-kicker{color:#f47721}
+.idc-support-card h3{margin:8px 0 7px;font-size:21px;line-height:1.2;color:inherit}
+.idc-support-card p{margin:0;color:#d2dcec;font-size:13px;max-width:560px}
+.idc-support-card.social p{color:#66758a}
+.idc-store-links{display:flex;gap:9px;flex-wrap:wrap}
+.idc-store-links a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 13px;border-radius:6px;background:#f47721;color:#fff;font-size:10px;font-weight:900;letter-spacing:.04em;text-decoration:none}
+.idc-store-links a:hover{background:#e7630e}
+.idc-support-card.social .idc-action-primary{background:#f47721}
+.idc-support-card.social .idc-action-primary:hover{background:#e7630e}
+.idc-note{margin:16px 0 0;color:#708096;font-size:11px}
+@media(max-width:780px){
+ .idc-ticker{gap:11px;padding:0 4%;height:40px}
+ .idc-ticker-label{font-size:9px;letter-spacing:.1em}
+ .idc-ticker>a{font-size:9px}
+ .indonesia-centre{padding:58px 0}
+ .idc-team-grid,.idc-support-grid{grid-template-columns:1fr}
+ .idc-team-card,.idc-support-card{padding:21px}
+}
+@media(max-width:420px){
+ .idc-ticker-label{display:none}
+ .idc-ticker-track{gap:13px}
+ .idc-ticker-track span{font-size:9px}
+ .idc-team-card h3{font-size:21px}
+}
+@media(prefers-reduced-motion:reduce){.idc-ticker-track{animation:none;transform:none}}
+
 </style>
 <style id="jpl-refresh-styles">
 
@@ -225,6 +286,16 @@ html{scroll-padding-top:135px}
     </button>
   </div>
 </header>
+<div class="idc-ticker" role="region" aria-label="Indonesia cricket updates">
+  <div class="idc-ticker-label">INDONESIA CRICKET</div>
+  <div class="idc-ticker-window" aria-hidden="true">
+    <div class="idc-ticker-track">
+      <span>MEN'S NATIONAL TEAM</span><i>•</i><span>WOMEN'S NATIONAL TEAM</span><i>•</i><span>OFFICIAL PCI LIVE SCORES</span><i>•</i><span>FIXTURES &amp; RESULTS</span><i>•</i><span>PCI TEAM UPDATES</span><i>•</i>
+      <span>MEN'S NATIONAL TEAM</span><i>•</i><span>WOMEN'S NATIONAL TEAM</span><i>•</i><span>OFFICIAL PCI LIVE SCORES</span><i>•</i><span>FIXTURES &amp; RESULTS</span><i>•</i><span>PCI TEAM UPDATES</span><i>•</i>
+    </div>
+  </div>
+  <a href="#indonesia-cricket-centre">OPEN CENTRE <span aria-hidden="true">↗</span></a>
+</div>
 <main id="home">
 <section class="hero"><div class="wrap"><div class="hero-inner"><div class="eyebrow">More than a game · One cricket community</div><h1 class="hero-title">JAKARTA<br><span>PREMIER LEAGUE</span></h1><p>Welcome to Jakarta Premier League (JPL), a cricket tournament organiser and community platform based in Jakarta, Indonesia. Through competitive tennis-ball cricket tournaments and community events, we bring players, teams and cricket enthusiasts together and help promote the growth of cricket across Indonesia.</p><div class="actions"><a class="btn primary" href="#seasons">EXPLORE JPL</a><a class="btn ghost" href="#about">OUR STORY</a></div><div class="hero-note">TENNIS-BALL CRICKET · COMMUNITY · COMPETITION</div></div></div></section>
 <div class="wrap"><div class="stats"><div class="stat"><b>2+</b><span>Seasons of cricket</span></div><div class="stat"><b>500+</b><span>Community engaged</span></div><div class="stat"><b>240+</b><span>Players involved</span></div><div class="stat"><b>1</b><span>Growing cricket family</span></div></div>
@@ -303,6 +374,63 @@ html{scroll-padding-top:135px}
 
 <section class="dark-band"><div class="wrap"><div class="kicker">The JPL experience</div><h2>Built around the love of the game.</h2><p class="intro">A league experience that brings people together on and beyond the cricket field.</p><div class="pillars"><article class="pillar"><div class="num">01 / COMPETE</div><h3>Tennis-ball cricket</h3><p>Fast-paced matches, competitive teams and exciting moments that celebrate the spirit of tennis-ball cricket.</p></article><article class="pillar"><div class="num">02 / CONNECT</div><h3>One cricket community</h3><p>Bringing players, families, supporters and cricket enthusiasts together from across Indonesia.</p></article><article class="pillar"><div class="num">03 / CELEBRATE</div><h3>Moments that matter</h3><p>Recognising performances, teamwork, sportsmanship and the memories created every season.</p></article></div></div></section>
 <section id="moments"><div class="wrap"><div class="section-head"><div class="kicker">Beyond the boundary</div><h2>JPL moments</h2><p class="intro">The action, the teams, the celebrations and the people who make the league special.</p></div><div class="gallery-grid"><div class="gallery-item"><img src="assets/homepage/hero-batting.jpg" alt="Tennis-ball cricket batting action" loading="lazy" decoding="async"><div class="gallery-label">On-field action</div></div><div class="gallery-item"><img src="assets/homepage/trophy-awards.jpg" alt="JPL trophies and awards" loading="lazy" decoding="async"><div class="gallery-label">The rewards</div></div><div class="gallery-item"><img src="assets/homepage/jpl-team-stage.jpg" alt="JPL team celebration on stage" loading="lazy" decoding="async"><div class="gallery-label">Together as one</div></div><div class="gallery-item"><img src="assets/homepage/batting-action.jpg" alt="Batter playing a shot" loading="lazy" decoding="async"><div class="gallery-label">Game day</div></div><div class="gallery-item"><img src="assets/homepage/presentation.jpg" alt="JPL tournament presentation" loading="lazy" decoding="async"><div class="gallery-label">Celebrating cricket</div></div></div></div></section>
+<section class="indonesia-centre" id="indonesia-cricket-centre">
+  <div class="wrap">
+    <div class="idc-heading">
+      <div class="kicker">CRICKET BEYOND JPL</div>
+      <h2>Indonesia Cricket Centre</h2>
+      <p>Follow Indonesia's men's and women's national teams, find official match information and stay connected with updates from Persatuan Cricket Indonesia.</p>
+    </div>
+
+    <div class="idc-team-grid">
+      <article class="idc-team-card">
+        <div class="idc-team-kicker"><span class="idc-flag" aria-hidden="true">🇮🇩</span> MEN'S NATIONAL TEAM</div>
+        <h3>Indonesia Men</h3>
+        <p>Open the official ICC team centre for team information, rankings, fixtures, results and available match centres.</p>
+        <div class="idc-team-actions">
+          <a class="idc-action-primary" href="https://www.icc-cricket.com/teams/1809/indonesia-men" target="_blank" rel="noopener noreferrer">VIEW MEN'S TEAM ON ICC ↗</a>
+        </div>
+      </article>
+
+      <article class="idc-team-card">
+        <div class="idc-team-kicker"><span class="idc-flag" aria-hidden="true">🇮🇩</span> WOMEN'S NATIONAL TEAM</div>
+        <h3>Indonesia Women</h3>
+        <p>Follow the Garuda Girls through the official ICC team centre for team information, fixtures, results and available match centres.</p>
+        <div class="idc-team-actions">
+          <a class="idc-action-primary" href="https://www.icc-cricket.com/teams/1810/indonesia-women" target="_blank" rel="noopener noreferrer">VIEW WOMEN'S TEAM ON ICC ↗</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="idc-support-grid">
+      <article class="idc-support-card">
+        <div>
+          <div class="idc-support-kicker">OFFICIAL PCI SCORE CENTRE</div>
+          <h3>Live scores, fixtures &amp; results</h3>
+          <p>The dedicated Persatuan Cricket Indonesia app is powered by CricClubs and supports scoring, past and upcoming matches and player statistics.</p>
+        </div>
+        <div class="idc-store-links">
+          <a href="https://play.google.com/store/apps/details?id=com.cricclubs.pci" target="_blank" rel="noopener noreferrer">ANDROID · GOOGLE PLAY ↗</a>
+          <a href="https://apps.apple.com/id/app/persatuan-cricket-indonesia/id1535613783" target="_blank" rel="noopener noreferrer">IPHONE · APP STORE ↗</a>
+        </div>
+      </article>
+
+      <article class="idc-support-card social">
+        <div>
+          <div class="idc-support-kicker">OFFICIAL PCI SOCIAL UPDATES</div>
+          <h3>Latest from PCI</h3>
+          <p>Follow official announcements, national-team news, matchday updates and player milestones from Persatuan Cricket Indonesia.</p>
+        </div>
+        <div class="idc-team-actions">
+          <a class="idc-action-primary" href="https://www.instagram.com/cricket_ina/" target="_blank" rel="noopener noreferrer">FOLLOW @CRICKET_INA ON INSTAGRAM ↗</a>
+          <a class="idc-action-secondary" href="https://cricketina.com/en/pages/news" target="_blank" rel="noopener noreferrer">PCI OFFICIAL NEWS ↗</a>
+        </div>
+      </article>
+    </div>
+    <p class="idc-note">Match scores and fixtures are provided by official PCI and ICC platforms. Live match information opens on those platforms; JPL does not reproduce or independently verify live scoring data.</p>
+  </div>
+</section>
+
 <section class="seasons" id="seasons"><div class="wrap"><div class="section-head"><div class="kicker">The JPL journey</div><h2>Every season. Every story.</h2><p class="intro">Explore the tournaments, teams and memories that continue to shape Jakarta Premier League.</p></div><div class="season-grid"><article class="season-card"><img src="assets/season1/awards/champions.jpg" alt="Powerhouse XI, JPL Season 1 champions, celebrating with the trophy" loading="lazy" decoding="async"><div class="season-body"><div class="tag">THE BEGINNING</div><h3>JPL Season 1</h3><p>Discover the beginning of the Jakarta Premier League journey.</p><a href="season-1.html">VIEW SEASON 1 →</a>
 <a class="cricheroes-link" href="https://cricheroes.com/tournament/1713491/jakarta-premier-league-2025-powered-by-classic-carpets/matches/past-matches" target="_blank" rel="noopener noreferrer">VIEW SCORES ON CRICHEROES ↗</a></div></article><article class="season-card"><img src="assets/season2/jpl-season2-winners-SDAM-United.jpg" alt="SDAM United, JPL Season 2 champions, with the trophy" loading="lazy" decoding="async"><div class="season-body"><div class="tag">2026 · COMPLETED</div><h3>JPL Season 2</h3><p>Relive the tournament, match results, teams and standout performances.</p><a href="season-2.html">VIEW SEASON 2 →</a>
 <a class="cricheroes-link" href="https://cricheroes.com/tournament/2031910/jakarta-premier-league-season-2-powered-by-classic-carpets-/matches/past-matches" target="_blank" rel="noopener noreferrer">VIEW SCORES ON CRICHEROES ↗</a></div></article><article class="season-card"><img src="assets/homepage/team-photo-3.jpg" alt="JPL cricket team group" loading="lazy" decoding="async"><div class="season-body"><div class="tag">COMING NEXT</div><h3>JPL Season 3</h3><p>Stay connected for upcoming season announcements and updates.</p><a href="season-3.html">EXPLORE SEASON 3 →</a></div></article></div></div></section>
