@@ -218,13 +218,80 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
   .season-menu a{padding:8px 10px}
 }
 </style>
+<style id="jpl-refresh-styles">
+
+/* JPL shared primary navigation */
+html{scroll-padding-top:135px}
+.jpl-site-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e2e8f0;box-shadow:0 4px 18px rgba(16,42,86,.07)}
+.jpl-nav-inner{width:min(1540px,96%);min-height:80px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+.jpl-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto;color:#102a56;font-weight:900;letter-spacing:.045em;white-space:nowrap;text-decoration:none}
+.jpl-brand img{width:54px;height:54px;object-fit:contain;display:block}
+.jpl-brand span{font-size:14px;line-height:1.15}
+.jpl-brand small{display:block;color:#f47721;font-size:10px;letter-spacing:.2em;margin-top:4px}
+.jpl-main-nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(9px,.8vw,15px);min-width:0;white-space:nowrap}
+.jpl-main-nav>a,.jpl-nav-dropdown>a{display:inline-flex;align-items:center;color:#394b65;font-size:10.5px;line-height:1.25;font-weight:800;letter-spacing:.025em;text-decoration:none;white-space:nowrap;cursor:pointer;transition:color .18s ease}
+.jpl-main-nav>a:hover,.jpl-nav-dropdown>a:hover,.jpl-main-nav a[aria-current="page"]{color:#f47721}
+.jpl-nav-dropdown{position:relative;display:flex;align-items:center;gap:3px;flex:0 0 auto}
+.jpl-season-toggle{border:0;background:transparent;color:#394b65;padding:5px 3px;font-size:12px;font-weight:900;cursor:pointer;border-radius:4px}
+.jpl-season-toggle:hover,.jpl-season-toggle[aria-expanded="true"]{color:#f47721;background:#fff5ed}
+.jpl-dropdown-menu{display:none;position:absolute;top:calc(100% + 12px);left:-14px;min-width:195px;padding:8px;background:#fff;border:1px solid #e2e8f0;border-radius:9px;box-shadow:0 14px 32px rgba(7,27,56,.16);z-index:1001}
+.jpl-nav-dropdown.open>.jpl-dropdown-menu{display:grid;gap:2px}
+@media(min-width:1101px){.jpl-nav-dropdown:hover>.jpl-dropdown-menu,.jpl-nav-dropdown:focus-within>.jpl-dropdown-menu{display:grid;gap:2px}}
+.jpl-dropdown-menu a{padding:10px 12px;border-radius:6px;color:#394b65;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap}
+.jpl-dropdown-menu a:hover,.jpl-dropdown-menu a[aria-current="page"]{background:#f5f7fa;color:#f47721}
+.jpl-nav-toggle{display:none;width:42px;height:40px;padding:9px;border:0;border-radius:7px;background:#102a56;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.jpl-nav-toggle span{display:block;width:19px;height:2px;background:#fff;border-radius:2px}
+.jpl-main-nav a:focus-visible,.jpl-season-toggle:focus-visible,.jpl-nav-toggle:focus-visible{outline:3px solid #f47721;outline-offset:3px}
+.jpl-page-shortcuts{background:#f7f9fc;border-bottom:1px solid #e2e8f0}
+.jpl-page-shortcuts-inner{width:min(1180px,92%);min-height:44px;margin:0 auto;display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:7px 0}
+.jpl-page-shortcuts-inner>span{color:#8a98aa;font-size:9px;font-weight:900;letter-spacing:.13em;margin-right:5px}
+.jpl-page-shortcuts-inner>a{display:inline-flex;align-items:center;padding:5px 9px;border-radius:5px;color:#43536b;background:#fff;border:1px solid #e2e8f0;font-size:9px;font-weight:800;letter-spacing:.035em;text-decoration:none;white-space:nowrap}
+.jpl-page-shortcuts-inner>a:hover{color:#f47721;border-color:#f7bf94}
+@media(max-width:1100px){
+  .jpl-nav-inner{min-height:74px}
+  .jpl-brand img{width:50px;height:50px}
+  .jpl-nav-toggle{display:flex;margin-left:auto}
+  .jpl-main-nav{display:none;position:absolute;top:100%;left:0;right:0;padding:10px 18px 14px;background:#fff;border:1px solid #e2e8f0;border-top:0;border-radius:0 0 12px 12px;box-shadow:0 14px 28px rgba(7,27,56,.14);align-items:stretch;flex-direction:column;gap:0;white-space:normal;z-index:1000}
+  .jpl-nav-inner.open>.jpl-main-nav{display:flex}
+  .jpl-main-nav>a{display:flex;width:100%;min-height:42px;padding:10px 2px;font-size:12px;border-bottom:1px solid #edf1f6}
+  .jpl-nav-dropdown{width:100%;display:grid;grid-template-columns:1fr auto;gap:4px 8px;border-bottom:1px solid #edf1f6}
+  .jpl-nav-dropdown>a{display:flex;align-items:center;min-height:42px;padding:10px 2px;font-size:12px}
+  .jpl-season-toggle{width:42px;min-height:38px}
+  .jpl-dropdown-menu{position:static;grid-column:1/-1;min-width:0;margin:0 0 9px;padding:4px 0 4px 12px;border:0;border-radius:0;box-shadow:none;background:#f7f9fc}
+  .jpl-nav-dropdown.open>.jpl-dropdown-menu{display:grid}
+  .jpl-dropdown-menu a{padding:10px 12px}
+  .jpl-page-shortcuts-inner{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding:8px 0}
+  .jpl-page-shortcuts-inner>span{flex:0 0 auto}
+}
+@media(max-width:420px){
+  .jpl-nav-inner{width:94%;min-height:68px}
+  .jpl-brand img{width:44px;height:44px}
+  .jpl-brand span{font-size:12px}
+  .jpl-brand small{font-size:9px}
+}
+
+</style>
+<link rel="preload" as="image" href="assets/season2/season2-header-ICA09856.jpg" fetchpriority="high">
 </head>
 <body>
 <div class="top"><div class="wrap"><span>JAKARTA PREMIER LEAGUE · THE HOME OF TENNIS CRICKET</span><span>JAKARTA, INDONESIA</span></div></div>
-<header><div class="wrap nav">
-<a class="brand" href="index.html"><img class="brand-mark" src="assets/season2/jpl-logo.png" alt="Jakarta Premier League logo"><span>JAKARTA<small>PREMIER LEAGUE</small></span></a>
-<nav><a href="index.html">HOME</a><a href="#season-moments">HIGHLIGHTS</a><a href="#fixtures">FIXTURES</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">STATISTICS</a><div class="season-dropdown"><details><summary>SEASONS <span aria-hidden="true">▾</span></summary><div class="season-menu"><a href="season-1.html">SEASON 1</a><a href="season-2.html">SEASON 2</a><a href="season-3.html">SEASON 3 · COMING SOON</a></div></details></div><a href="#sponsors">SPONSORS</a></nav>
-</div></header>
+<header class="jpl-site-header">
+  <div class="jpl-nav-inner" id="jpl-nav">
+    <a class="jpl-brand" href="index.html#home" aria-label="Jakarta Premier League home">
+      <img src="assets/season2/jpl-logo.png" alt="Jakarta Premier League logo" decoding="async">
+      <span>JAKARTA<small>PREMIER LEAGUE</small></span>
+    </a>
+    <nav class="jpl-main-nav" id="jpl-main-nav" aria-label="Main navigation">
+      <a href="index.html#home">HOME</a><a href="index.html#about">ABOUT JPL</a><a href="index.html#story">WHY WE STARTED</a><a href="index.html#moments">JPL MOMENTS</a><a href="gallery.html">GALLERY</a><div class="jpl-nav-dropdown"><a href="index.html#seasons">SEASONS</a><button class="jpl-season-toggle" type="button" aria-label="Open Seasons menu" aria-controls="jpl-seasons-menu" aria-expanded="false">▾</button><div class="jpl-dropdown-menu" id="jpl-seasons-menu" aria-label="Season pages"><a href="season-1.html">Season 1</a><a href="season-2.html" aria-current="page">Season 2</a><a href="season-3.html">Season 3 · Coming Soon</a></div></div><a href="cricket-in-indonesia.html">CRICKET IN INDONESIA</a><a href="sponsors.html">OUR PARTNERS</a><a href="index.html#contact">CONTACT US</a>
+    </nav>
+    <button class="jpl-nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="jpl-main-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="jpl-page-shortcuts" aria-label="Page sections">
+  <div class="jpl-page-shortcuts-inner"><span>ON THIS PAGE</span><a href="#season-moments">HIGHLIGHTS</a><a href="#fixtures">FIXTURES</a><a href="#points-table">POINTS TABLE</a><a href="#statistics">STATISTICS</a><a href="#sponsors">SPONSORS</a></div>
+</div>
 <section class="hero"><div class="wrap">
 <div class="crumb"><a href="index.html">Home</a> / <a href="seasons.html">Seasons</a> / Season 2</div>
 <div class="kicker">Jakarta Premier League · 2026 edition</div>
@@ -243,7 +310,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
     </div>
     <div class="champions-grid">
       <article class="champion-card winner">
-        <img class="champion-photo" src="assets/season2/jpl-season2-winners-SDAM-United.jpg" alt="SDAM United team photograph, Jakarta Premier League Season 2 champions">
+        <img class="champion-photo" src="assets/season2/jpl-season2-winners-SDAM-United.jpg" alt="SDAM United team photograph, Jakarta Premier League Season 2 champions" loading="eager" decoding="async" fetchpriority="high">
         <div class="champion-info">
           <div class="champion-rank">🏆 Season 2 Champions</div>
           <h3>SDAM UNITED</h3>
@@ -252,7 +319,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
         </div>
       </article>
       <article class="champion-card runner">
-        <img class="champion-photo" src="assets/season2/jpl-season2-runners-up-BOII-Stars.jpg" alt="BOII Stars team photograph, Jakarta Premier League Season 2 runners-up">
+        <img class="champion-photo" src="assets/season2/jpl-season2-runners-up-BOII-Stars.jpg" alt="BOII Stars team photograph, Jakarta Premier League Season 2 runners-up" loading="eager" decoding="async" fetchpriority="high">
         <div class="champion-info">
           <div class="champion-rank">🥈 Season 2 Runners-up</div>
           <h3>BOII STARS</h3>
@@ -269,9 +336,9 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 <section class="media-section wrap" id="season-moments" style="padding-top:34px">
   <div class="media-intro"><div><span class="media-tag">RELIVE THE ACTION</span><h2>Season 2 — The Moments</h2><p>Real match footage and memories from the JPL Season 2 weekend.</p></div></div>
   <div class="video-grid">
-    <article class="video-card"><video controls preload="metadata" playsinline webkit-playsinline><source src="assets/videos/jpl-season2-ground-overview.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Ground Overview</strong><span>Aerial view of the tournament ground</span></div></article>
-    <article class="video-card"><video controls preload="metadata" playsinline webkit-playsinline><source src="assets/videos/jpl-season2-match-wide.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Match View</strong><span>Wide-angle action from the pitch</span></div></article>
-    <article class="video-card"><video controls preload="metadata" playsinline webkit-playsinline><source src="assets/videos/jpl-season2-batting-action.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Batting Action</strong><span>On-field action from the tournament</span></div></article>
+    <article class="video-card"><video controls preload="none" playsinline webkit-playsinline><source src="assets/videos/jpl-season2-ground-overview.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Ground Overview</strong><span>Aerial view of the tournament ground</span></div></article>
+    <article class="video-card"><video controls preload="none" playsinline webkit-playsinline><source src="assets/videos/jpl-season2-match-wide.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Match View</strong><span>Wide-angle action from the pitch</span></div></article>
+    <article class="video-card"><video controls preload="none" playsinline webkit-playsinline><source src="assets/videos/jpl-season2-batting-action.mp4" type="video/mp4">Your browser does not support video playback.</video><div class="video-caption"><strong>JPL Season 2 — Batting Action</strong><span>On-field action from the tournament</span></div></article>
   </div>
 </section>
 <main class="wrap">
@@ -286,14 +353,14 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 <section class="section" id="moments-gallery">
   <div class="section-head"><div><h2>On-field action & celebrations</h2><p>Real JPL moments — from the first ball to the champions’ celebration.</p></div></div>
   <div class="photo-grid season2-photo-grid">
-    <img class="photo-tall" src="assets/season2/season2-team-gmis.jpg" alt="GMIS Cricket Club team at JPL Season 2" loading="lazy">
-    <img class="photo-wide" src="assets/season2/season2-team-handshake.jpg" alt="JPL Season 2 teams greeting each other" loading="lazy">
-    <img src="assets/season2/season2-team-photo-1.jpg" alt="JPL Season 2 team group photograph" loading="lazy">
-    <img src="assets/season2/season2-team-photo-2.jpg" alt="JPL Season 2 team group photograph" loading="lazy">
-    <img src="assets/season2/season2-team-photo-3.jpg" alt="JPL Season 2 team group photograph" loading="lazy">
-    <img src="assets/season2/season2-team-photo-4.jpg" alt="JPL Season 2 team group photograph" loading="lazy">
-    <img src="assets/season2/season2-team-photo-5.jpg" alt="JPL Season 2 team group photograph" loading="lazy">
-    <img src="assets/season2/season2-team-photo-6.jpg" alt="JPL Season 2 team group photograph" loading="lazy">
+    <img class="photo-tall" src="assets/season2/season2-team-gmis.jpg" alt="GMIS Cricket Club team at JPL Season 2" loading="lazy" decoding="async">
+    <img class="photo-wide" src="assets/season2/season2-team-handshake.jpg" alt="JPL Season 2 teams greeting each other" loading="lazy" decoding="async">
+    <img src="assets/season2/season2-team-photo-1.jpg" alt="JPL Season 2 team group photograph" loading="lazy" decoding="async">
+    <img src="assets/season2/season2-team-photo-2.jpg" alt="JPL Season 2 team group photograph" loading="lazy" decoding="async">
+    <img src="assets/season2/season2-team-photo-3.jpg" alt="JPL Season 2 team group photograph" loading="lazy" decoding="async">
+    <img src="assets/season2/season2-team-photo-4.jpg" alt="JPL Season 2 team group photograph" loading="lazy" decoding="async">
+    <img src="assets/season2/season2-team-photo-5.jpg" alt="JPL Season 2 team group photograph" loading="lazy" decoding="async">
+    <img src="assets/season2/season2-team-photo-6.jpg" alt="JPL Season 2 team group photograph" loading="lazy" decoding="async">
   </div>
 </section>
 
@@ -310,7 +377,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/sdam-united.webp" alt="SDAM United logo" loading="lazy"><span class="team-copy"><span class="team-name">SDAM United</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/sdam-united.webp" alt="SDAM United logo" decoding="async"><span class="team-copy"><span class="team-name">SDAM United</span>
           <span class="captain">Captain: Varun Rawat</span></span></div>
       </summary>
       <div class="squad">
@@ -337,7 +404,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/high-spirits.webp" alt="High Spirits logo" loading="lazy"><span class="team-copy"><span class="team-name">High Spirits</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/high-spirits.webp" alt="High Spirits logo" decoding="async"><span class="team-copy"><span class="team-name">High Spirits</span>
           <span class="captain">Captain: Harsh Sadarangani</span></span></div>
       </summary>
       <div class="squad">
@@ -365,7 +432,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/tkc-gully-cricket-guys.webp" alt="TKC Gully Cricket Guys logo" loading="lazy"><span class="team-copy"><span class="team-name">TKC Gully Cricket Guys</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/tkc-gully-cricket-guys.webp" alt="TKC Gully Cricket Guys logo" decoding="async"><span class="team-copy"><span class="team-name">TKC Gully Cricket Guys</span>
           <span class="captain">Captain: Srini</span></span></div>
       </summary>
       <div class="squad">
@@ -394,7 +461,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/kns-titans.webp" alt="KNS Titans logo" loading="lazy"><span class="team-copy"><span class="team-name">KNS Titans</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/kns-titans.webp" alt="KNS Titans logo" decoding="async"><span class="team-copy"><span class="team-name">KNS Titans</span>
           <span class="captain">Captain: Ashish Gupta</span></span></div>
       </summary>
       <div class="squad">
@@ -423,7 +490,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/satavahana-strikers.webp" alt="Satavahana Strikers logo" loading="lazy"><span class="team-copy"><span class="team-name">Satavahana Strikers</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/satavahana-strikers.webp" alt="Satavahana Strikers logo" decoding="async"><span class="team-copy"><span class="team-name">Satavahana Strikers</span>
           <span class="captain">Captain: Satya Narayana Gorla</span></span></div>
       </summary>
       <div class="squad">
@@ -452,7 +519,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/gmis-cricket-club.webp" alt="GMIS Cricket Club logo" loading="lazy"><span class="team-copy"><span class="team-name">GMIS Cricket Club</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/gmis-cricket-club.webp" alt="GMIS Cricket Club logo" decoding="async"><span class="team-copy"><span class="team-name">GMIS Cricket Club</span>
           <span class="captain">Captain: Yash Maheshwary</span></span></div>
       </summary>
       <div class="squad">
@@ -477,7 +544,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/boii-stars.webp" alt="BOII Stars logo" loading="lazy"><span class="team-copy"><span class="team-name">BOII Stars</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/boii-stars.webp" alt="BOII Stars logo" decoding="async"><span class="team-copy"><span class="team-name">BOII Stars</span>
           <span class="captain">Captain: K S B Chandramouli</span></span></div>
       </summary>
       <div class="squad">
@@ -502,7 +569,7 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 
     <details class="team-card">
       <summary>
-        <div class="team-heading"><img class="team-logo" src="assets/team-logos/udupi-sunshine.webp" alt="Udupi Sunshine Cricket Club logo" loading="lazy"><span class="team-copy"><span class="team-name">Udupi Sunshine Cricket Club</span>
+        <div class="team-heading"><img class="team-logo" src="assets/team-logos/udupi-sunshine.webp" alt="Udupi Sunshine Cricket Club logo" decoding="async"><span class="team-copy"><span class="team-name">Udupi Sunshine Cricket Club</span>
           <span class="captain">Captain: Sampath Kumar</span></span></div>
       </summary>
       <div class="squad">
@@ -562,10 +629,10 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 <div class="awards-block">
   <h3 class="awards-title">🏆 Individual Award Winners</h3>
   <div class="awards-grid">
-    <article class="award-card"><img src="assets/season2/award-player-of-series.jpg" alt="Jamshed receiving the Player of the Series award"><div class="award-copy"><div class="award-label">⭐ Player of the Series · MVP</div><h3>Jamshed</h3><p>SDAM United · 44.766 MVP points</p></div></article>
-    <article class="award-card"><img src="assets/season2/award-best-batsman.jpg" alt="Jamshed receiving the Best Batsman award"><div class="award-copy"><div class="award-label">🏏 Best Batsman</div><h3>Jamshed</h3><p>SDAM United · 443 runs</p></div></article>
-    <article class="award-card"><img src="assets/season2/award-best-bowler.jpg" alt="Best Bowler award presentation"><div class="award-copy"><div class="award-label">🎯 Best Bowler</div><h3>Vishal Uberoi Jkt</h3><p>SDAM United · 8 wickets</p></div></article>
-    <article class="award-card"><img src="assets/season2/award-best-fielder.jpg" alt="Best Fielder award presentation"><div class="award-copy"><div class="award-label">🧤 Best Fielder</div><h3>Harish Selavaganesan</h3><p>SDAM United · 11 dismissals</p></div></article>
+    <article class="award-card"><img src="assets/season2/award-player-of-series.jpg" alt="Jamshed receiving the Player of the Series award" loading="lazy" decoding="async"><div class="award-copy"><div class="award-label">⭐ Player of the Series · MVP</div><h3>Jamshed</h3><p>SDAM United · 44.766 MVP points</p></div></article>
+    <article class="award-card"><img src="assets/season2/award-best-batsman.jpg" alt="Jamshed receiving the Best Batsman award" loading="lazy" decoding="async"><div class="award-copy"><div class="award-label">🏏 Best Batsman</div><h3>Jamshed</h3><p>SDAM United · 443 runs</p></div></article>
+    <article class="award-card"><img src="assets/season2/award-best-bowler.jpg" alt="Best Bowler award presentation" loading="lazy" decoding="async"><div class="award-copy"><div class="award-label">🎯 Best Bowler</div><h3>Vishal Uberoi Jkt</h3><p>SDAM United · 8 wickets</p></div></article>
+    <article class="award-card"><img src="assets/season2/award-best-fielder.jpg" alt="Best Fielder award presentation" loading="lazy" decoding="async"><div class="award-copy"><div class="award-label">🧤 Best Fielder</div><h3>Harish Selavaganesan</h3><p>SDAM United · 11 dismissals</p></div></article>
   </div>
 </div>
 <div class="stat-tabs" role="tablist" aria-label="Player statistics categories">
@@ -608,29 +675,29 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 <div class="section-head"><div><h2>Official sponsors</h2><p>Thank you to the partners supporting JPL Season 2.</p></div></div>
 <div class="sponsor-tier title-tier">
   <h3>Title Sponsor</h3>
-  <div class="sponsor-logo-card title-logo"><img src="assets/sponsors/classic-carpets.png" alt="Classic Carpets logo"><strong>Classic Carpets</strong></div>
+  <div class="sponsor-logo-card title-logo"><img src="assets/sponsors/classic-carpets.png" alt="Classic Carpets logo" loading="lazy" decoding="async"><strong>Classic Carpets</strong></div>
 </div>
 <div class="sponsor-tier co-tier">
   <h3>Co-Sponsors</h3>
   <div class="sponsor-logo-grid co-grid">
-    <div class="sponsor-logo-card"><img src="assets/sponsors/ktl-international-indonesia.jpg" alt="KTL International Indonesia logo"><strong>KTL International Indonesia</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/pt-gokak-indonesia.png" alt="PT Gokak Indonesia logo"><strong>PT Gokak Indonesia</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/pgi-data.png" alt="PT Platinumetrix Global Inovasi logo"><strong>PT Platinumetrix Global Inovasi</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/ktl-international-indonesia.jpg" alt="KTL International Indonesia logo" loading="lazy" decoding="async"><strong>KTL International Indonesia</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/pt-gokak-indonesia.png" alt="PT Gokak Indonesia logo" loading="lazy" decoding="async"><strong>PT Gokak Indonesia</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/pgi-data.png" alt="PT Platinumetrix Global Inovasi logo" loading="lazy" decoding="async"><strong>PT Platinumetrix Global Inovasi</strong></div>
   </div>
 </div>
 <div class="sponsor-tier partner-tier">
   <h3>Sponsors</h3>
   <div class="sponsor-logo-grid">
-    <div class="sponsor-logo-card"><img src="assets/sponsors/finsure.jpg" alt="Finsure logo"><strong>Finsure</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/jvr.png" alt="JVR logo"><strong>JVR</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/akgrains.png" alt="AKGRAINS logo"><strong>AKGRAINS</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/udupi.png" alt="Udupi logo"><strong>Udupi</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/showtix-id.jpg" alt="Showtix.id logo"><strong>Showtix.id</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/swastik.jpg" alt="Swastik logo"><strong>Swastik</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/wynder-holidays.jpg" alt="Wynder Holidays logo"><strong>Wynder Holidays</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/bank-of-india-indonesia.jpeg" alt="Bank of India Indonesia logo"><strong>Bank of India Indonesia</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/yayasan-kmn.jpg" alt="Yayasan Karnataka Mitra Nusantara Indonesia logo"><strong>Yayasan Karnataka Mitra Nusantara Indonesia</strong></div>
-    <div class="sponsor-logo-card"><img src="assets/sponsors/udupi-rf-hospitality.jpg" alt="Udupi by RF Hospitality logo"><strong>Udupi by RF Hospitality</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/finsure.jpg" alt="Finsure logo" loading="lazy" decoding="async"><strong>Finsure</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/jvr.png" alt="JVR logo" loading="lazy" decoding="async"><strong>JVR</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/akgrains.png" alt="AKGRAINS logo" loading="lazy" decoding="async"><strong>AKGRAINS</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/udupi.png" alt="Udupi logo" loading="lazy" decoding="async"><strong>Udupi</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/showtix-id.jpg" alt="Showtix.id logo" loading="lazy" decoding="async"><strong>Showtix.id</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/swastik.jpg" alt="Swastik logo" loading="lazy" decoding="async"><strong>Swastik</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/wynder-holidays.jpg" alt="Wynder Holidays logo" loading="lazy" decoding="async"><strong>Wynder Holidays</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/bank-of-india-indonesia.jpeg" alt="Bank of India Indonesia logo" loading="lazy" decoding="async"><strong>Bank of India Indonesia</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/yayasan-kmn.jpg" alt="Yayasan Karnataka Mitra Nusantara Indonesia logo" loading="lazy" decoding="async"><strong>Yayasan Karnataka Mitra Nusantara Indonesia</strong></div>
+    <div class="sponsor-logo-card"><img src="assets/sponsors/udupi-rf-hospitality.jpg" alt="Udupi by RF Hospitality logo" loading="lazy" decoding="async"><strong>Udupi by RF Hospitality</strong></div>
   </div>
   <div class="individual-supporters">
     <h3>Special Thanks to Our Individual Supporters</h3>
@@ -667,4 +734,40 @@ footer{background:linear-gradient(100deg,#071a39,var(--navy));border-top:4px sol
 })();
 </script>
 
+<script>
+(function(){
+  const header=document.getElementById('jpl-nav');
+  if(!header)return;
+  const toggle=header.querySelector('.jpl-nav-toggle');
+  const nav=header.querySelector('.jpl-main-nav');
+  const dropdown=header.querySelector('.jpl-nav-dropdown');
+  const seasonToggle=header.querySelector('.jpl-season-toggle');
+  if(!toggle||!nav||!dropdown||!seasonToggle)return;
+  function closeMenu(){
+    header.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open navigation menu');
+  }
+  function closeSeasons(){
+    dropdown.classList.remove('open');
+    seasonToggle.setAttribute('aria-expanded','false');
+    seasonToggle.setAttribute('aria-label','Open Seasons menu');
+  }
+  toggle.addEventListener('click',function(){
+    const open=header.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+    if(!open)closeSeasons();
+  });
+  seasonToggle.addEventListener('click',function(event){
+    event.stopPropagation();
+    const open=dropdown.classList.toggle('open');
+    seasonToggle.setAttribute('aria-expanded',String(open));
+    seasonToggle.setAttribute('aria-label',open?'Close Seasons menu':'Open Seasons menu');
+  });
+  nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){closeMenu();closeSeasons();});});
+  document.addEventListener('keydown',function(event){if(event.key==='Escape'){closeMenu();closeSeasons();}});
+  document.addEventListener('click',function(event){if(!header.contains(event.target)){closeMenu();closeSeasons();}});
+})();
+</script>
 </body></html>
