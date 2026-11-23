@@ -210,6 +210,68 @@ header .menu{display:none}
 }
 @media(prefers-reduced-motion:reduce){.idc-ticker-track{animation:none;transform:none}}
 
+
+
+/* Indonesia Cricket Centre — latest national-team results and fixtures */
+.idc-ticker{min-height:44px;display:flex;align-items:center;gap:13px;padding:7px max(2%,calc((100% - 1500px)/2));background:#071b38;color:#fff;position:relative;z-index:5;flex-wrap:nowrap}
+.idc-ticker-label{flex:0 0 auto;color:#ffad70;font-size:10px;font-weight:900;letter-spacing:.13em;white-space:nowrap}
+.idc-ticker-date{flex:0 0 auto;padding:4px 7px;border:1px solid #ffffff35;border-radius:4px;color:#c8d7eb;font-size:9px;font-weight:800;letter-spacing:.06em;white-space:nowrap}
+.idc-ticker-headline{flex:1 1 auto;min-width:0;color:#fff;font-size:11px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}
+.idc-ticker-headline:hover{color:#ffad70}
+.idc-ticker-link{flex:0 0 auto;color:#ffad70;font-size:9px;font-weight:900;letter-spacing:.06em;white-space:nowrap;text-decoration:none}
+.idc-ticker-link:hover{color:#fff}
+.indonesia-centre{padding:76px 0;background:#eef2f7;scroll-margin-top:100px}
+.idc-wrap{width:min(1180px,92%);margin:0 auto;min-width:0}
+.idc-heading{max-width:790px;margin:0 auto 28px;text-align:center}
+.idc-heading .kicker{color:#f47721}
+.idc-heading h2{margin:8px 0 10px}
+.idc-heading p{margin:0 auto;color:#66758a;font-size:15px;max-width:700px}
+.idc-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(245px,.48fr);gap:18px;align-items:stretch;margin-bottom:18px}
+.idc-latest-card{min-width:0;background:#102a56;color:#fff;border-radius:13px;padding:26px;box-shadow:0 12px 28px rgba(16,42,86,.10)}
+.idc-latest-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.idc-latest-label{color:#ffad70;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.idc-fulltime{padding:5px 9px;border-radius:50px;background:#ffffff17;color:#fff;font-size:9px;font-weight:900;letter-spacing:.08em}
+.idc-latest-card h3{margin:13px 0 8px;color:#fff;font-size:clamp(22px,3vw,30px);line-height:1.15}
+.idc-latest-desc{margin:0 0 19px;color:#d2dcec;font-size:13px}
+.idc-scoreline{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;padding:17px 15px;border:1px solid #ffffff28;border-radius:9px;background:#ffffff0c}
+.idc-score-team{min-width:0}
+.idc-score-team:last-child{text-align:right}
+.idc-score-team span{display:block;color:#bdcce0;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.idc-score-team strong{display:block;margin-top:4px;color:#fff;font-size:clamp(18px,2.2vw,24px);font-weight:900;white-space:nowrap}
+.idc-score-vs{color:#ffad70;font-size:10px;font-weight:900;letter-spacing:.1em}
+.idc-match-meta{margin:13px 0 0;color:#c7d5e8;font-size:11px}
+.idc-score-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
+.idc-button-primary,.idc-button-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;border-radius:6px;font-size:10px;font-weight:900;letter-spacing:.05em;text-decoration:none}
+.idc-button-primary{background:#f47721;color:#fff}
+.idc-button-primary:hover{background:#e7630e;color:#fff}
+.idc-button-secondary{border:1px solid #ffffff70;color:#fff;background:transparent}
+.idc-button-secondary:hover{border-color:#ffad70;color:#ffad70}
+.idc-next-card{min-width:0;padding:24px;background:#fff;border:1px solid #dce4ee;border-radius:13px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;box-shadow:0 12px 28px rgba(16,42,86,.05)}
+.idc-next-kicker{color:#f47721;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.idc-next-card h3{margin:10px 0 8px;color:#102a56;font-size:22px;line-height:1.2}
+.idc-next-card p{margin:0;color:#66758a;font-size:13px}
+.idc-next-date{display:inline-flex;align-items:center;gap:7px;color:#102a56;font-size:12px;font-weight:900}
+.idc-subheading{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:28px 0 13px}
+.idc-subheading h3{margin:0;color:#102a56;font-size:18px}
+.idc-subheading a{color:#f47721;font-size:10px;font-weight:900;letter-spacing:.06em;text-decoration:none}
+.idc-results-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.idc-result-card{min-width:0;padding:19px;background:#fff;border:1px solid #dce4ee;border-radius:10px}
+.idc-result-date{color:#f47721;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.idc-result-card h4{margin:7px 0 9px;color:#102a56;font-size:15px;line-height:1.35}
+.idc-result-score{color:#263b5b;font-size:12px;font-weight:800}
+.idc-result-outcome{margin-top:5px;color:#66758a;font-size:11px}
+.idc-result-card a{display:inline-block;margin-top:10px;color:#f47721;font-size:10px;font-weight:900;letter-spacing:.05em;text-decoration:none}
+.idc-footer-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:20px;padding:18px 20px;border:1px solid #dce4ee;border-radius:10px;background:#fff}
+.idc-footer-row strong{display:block;color:#102a56;font-size:13px}
+.idc-footer-row span{display:block;color:#66758a;font-size:11px;margin-top:3px}
+.idc-footer-links{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.idc-footer-links a{display:inline-flex;align-items:center;min-height:36px;padding:8px 12px;border-radius:5px;background:#102a56;color:#fff;font-size:9px;font-weight:900;letter-spacing:.05em;text-decoration:none}
+.idc-footer-links a.secondary{background:#fff;border:1px solid #d5deea;color:#102a56}
+.idc-source-note{margin:13px 0 0;color:#718096;font-size:10px;line-height:1.5}
+@media(max-width:820px){.idc-feature{grid-template-columns:1fr}.idc-latest-card,.idc-next-card{padding:22px}}
+@media(max-width:620px){.idc-ticker{gap:8px;padding:7px 3%;flex-wrap:wrap}.idc-ticker-label{font-size:9px}.idc-ticker-date{font-size:8px}.idc-ticker-headline{order:3;flex-basis:100%;font-size:10px}.idc-ticker-link{margin-left:auto;font-size:8px}.indonesia-centre{padding:55px 0}.idc-results-grid{grid-template-columns:1fr}.idc-scoreline{gap:7px;padding:13px 10px}.idc-score-team strong{font-size:18px}.idc-score-team span{font-size:8px}.idc-subheading{align-items:center}}
+@media(prefers-reduced-motion:reduce){.idc-ticker *{scroll-behavior:auto}}
+
 </style>
 <style id="jpl-refresh-styles">
 
@@ -286,15 +348,11 @@ html{scroll-padding-top:135px}
     </button>
   </div>
 </header>
-<div class="idc-ticker" role="region" aria-label="Indonesia cricket updates">
-  <div class="idc-ticker-label">INDONESIA CRICKET</div>
-  <div class="idc-ticker-window" aria-hidden="true">
-    <div class="idc-ticker-track">
-      <span>MEN'S NATIONAL TEAM</span><i>•</i><span>WOMEN'S NATIONAL TEAM</span><i>•</i><span>OFFICIAL PCI LIVE SCORES</span><i>•</i><span>FIXTURES &amp; RESULTS</span><i>•</i><span>PCI TEAM UPDATES</span><i>•</i>
-      <span>MEN'S NATIONAL TEAM</span><i>•</i><span>WOMEN'S NATIONAL TEAM</span><i>•</i><span>OFFICIAL PCI LIVE SCORES</span><i>•</i><span>FIXTURES &amp; RESULTS</span><i>•</i><span>PCI TEAM UPDATES</span><i>•</i>
-    </div>
-  </div>
-  <a href="#indonesia-cricket-centre">OPEN CENTRE <span aria-hidden="true">↗</span></a>
+<div class="idc-ticker" role="region" aria-label="Latest Indonesia national cricket result">
+  <span class="idc-ticker-label">LATEST RESULT</span>
+  <span class="idc-ticker-date">23 NOV 2026</span>
+  <a class="idc-ticker-headline" href="https://www.cricketworld.com/cricket/malaysia-women-vs-indonesia-women/match/scorecard/100519" target="_blank" rel="noopener noreferrer">Indonesia Women beat Malaysia by 6 wickets · 80/4 (16.2) chasing 79/6</a>
+  <a class="idc-ticker-link" href="#indonesia-cricket-centre">MORE INDONESIA CRICKET <span aria-hidden="true">↓</span></a>
 </div>
 <main id="home">
 <section class="hero"><div class="wrap"><div class="hero-inner"><div class="eyebrow">More than a game · One cricket community</div><h1 class="hero-title">JAKARTA<br><span>PREMIER LEAGUE</span></h1><p>Welcome to Jakarta Premier League (JPL), a cricket tournament organiser and community platform based in Jakarta, Indonesia. Through competitive tennis-ball cricket tournaments and community events, we bring players, teams and cricket enthusiasts together and help promote the growth of cricket across Indonesia.</p><div class="actions"><a class="btn primary" href="#seasons">EXPLORE JPL</a><a class="btn ghost" href="#about">OUR STORY</a></div><div class="hero-note">TENNIS-BALL CRICKET · COMMUNITY · COMPETITION</div></div></div></section>
@@ -374,63 +432,6 @@ html{scroll-padding-top:135px}
 
 <section class="dark-band"><div class="wrap"><div class="kicker">The JPL experience</div><h2>Built around the love of the game.</h2><p class="intro">A league experience that brings people together on and beyond the cricket field.</p><div class="pillars"><article class="pillar"><div class="num">01 / COMPETE</div><h3>Tennis-ball cricket</h3><p>Fast-paced matches, competitive teams and exciting moments that celebrate the spirit of tennis-ball cricket.</p></article><article class="pillar"><div class="num">02 / CONNECT</div><h3>One cricket community</h3><p>Bringing players, families, supporters and cricket enthusiasts together from across Indonesia.</p></article><article class="pillar"><div class="num">03 / CELEBRATE</div><h3>Moments that matter</h3><p>Recognising performances, teamwork, sportsmanship and the memories created every season.</p></article></div></div></section>
 <section id="moments"><div class="wrap"><div class="section-head"><div class="kicker">Beyond the boundary</div><h2>JPL moments</h2><p class="intro">The action, the teams, the celebrations and the people who make the league special.</p></div><div class="gallery-grid"><div class="gallery-item"><img src="assets/homepage/hero-batting.jpg" alt="Tennis-ball cricket batting action" loading="lazy" decoding="async"><div class="gallery-label">On-field action</div></div><div class="gallery-item"><img src="assets/homepage/trophy-awards.jpg" alt="JPL trophies and awards" loading="lazy" decoding="async"><div class="gallery-label">The rewards</div></div><div class="gallery-item"><img src="assets/homepage/jpl-team-stage.jpg" alt="JPL team celebration on stage" loading="lazy" decoding="async"><div class="gallery-label">Together as one</div></div><div class="gallery-item"><img src="assets/homepage/batting-action.jpg" alt="Batter playing a shot" loading="lazy" decoding="async"><div class="gallery-label">Game day</div></div><div class="gallery-item"><img src="assets/homepage/presentation.jpg" alt="JPL tournament presentation" loading="lazy" decoding="async"><div class="gallery-label">Celebrating cricket</div></div></div></div></section>
-<section class="indonesia-centre" id="indonesia-cricket-centre">
-  <div class="wrap">
-    <div class="idc-heading">
-      <div class="kicker">CRICKET BEYOND JPL</div>
-      <h2>Indonesia Cricket Centre</h2>
-      <p>Follow Indonesia's men's and women's national teams, find official match information and stay connected with updates from Persatuan Cricket Indonesia.</p>
-    </div>
-
-    <div class="idc-team-grid">
-      <article class="idc-team-card">
-        <div class="idc-team-kicker"><span class="idc-flag" aria-hidden="true">🇮🇩</span> MEN'S NATIONAL TEAM</div>
-        <h3>Indonesia Men</h3>
-        <p>Open the official ICC team centre for team information, rankings, fixtures, results and available match centres.</p>
-        <div class="idc-team-actions">
-          <a class="idc-action-primary" href="https://www.icc-cricket.com/teams/1809/indonesia-men" target="_blank" rel="noopener noreferrer">VIEW MEN'S TEAM ON ICC ↗</a>
-        </div>
-      </article>
-
-      <article class="idc-team-card">
-        <div class="idc-team-kicker"><span class="idc-flag" aria-hidden="true">🇮🇩</span> WOMEN'S NATIONAL TEAM</div>
-        <h3>Indonesia Women</h3>
-        <p>Follow the Garuda Girls through the official ICC team centre for team information, fixtures, results and available match centres.</p>
-        <div class="idc-team-actions">
-          <a class="idc-action-primary" href="https://www.icc-cricket.com/teams/1810/indonesia-women" target="_blank" rel="noopener noreferrer">VIEW WOMEN'S TEAM ON ICC ↗</a>
-        </div>
-      </article>
-    </div>
-
-    <div class="idc-support-grid">
-      <article class="idc-support-card">
-        <div>
-          <div class="idc-support-kicker">OFFICIAL PCI SCORE CENTRE</div>
-          <h3>Live scores, fixtures &amp; results</h3>
-          <p>The dedicated Persatuan Cricket Indonesia app is powered by CricClubs and supports scoring, past and upcoming matches and player statistics.</p>
-        </div>
-        <div class="idc-store-links">
-          <a href="https://play.google.com/store/apps/details?id=com.cricclubs.pci" target="_blank" rel="noopener noreferrer">ANDROID · GOOGLE PLAY ↗</a>
-          <a href="https://apps.apple.com/id/app/persatuan-cricket-indonesia/id1535613783" target="_blank" rel="noopener noreferrer">IPHONE · APP STORE ↗</a>
-        </div>
-      </article>
-
-      <article class="idc-support-card social">
-        <div>
-          <div class="idc-support-kicker">OFFICIAL PCI SOCIAL UPDATES</div>
-          <h3>Latest from PCI</h3>
-          <p>Follow official announcements, national-team news, matchday updates and player milestones from Persatuan Cricket Indonesia.</p>
-        </div>
-        <div class="idc-team-actions">
-          <a class="idc-action-primary" href="https://www.instagram.com/cricket_ina/" target="_blank" rel="noopener noreferrer">FOLLOW @CRICKET_INA ON INSTAGRAM ↗</a>
-          <a class="idc-action-secondary" href="https://cricketina.com/en/pages/news" target="_blank" rel="noopener noreferrer">PCI OFFICIAL NEWS ↗</a>
-        </div>
-      </article>
-    </div>
-    <p class="idc-note">Match scores and fixtures are provided by official PCI and ICC platforms. Live match information opens on those platforms; JPL does not reproduce or independently verify live scoring data.</p>
-  </div>
-</section>
-
 <section class="seasons" id="seasons"><div class="wrap"><div class="section-head"><div class="kicker">The JPL journey</div><h2>Every season. Every story.</h2><p class="intro">Explore the tournaments, teams and memories that continue to shape Jakarta Premier League.</p></div><div class="season-grid"><article class="season-card"><img src="assets/season1/awards/champions.jpg" alt="Powerhouse XI, JPL Season 1 champions, celebrating with the trophy" loading="lazy" decoding="async"><div class="season-body"><div class="tag">THE BEGINNING</div><h3>JPL Season 1</h3><p>Discover the beginning of the Jakarta Premier League journey.</p><a href="season-1.html">VIEW SEASON 1 →</a>
 <a class="cricheroes-link" href="https://cricheroes.com/tournament/1713491/jakarta-premier-league-2025-powered-by-classic-carpets/matches/past-matches" target="_blank" rel="noopener noreferrer">VIEW SCORES ON CRICHEROES ↗</a></div></article><article class="season-card"><img src="assets/season2/jpl-season2-winners-SDAM-United.jpg" alt="SDAM United, JPL Season 2 champions, with the trophy" loading="lazy" decoding="async"><div class="season-body"><div class="tag">2026 · COMPLETED</div><h3>JPL Season 2</h3><p>Relive the tournament, match results, teams and standout performances.</p><a href="season-2.html">VIEW SEASON 2 →</a>
 <a class="cricheroes-link" href="https://cricheroes.com/tournament/2031910/jakarta-premier-league-season-2-powered-by-classic-carpets-/matches/past-matches" target="_blank" rel="noopener noreferrer">VIEW SCORES ON CRICHEROES ↗</a></div></article><article class="season-card"><img src="assets/homepage/team-photo-3.jpg" alt="JPL cricket team group" loading="lazy" decoding="async"><div class="season-body"><div class="tag">COMING NEXT</div><h3>JPL Season 3</h3><p>Stay connected for upcoming season announcements and updates.</p><a href="season-3.html">EXPLORE SEASON 3 →</a></div></article></div></div></section>
@@ -454,6 +455,88 @@ html{scroll-padding-top:135px}
 </div></section>
 
 <section class="cta"><div class="wrap"><div><h2>Be part of the JPL community.</h2><p>Celebrating tennis-ball cricket and growing the game together in Indonesia.</p></div><a class="btn primary" href="#seasons">EXPLORE SEASONS</a></div></section>
+<section class="indonesia-centre" id="indonesia-cricket-centre" aria-labelledby="idc-title">
+  <div class="idc-wrap">
+    <div class="idc-heading">
+      <div class="kicker">NATIONAL TEAM NEWS &amp; RESULTS</div>
+      <h2 id="idc-title">Indonesia Cricket Centre</h2>
+      <p>Follow Indonesia's men's and women's national teams with recent match results, upcoming fixtures and links to official cricket updates.</p>
+    </div>
+
+    <div class="idc-feature">
+      <article class="idc-latest-card">
+        <div class="idc-latest-top">
+          <span class="idc-latest-label">Latest result · 23 November 2026</span>
+          <span class="idc-fulltime">FULL TIME</span>
+        </div>
+        <h3>Indonesia Women beat Malaysia by 6 wickets</h3>
+        <p class="idc-latest-desc">A successful chase in the Women's T20I Tri-Series in Malaysia.</p>
+        <div class="idc-scoreline" aria-label="Malaysia Women 79 for 6 in 20 overs; Indonesia Women 80 for 4 in 16.2 overs">
+          <div class="idc-score-team"><span>Malaysia Women</span><strong>79/6 <small>(20 ov)</small></strong></div>
+          <div class="idc-score-vs">VS</div>
+          <div class="idc-score-team"><span>Indonesia Women</span><strong>80/4 <small>(16.2 ov)</small></strong></div>
+        </div>
+        <p class="idc-match-meta">4th Match · Bayuemas Oval, Kuala Lumpur · Indonesia won with 22 balls remaining</p>
+        <div class="idc-score-actions">
+          <a class="idc-button-primary" href="https://www.cricketworld.com/cricket/malaysia-women-vs-indonesia-women/match/scorecard/100519" target="_blank" rel="noopener noreferrer">VIEW FULL SCORECARD ↗</a>
+          <a class="idc-button-secondary" href="https://www.icc-cricket.com/teams/1810/indonesia-women" target="_blank" rel="noopener noreferrer">INDONESIA WOMEN ON ICC ↗</a>
+        </div>
+      </article>
+
+      <article class="idc-next-card">
+        <div>
+          <div class="idc-next-kicker">Next listed fixture</div>
+          <h3>China Women vs Indonesia Women</h3>
+          <p>Women's T20I Tri-Series in Malaysia</p>
+        </div>
+        <div>
+          <span class="idc-next-date">24 NOVEMBER 2026</span>
+          <p style="margin-top:7px">Bayuemas Oval, Kuala Lumpur</p>
+          <div class="idc-score-actions">
+            <a class="idc-button-primary" style="background:#102a56" href="https://www.icc-cricket.com/teams/1810/indonesia-women" target="_blank" rel="noopener noreferrer">FIXTURE &amp; MATCH CENTRE ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="idc-subheading">
+      <h3>Recent Indonesia Women results</h3>
+      <a href="https://www.icc-cricket.com/teams/1810/indonesia-women" target="_blank" rel="noopener noreferrer">ALL TEAM RESULTS ↗</a>
+    </div>
+
+    <div class="idc-results-grid">
+      <article class="idc-result-card">
+        <div class="idc-result-date">21 November 2026 · Match 2</div>
+        <h4>Indonesia Women beat China Women by 3 runs</h4>
+        <div class="idc-result-score">Indonesia 114/3 (20 ov) · China 111/9 (20 ov)</div>
+        <div class="idc-result-outcome">Women's T20I Tri-Series in Malaysia</div>
+        <a href="https://www.cricbuzz.com/live-cricket-scores/178400/chnw-vs-idnw-2nd-match-malaysia-womens-t20i-tri-series" target="_blank" rel="noopener noreferrer">VIEW SCORECARD ↗</a>
+      </article>
+      <article class="idc-result-card">
+        <div class="idc-result-date">20 November 2026 · Match 1</div>
+        <h4>Indonesia Women beat Malaysia Women by 7 wickets</h4>
+        <div class="idc-result-score">Malaysia 93/6 (20 ov) · Indonesia 95/3 (18.4 ov)</div>
+        <div class="idc-result-outcome">Women's T20I Tri-Series in Malaysia</div>
+        <a href="https://www.icc-cricket.com/matches/276123/malaysia-vs-indonesia" target="_blank" rel="noopener noreferrer">VIEW ICC MATCH CENTRE ↗</a>
+      </article>
+    </div>
+
+    <div class="idc-footer-row">
+      <div>
+        <strong>Follow Indonesia's national teams and official PCI updates</strong>
+        <span>Men's and women's team information, national cricket news and announcements.</span>
+      </div>
+      <div class="idc-footer-links">
+        <a href="https://www.icc-cricket.com/teams/1809/indonesia-men" target="_blank" rel="noopener noreferrer">INDONESIA MEN ↗</a>
+        <a href="https://www.icc-cricket.com/teams/1810/indonesia-women" target="_blank" rel="noopener noreferrer">INDONESIA WOMEN ↗</a>
+        <a class="secondary" href="https://cricketina.com/en/pages/news" target="_blank" rel="noopener noreferrer">PCI NEWS ↗</a>
+        <a class="secondary" href="https://www.instagram.com/cricket_ina/" target="_blank" rel="noopener noreferrer">PCI INSTAGRAM ↗</a>
+      </div>
+    </div>
+    <p class="idc-source-note">Match scores and results are linked to the original scorecard providers. This homepage summary is a curated update as of 23 November 2026; it is not a live ball-by-ball feed. Upcoming fixtures can change, so check the official ICC match centre before match time.</p>
+  </div>
+</section>
+
 </main>
 <footer><div class="wrap"><div class="foot"><div><strong>JAKARTA PREMIER LEAGUE</strong><p>A platform connecting the cricket community in Indonesia through tennis-ball cricket, competition and community.</p></div><div class="foot-links"><a href="#about">About JPL</a><a href="#vision">Our Vision</a><a href="#sponsors">Sponsors</a><a href="#moments">JPL Moments</a><a href="season-1.html">Season 1</a><a href="season-2.html">Season 2</a><a href="season-3.html">Season 3</a></div></div><div class="copyright">© <span id="year"></span> Jakarta Premier League. All rights reserved.</div></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
