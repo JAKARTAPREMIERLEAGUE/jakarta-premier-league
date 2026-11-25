@@ -90,6 +90,51 @@ html{scroll-padding-top:135px}
 }
 
 </style>
+
+<style id="partner-lightbox-styles">
+/* Click-to-enlarge partner logos */
+.partner-zoom{
+  appearance:none;-webkit-appearance:none;border:0;padding:0;margin:0;
+  width:100%;height:100%;min-height:100px;display:flex;align-items:center;
+  justify-content:center;background:transparent;cursor:zoom-in;border-radius:8px;
+}
+.partner-zoom img{display:block;max-width:90%;max-height:112px;width:auto;height:auto;object-fit:contain;transition:transform .22s ease}
+.featured-art .partner-zoom{min-height:230px}
+.featured-art .partner-zoom img{width:min(100%,390px);height:240px;max-height:240px;max-width:100%;object-fit:contain;filter:drop-shadow(0 12px 15px #17243a16)}
+.partner-zoom:hover img{transform:scale(1.055)}
+.partner-zoom:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
+.partner-lightbox[hidden]{display:none!important}
+.partner-lightbox{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;padding:22px}
+.partner-lightbox-backdrop{position:absolute;inset:0;background:rgba(3,12,27,.88);backdrop-filter:blur(5px)}
+.partner-lightbox-dialog{position:relative;z-index:1;width:min(900px,94vw);max-height:min(760px,90vh);overflow:auto;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;
+  background:#fff;border:1px solid #dce4ef;border-radius:18px;box-shadow:0 28px 90px rgba(0,0,0,.42)}
+.partner-lightbox-close{position:absolute;top:13px;right:14px;z-index:3;width:42px;height:42px;border:0;border-radius:50%;
+  background:#102b50;color:#fff;font-size:27px;line-height:1;cursor:pointer;box-shadow:0 4px 14px #102b5033}
+.partner-lightbox-close:hover{background:#ff6b35;color:#071b38}
+.partner-lightbox-image{min-height:330px;padding:45px 30px;display:grid;place-items:center;background:linear-gradient(145deg,#f2f5fa,#fff)}
+.partner-lightbox-image img{display:block;width:100%;max-width:390px;max-height:340px;object-fit:contain}
+.partner-lightbox-copy{padding:58px 42px 42px;display:flex;flex-direction:column;justify-content:center}
+.partner-lightbox-kicker{color:#ff6b35;font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+.partner-lightbox-copy h2{margin:9px 0 13px;color:#102b50;font-size:clamp(25px,4vw,38px);line-height:1.08}
+.partner-lightbox-copy p{margin:0 0 22px;color:#63748b;font-size:14px;line-height:1.75}
+.partner-lightbox-link{align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:5px;
+  background:linear-gradient(110deg,#ff6b35,#f59e35);color:#071b38;font-size:11px;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+.partner-lightbox-link:hover{background:#ffd27a}
+body.partner-lightbox-open{overflow:hidden}
+@media(max-width:650px){
+  .partner-lightbox{padding:14px}
+  .partner-lightbox-dialog{width:min(520px,96vw);max-height:92vh;grid-template-columns:1fr}
+  .partner-lightbox-image{min-height:210px;padding:35px 24px 18px}
+  .partner-lightbox-image img{max-height:210px}
+  .partner-lightbox-copy{padding:18px 25px 28px}
+  .partner-lightbox-copy h2{font-size:27px;padding-right:26px}
+  .partner-lightbox-copy p{font-size:13px}
+  .partner-lightbox-close{top:9px;right:9px;width:38px;height:38px}
+}
+@media(prefers-reduced-motion:reduce){.partner-zoom img{transition:none}}
+</style>
+
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>Jakarta Premier League</span><span>Connecting Cricket in Indonesia</span></div></div>
@@ -112,13 +157,23 @@ html{scroll-padding-top:135px}
 <div class="section-heading"><div class="kicker">Special Recognition</div><h2>Featured Premium Partner</h2><p>Our sincere appreciation to a partner whose outstanding support has made a lasting contribution to the JPL journey.</p></div>
 <section class="featured" aria-labelledby="classic-title">
 <div class="featured-copy"><span class="featured-label">Featured Premium Partner</span><h2 id="classic-title">Classic Carpets</h2><p>Classic Carpets is an Indonesian carpet manufacturer with a global footprint, offering broadloom carpets, carpet tiles, rugs, doormats and customised flooring solutions. We are proud to recognise their exceptional support for Jakarta Premier League.</p><a class="btn" href="https://classiccarpets.id/en/" target="_blank" rel="noopener">Visit Company Website ↗</a></div>
-<div class="featured-art"><img src="assets/sponsors/classic-carpets.png" alt="Classic Carpets logo" loading="eager" decoding="async" fetchpriority="high"></div>
+<div class="featured-art">
+  <button class="partner-zoom" type="button"
+    data-name="Classic Carpets"
+    data-description="Classic Carpets is an Indonesian carpet manufacturer with a global footprint, offering broadloom carpets, carpet tiles, rugs, doormats and customised flooring solutions. We are proud to recognise their exceptional support for Jakarta Premier League."
+    data-image="assets/sponsors/classic-carpets.png"
+    data-alt="Classic Carpets logo"
+    data-website="https://classiccarpets.id/en/"
+    aria-label="Enlarge Classic Carpets logo">
+    <img src="assets/sponsors/classic-carpets.png" alt="Classic Carpets logo" loading="eager" decoding="async" fetchpriority="high">
+  </button>
+</div>
 </section>
 <div class="section-heading" style="margin-top:64px"><div class="kicker">Standing Together</div><h2>Other Premium Partners</h2><p>We are grateful to our partners for believing in the JPL vision and helping us bring the cricket community together.</p></div>
 <div class="partners">
-<article class="partner"><div class="partner-logo"><img src="assets/sponsors/pgi-data.png" alt="PGI Data logo" loading="eager" decoding="async" fetchpriority="high"></div><h3>PGI Data</h3><p>PT Platinumetrix Global Inovasi is an enterprise digital transformation company delivering technology solutions across BFSI, telecommunications and government sectors in Indonesia and the region.</p><a class="text-link" href="https://pgi-data.com/" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
-<article class="partner"><div class="partner-logo"><img src="assets/sponsors/pt-gokak-indonesia.png" alt="PT Gokak Indonesia logo" loading="lazy" decoding="async"></div><h3>PT Gokak Indonesia</h3><p>An Indonesian textile manufacturer operating in the fibre, yarn and thread mills sector, including cotton, synthetic and blended yarn products.</p><a class="text-link" href="https://www.gokakindonesia.com/" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
-<article class="partner"><div class="partner-logo"><img src="assets/sponsors/ktl-international-indonesia.jpg" alt="KTL International Indonesia logo" loading="lazy" decoding="async"></div><h3>KTL International Indonesia</h3><p>KTL Indonesia combines local market knowledge with KTL’s international network for sea and air shipments to and from Indonesia. Its regional presence includes Belawan, Jakarta and Surabaya, supporting local coordination and customers’ transport requirements.</p><a class="text-link" href="https://www.kinay.com/Group-Companies/25/indonesia" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
+<article class="partner"><div class="partner-logo"><button class="partner-zoom" type="button" data-name="PGI Data" data-description="PT Platinumetrix Global Inovasi is an enterprise digital transformation company delivering technology solutions across BFSI, telecommunications and government sectors in Indonesia and the region." data-image="assets/sponsors/pgi-data.png" data-alt="PGI Data logo" data-website="https://pgi-data.com/" aria-label="Enlarge PGI Data logo"><img src="assets/sponsors/pgi-data.png" alt="PGI Data logo" loading="eager" decoding="async" fetchpriority="high"></button></div><h3>PGI Data</h3><p>PT Platinumetrix Global Inovasi is an enterprise digital transformation company delivering technology solutions across BFSI, telecommunications and government sectors in Indonesia and the region.</p><a class="text-link" href="https://pgi-data.com/" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
+<article class="partner"><div class="partner-logo"><button class="partner-zoom" type="button" data-name="PT Gokak Indonesia" data-description="An Indonesian textile manufacturer operating in the fibre, yarn and thread mills sector, including cotton, synthetic and blended yarn products." data-image="assets/sponsors/pt-gokak-indonesia.png" data-alt="PT Gokak Indonesia logo" data-website="https://www.gokakindonesia.com/" aria-label="Enlarge PT Gokak Indonesia logo"><img src="assets/sponsors/pt-gokak-indonesia.png" alt="PT Gokak Indonesia logo" loading="lazy" decoding="async"></button></div><h3>PT Gokak Indonesia</h3><p>An Indonesian textile manufacturer operating in the fibre, yarn and thread mills sector, including cotton, synthetic and blended yarn products.</p><a class="text-link" href="https://www.gokakindonesia.com/" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
+<article class="partner"><div class="partner-logo"><button class="partner-zoom" type="button" data-name="KTL International Indonesia" data-description="KTL Indonesia combines local market knowledge with KTL’s international network for sea and air shipments to and from Indonesia. Its regional presence includes Belawan, Jakarta and Surabaya, supporting local coordination and customers’ transport requirements." data-image="assets/sponsors/ktl-international-indonesia.jpg" data-alt="KTL International Indonesia logo" data-website="https://www.kinay.com/Group-Companies/25/indonesia" aria-label="Enlarge KTL International Indonesia logo"><img src="assets/sponsors/ktl-international-indonesia.jpg" alt="KTL International Indonesia logo" loading="lazy" decoding="async"></button></div><h3>KTL International Indonesia</h3><p>KTL Indonesia combines local market knowledge with KTL’s international network for sea and air shipments to and from Indonesia. Its regional presence includes Belawan, Jakarta and Surabaya, supporting local coordination and customers’ transport requirements.</p><a class="text-link" href="https://www.kinay.com/Group-Companies/25/indonesia" target="_blank" rel="noopener">Visit Company Website ↗</a></article>
 </div>
 <section class="supported-by-section" aria-labelledby="supported-by-title">
   <div class="supported-by-heading">
@@ -137,6 +192,21 @@ html{scroll-padding-top:135px}
 <div class="closing"><h2>Thank You for Supporting JPL</h2><p>Your partnership helps us create opportunities, strengthen our cricket community and grow the game in Indonesia.</p></div>
 </main>
 <footer><div class="wrap"><span>© Jakarta Premier League. All rights reserved.</span><a href="index.html">Back to JPL Home</a></div></footer>
+
+<div class="partner-lightbox" id="partner-lightbox" hidden>
+  <div class="partner-lightbox-backdrop" data-partner-lightbox-close></div>
+  <section class="partner-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="partner-lightbox-title" tabindex="-1">
+    <button class="partner-lightbox-close" type="button" aria-label="Close enlarged partner view" data-partner-lightbox-close>×</button>
+    <div class="partner-lightbox-image"><img id="partner-lightbox-img" src="" alt=""></div>
+    <div class="partner-lightbox-copy">
+      <span class="partner-lightbox-kicker">Jakarta Premier League · Partner</span>
+      <h2 id="partner-lightbox-title"></h2>
+      <p id="partner-lightbox-description"></p>
+      <a class="partner-lightbox-link" id="partner-lightbox-website" href="#" target="_blank" rel="noopener noreferrer">Visit Company Website ↗</a>
+    </div>
+  </section>
+</div>
+
 <script>
 (function(){
   const header=document.getElementById('jpl-nav');
@@ -173,5 +243,63 @@ html{scroll-padding-top:135px}
   document.addEventListener('click',function(event){if(!header.contains(event.target)){closeMenu();closeSeasons();}});
 })();
 </script>
+
+<script id="partner-lightbox-script">
+(function(){
+  const lightbox = document.getElementById('partner-lightbox');
+  if (!lightbox) return;
+  const title = document.getElementById('partner-lightbox-title');
+  const description = document.getElementById('partner-lightbox-description');
+  const image = document.getElementById('partner-lightbox-img');
+  const website = document.getElementById('partner-lightbox-website');
+  const dialog = lightbox.querySelector('.partner-lightbox-dialog');
+  const closeButtons = lightbox.querySelectorAll('[data-partner-lightbox-close]');
+  let lastTrigger = null;
+
+  function openLightbox(trigger){
+    lastTrigger = trigger;
+    title.textContent = trigger.dataset.name || 'JPL Partner';
+    description.textContent = trigger.dataset.description || '';
+    image.src = trigger.dataset.image || '';
+    image.alt = trigger.dataset.alt || (trigger.dataset.name + ' logo');
+    website.href = trigger.dataset.website || '#';
+    website.hidden = !trigger.dataset.website;
+    lightbox.hidden = false;
+    document.body.classList.add('partner-lightbox-open');
+    dialog.focus();
+    closeButtons[0].focus();
+  }
+
+  function closeLightbox(){
+    if (lightbox.hidden) return;
+    lightbox.hidden = true;
+    document.body.classList.remove('partner-lightbox-open');
+    image.removeAttribute('src');
+    if (lastTrigger) lastTrigger.focus();
+    lastTrigger = null;
+  }
+
+  document.querySelectorAll('.partner-zoom').forEach(function(trigger){
+    trigger.addEventListener('click', function(){ openLightbox(trigger); });
+  });
+  closeButtons.forEach(function(button){
+    button.addEventListener('click', closeLightbox);
+  });
+  lightbox.addEventListener('click', function(event){
+    if (event.target.classList.contains('partner-lightbox-backdrop')) closeLightbox();
+  });
+  document.addEventListener('keydown', function(event){
+    if (!lightbox.hidden && event.key === 'Escape') closeLightbox();
+    if (!lightbox.hidden && event.key === 'Tab') {
+      const focusable = Array.from(dialog.querySelectorAll('a[href]:not([hidden]),button:not([hidden])')).filter(function(el){return !el.disabled;});
+      if (!focusable.length) { event.preventDefault(); dialog.focus(); return; }
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
