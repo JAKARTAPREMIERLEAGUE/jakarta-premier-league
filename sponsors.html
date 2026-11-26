@@ -318,6 +318,70 @@ body.partner-lightbox-open{overflow:hidden}
 }
 </style>
 
+
+<style id="jpl-mobile-layout-fix">
+/* Mobile viewport and layout correction */
+@media (max-width: 1050px) {
+  html, body {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  body { margin: 0; }
+  .topbar, .jpl-site-header, .hero, main, footer {
+    width: 100%;
+    max-width: 100%;
+  }
+  .wrap, .jpl-nav-inner, .jpl-page-shortcuts-inner {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    min-width: 0;
+  }
+  .partners-page-layout,
+  .partners-main-content,
+  .featured,
+  .partners,
+  .partner,
+  .closing {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .partners-page-layout { display: grid; grid-template-columns: minmax(0,1fr); }
+  .featured { grid-template-columns: minmax(0,1fr); }
+  .featured-copy { min-width: 0; }
+  .featured-art { min-width: 0; width: 100%; }
+  .partners { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .partner-rail-panel { width: 100%; }
+}
+@media (max-width: 560px) {
+  .wrap, .jpl-nav-inner, .jpl-page-shortcuts-inner {
+    width: calc(100% - 28px);
+  }
+  .hero { padding: 48px 0 54px; }
+  .hero p { padding: 0 4px; font-size: 14px; }
+  main { padding: 28px 0 46px; }
+  .partners-page-layout { gap: 22px; }
+  .partner-rail-heading { min-height: 58px; }
+  .partner-rail-window { height: 72px; }
+  .section-heading { margin-bottom: 20px; }
+  .section-heading[style*="margin-top"] { margin-top: 38px !important; }
+  .featured { min-height: 0; border-radius: 14px; }
+  .featured-copy { padding: 25px 20px 22px; }
+  .featured h2 { font-size: 30px; }
+  .featured-copy p { font-size: 13px; line-height: 1.6; }
+  .featured-art { min-height: 190px; padding: 20px; }
+  .featured-art .partner-zoom { min-height: 160px; }
+  .featured-art .partner-zoom img { height: 160px; max-height: 160px; }
+  .partners { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .partner { padding: 18px 16px; }
+  .partner-logo { height: 108px; }
+  .partner-logo img, .partner-zoom img { max-height: 96px; }
+  .closing { margin-top: 32px; padding: 27px 18px; }
+}
+</style>
+
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>Jakarta Premier League</span><span>Connecting Cricket in Indonesia</span></div></div>
