@@ -145,48 +145,21 @@ html{scroll-padding-top:135px}
 }
 @media(max-width:420px){.jpl-nav-inner{width:94%;min-height:68px}.jpl-brand img{width:44px;height:44px}.jpl-brand span{font-size:12px}.jpl-brand small{font-size:9px}}
 </style>
-<style id="pci-hero-identity-update">
-/* Clear separation: PCI crest on the left, page copy in the centre, Indonesian flag on the right. */
-.hero{isolation:isolate;position:relative;overflow:hidden;background:linear-gradient(112deg,#0b2345 0%,#15345f 66%,#1c416f 100%);padding:70px 0 76px}
-.hero::before{display:none}
-.hero::after{display:none}
-.hero .wrap{position:relative;z-index:1;width:min(1480px,94%);max-width:1480px}
-.hero-layout{display:grid;grid-template-columns:180px minmax(0,1fr) 220px;gap:clamp(22px,3vw,44px);align-items:center}
-.pci-emblem{grid-column:1;grid-row:1;align-self:center;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:17px 12px;color:#102a56;text-align:center;text-decoration:none;background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.75);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.18);transition:transform .18s ease,box-shadow .18s ease}
-.pci-emblem:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.24)}
-.pci-logo-frame{display:grid;place-items:center;width:136px;height:136px;padding:0;border-radius:50%;background:#fff;overflow:hidden}
-.pci-logo-img{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
-.pci-label{display:block;max-width:160px}
-.pci-label strong{display:block;color:#102a56;font-size:10px;line-height:1.4;letter-spacing:.09em;text-transform:uppercase}
-.pci-label small{display:block;margin-top:5px;color:#d95720;font-size:10px;line-height:1.4;font-weight:800}
-.pci-emblem:focus-visible{outline:3px solid #ff9a50;outline-offset:5px;border-radius:12px}
-.hero-copy{grid-column:2;grid-row:1;position:relative;z-index:1;max-width:950px;min-width:0}
-.hero h1{max-width:none;font-size:clamp(42px,5.4vw,76px)}
-.hero p{max-width:880px}
-.hero-flag-wrap{grid-column:3;grid-row:1;display:flex;flex-direction:column;align-items:center;gap:12px;justify-self:end;width:100%;position:relative;z-index:1}
-.hero-flag{display:block;width:100%;aspect-ratio:3/2;border-radius:5px;background:linear-gradient(to bottom,#ed1c24 0 50%,#fff 50% 100%);border:1px solid rgba(255,255,255,.55);box-shadow:0 16px 36px rgba(0,0,0,.17)}
-.hero-flag-caption{color:#dbe6f4;font-size:10px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
-@media(max-width:1000px){
- .hero-layout{grid-template-columns:150px minmax(0,1fr);gap:25px}
- .pci-emblem{grid-column:1;grid-row:1;max-width:150px}
- .pci-logo-frame{width:112px;height:112px}
- .hero-copy{grid-column:2;grid-row:1}
- .hero-flag-wrap{grid-column:2;grid-row:2;justify-self:start;width:min(220px,60%);margin-top:5px}
-}
-@media(max-width:680px){
- .hero{padding:48px 0 54px}
- .hero-layout{grid-template-columns:1fr;gap:22px}
- .pci-emblem{grid-column:1;grid-row:1;justify-self:start;max-width:230px;flex-direction:row;text-align:left;gap:13px;padding:10px 14px}
- .pci-logo-frame{width:76px;height:76px;flex:0 0 auto}
- .pci-label{max-width:125px}
- .pci-label strong{font-size:9px}
- .hero-copy{grid-column:1;grid-row:2}
- .hero h1{font-size:clamp(38px,11vw,58px)}
- .hero p{font-size:16px}
- .hero-flag-wrap{grid-column:1;grid-row:3;justify-self:start;width:min(210px,68%);margin-top:0}
- .hero-flag-caption{font-size:9px}
-}
-@media(prefers-reduced-motion:reduce){.pci-emblem{transition:none}}
+<style id="jpl-hero-video-background">
+/* Full-bleed cricket video in the page hero. Sound is opt-in because browsers block audible autoplay. */
+.hero.hero-video-hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:440px;overflow:hidden;padding:82px 0 88px;background:#071b38;color:#fff}
+.hero-video-hero .hero-background-video{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center center}
+.hero-video-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,18,38,.90) 0%,rgba(5,18,38,.73) 52%,rgba(5,18,38,.40) 100%)}
+.hero-video-hero .hero-content{position:relative;z-index:1;width:min(1200px,92%);max-width:1200px;margin:0 auto}
+.hero-video-hero h1{max-width:920px;font-size:clamp(42px,6.2vw,76px);line-height:1.02;letter-spacing:-.05em;margin:14px 0 18px}
+.hero-video-hero p{max-width:850px;color:#eef3fa;font-size:18px;margin:0}
+.hero-video-hero .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.hero-video-hero .pill{display:inline-block;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.12);border-radius:99px;padding:8px 13px;font-size:12px;color:#f2f6fb;font-weight:700}
+.hero-sound-toggle{display:inline-flex;align-items:center;gap:9px;margin-top:25px;padding:10px 15px;border:1px solid rgba(255,255,255,.68);border-radius:99px;background:rgba(4,16,34,.42);color:#fff;font-size:11px;font-weight:900;letter-spacing:.09em;cursor:pointer;transition:background .18s ease,border-color .18s ease}
+.hero-sound-toggle:hover{background:rgba(244,119,33,.92);border-color:#f47721}
+.hero-sound-toggle:focus-visible{outline:3px solid #ffb36f;outline-offset:4px}
+@media(max-width:620px){.hero.hero-video-hero{min-height:400px;padding:58px 0 64px}.hero-video-hero p{font-size:16px}.hero-video-hero::after{background:linear-gradient(90deg,rgba(5,18,38,.88),rgba(5,18,38,.60))}.hero-sound-toggle{margin-top:21px}}
+@media(prefers-reduced-motion:reduce){.hero-video-hero .hero-background-video{display:none}.hero.hero-video-hero{background:#071b38 url('assets/cricket-in-indonesia-background-poster.jpg') center/cover no-repeat}}
 </style>
 </head>
 <body>
@@ -205,31 +178,20 @@ html{scroll-padding-top:135px}
     </button>
   </div>
 </header>
-<section class="hero">
-  <div class="wrap hero-layout">
-    <a class="pci-emblem" href="https://cricketina.com/en" target="_blank" rel="noopener noreferrer" aria-label="Visit the official Persatuan Cricket Indonesia website">
-      <span class="pci-logo-frame">
-        <img class="pci-logo-img" src="https://emergingcricket.com/my_content/uploads/2020/10/Indonesia-logo.jpg" alt="Persatuan Cricket Indonesia crest" loading="eager" fetchpriority="high" referrerpolicy="no-referrer">
-      </span>
-      <span class="pci-label">
-        <strong>Persatuan Cricket Indonesia</strong>
-        <small>Visit official website ↗</small>
-      </span>
-    </a>
-    <div class="hero-copy">
-      <div class="eyebrow">The game across the archipelago</div>
-      <h1>Cricket in Indonesia</h1>
-      <p>Cricket connects players, clubs, schools and local communities across Indonesia. From organised club competitions in Jakarta to the wider development of the game across the provinces, the cricket story is bigger than one city or one tournament.</p>
-      <div class="hero-meta">
-        <span class="pill">National cricket development</span>
-        <span class="pill">Club cricket and leagues</span>
-        <span class="pill">Community tournaments</span>
-      </div>
+<section class="hero hero-video-hero" aria-label="Cricket in Indonesia">
+  <video class="hero-background-video" id="heroBackgroundVideo" autoplay muted loop playsinline preload="auto" poster="assets/cricket-in-indonesia-background-poster.jpg" aria-hidden="true" tabindex="-1">
+    <source src="assets/cricket-in-indonesia-background.mp4" type="video/mp4">
+  </video>
+  <div class="wrap hero-content">
+    <div class="eyebrow">The game across the archipelago</div>
+    <h1>Cricket in Indonesia</h1>
+    <p>Cricket connects players, clubs, schools and local communities across Indonesia. From organised club competitions in Jakarta to the wider development of the game across the provinces, the cricket story is bigger than one city or one tournament.</p>
+    <div class="hero-meta">
+      <span class="pill">National cricket development</span>
+      <span class="pill">Club cricket and leagues</span>
+      <span class="pill">Community tournaments</span>
     </div>
-    <div class="hero-flag-wrap" aria-label="Indonesian national flag">
-      <span class="hero-flag" aria-hidden="true"></span>
-      <span class="hero-flag-caption">Indonesia</span>
-    </div>
+    <button class="hero-sound-toggle" id="heroSoundToggle" type="button" aria-pressed="false" aria-label="Enable background video sound">♪ &nbsp; ENABLE SOUND</button>
   </div>
 </section>
 <main>
@@ -337,6 +299,35 @@ html{scroll-padding-top:135px}
   nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){closeMenu();closeSeasons();});});
   document.addEventListener('keydown',function(event){if(event.key==='Escape'){closeMenu();closeSeasons();}});
   document.addEventListener('click',function(event){if(!header.contains(event.target)){closeMenu();closeSeasons();}});
+})();
+</script>
+<script>
+(function(){
+  const video=document.getElementById('heroBackgroundVideo');
+  const button=document.getElementById('heroSoundToggle');
+  if(!video||!button)return;
+  button.addEventListener('click',async function(){
+    if(video.muted){
+      video.muted=false;
+      video.volume=0.7;
+      try{
+        await video.play();
+        button.textContent='♪  MUTE SOUND';
+        button.setAttribute('aria-pressed','true');
+        button.setAttribute('aria-label','Mute background video sound');
+      }catch(error){
+        video.muted=true;
+        button.textContent='♪  ENABLE SOUND';
+        button.setAttribute('aria-pressed','false');
+        button.setAttribute('aria-label','Enable background video sound');
+      }
+    }else{
+      video.muted=true;
+      button.textContent='♪  ENABLE SOUND';
+      button.setAttribute('aria-pressed','false');
+      button.setAttribute('aria-label','Enable background video sound');
+    }
+  });
 })();
 </script>
 </body>
